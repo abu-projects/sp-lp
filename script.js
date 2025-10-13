@@ -14,14 +14,15 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Mobile Menu Toggle
-const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+// Mobile Menu Toggle (guarded for presence)
+const mobileMenuToggle = document.getElementById('mobile-menu-btn') || document.getElementById('mobileMenuToggle');
 const nav = document.getElementById('nav');
-
-mobileMenuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
-});
+if (mobileMenuToggle && nav) {
+    mobileMenuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+    });
+}
 
 // Smooth Scroll & Active Nav Link
 const navLinks = document.querySelectorAll('.nav-link');
@@ -41,8 +42,8 @@ navLinks.forEach(link => {
         }
         
         // Close mobile menu after click
-        nav.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
+        if (nav) nav.classList.remove('active');
+        if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
         
         // Update active link
         navLinks.forEach(l => l.classList.remove('active'));
@@ -96,30 +97,24 @@ animateElements.forEach(el => {
 
 // Language Switch Handler
 const languageSwitch = document.querySelector('.language-switch');
+if (languageSwitch) {
+    languageSwitch.addEventListener('change', (e) => {
+        const selectedLang = e.target.value;
+        if (selectedLang === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
+        localStorage.setItem('preferredLanguage', selectedLang);
+        console.log(`Language changed to: ${selectedLang}`);
+    });
 
-languageSwitch.addEventListener('change', (e) => {
-    const selectedLang = e.target.value;
-    
-    // Set document direction for RTL languages
-    if (selectedLang === 'ar') {
-        document.documentElement.setAttribute('dir', 'rtl');
-    } else {
-        document.documentElement.setAttribute('dir', 'ltr');
-    }
-    
-    // Store preference
-    localStorage.setItem('preferredLanguage', selectedLang);
-    
-    console.log(`Language changed to: ${selectedLang}`);
-    // In a real app, you would load translations here
-});
-
-// Load saved language preference
-const savedLanguage = localStorage.getItem('preferredLanguage');
-if (savedLanguage) {
-    languageSwitch.value = savedLanguage;
-    if (savedLanguage === 'ar') {
-        document.documentElement.setAttribute('dir', 'rtl');
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    if (savedLanguage) {
+        languageSwitch.value = savedLanguage;
+        if (savedLanguage === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        }
     }
 }
 
@@ -190,3 +185,41 @@ window.addEventListener('scroll', () => {
 // Console welcome message
 console.log('%c🏆 Welcome to Sport Planet! 🏆', 'color: #A0C24F; font-size: 20px; font-weight: bold;');
 console.log('%cDiscover. Connect. Succeed.', 'color: #CFE29E; font-size: 14px;');
+
+// Hero background slider (background-only, no controls)
+(() => {
+    const slider = document.getElementById('hero-slider');
+    if (!slider) return;
+
+    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    if (slides.length <= 1) return;
+
+    // Respect reduced-motion preference
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) return;
+
+    // Preload slide images
+    slides.forEach(s => {
+        const bg = s.style.backgroundImage;
+        const match = /url\(["']?(.*?)["']?\)/.exec(bg);
+        if (match && match[1]) {
+            const img = new Image();
+            img.src = match[1];
+        }
+    });
+
+    let current = 0;
+    const intervalMs = 6000; // 6 seconds between slides for slower, more cinematic pacing
+
+    function show(next) {
+        if (next === current) return;
+        slides[current].classList.remove('active');
+        slides[next].classList.add('active');
+        current = next;
+    }
+
+    setInterval(() => {
+        const next = (current + 1) % slides.length;
+        show(next);
+    }, intervalMs);
+})();
