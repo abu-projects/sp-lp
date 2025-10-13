@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Planet - Discover. Connect. Succeed.</title>
+    <meta name="description"
+        content="Join Sport Planet, the global sports discovery platform connecting players, agents, scouts, coaches, and clubs across all sports.">
+    <meta property="og:title" content="Sport Planet - Discover. Connect. Succeed.">
+    <meta property="og:description"
+        content="Join Sport Planet, the global sports discovery platform connecting players, agents, scouts, coaches, and clubs across all sports.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sportplanet.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#A0C24F',
+                        secondary: '#A3FFB2',
+                        'dark-bg': '#1a2e2e',
+                        'card-bg': '#0f1f1f'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'system-ui', 'sans-serif'],
+                        'pacifico': ['Pacifico', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            background-color: #1a2e2e;
+            color: #ffffff;
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1a2e2e 0%, #0f1f1f 50%, #1a2e2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Override bg-black and bg-gray-900 */
+        .bg-black {
+            background-color: #0f1f1f !important;
+        }
+
+        .bg-gray-900 {
+            background-color: #1a2e2e !important;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://readdy.ai/api/search-image?query=modern%20stadium%20lights%20glowing%20at%20night%20with%20atmospheric%20mist%20and%20subtle%20particle%20effects%20creating%20dramatic%20lighting%20across%20empty%20sports%20field%20with%20silhouettes%20of%20athletes%20in%20distance%2C%20cinematic%20dark%20atmosphere%20with%20green%20accent%20lighting%2C%20professional%20sports%20photography%20style%2C%20ultra%20high%20quality%208k%20resolution&width=1920&height=1080&seq=hero-bg-001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background: #A0C24F;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        .header-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(11, 11, 11, 0.9);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(160, 194, 79, 0.2);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(160, 194, 79, 0.3);
+        }
+
+        .partner-logo img {
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            min-height: 40px;
+            background-color: #f0f0f0;
+        }
+
+        .partner-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Image fallback styling */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Ensure images are visible */
+        .partner-logo,
+        .bg-white.rounded-full,
+        .rounded-full.overflow-hidden {
+            background-color: white !important;
+        }
+
+        /* Fix for academy and club logos */
+        .bg-white.rounded-full img,
+        .rounded-full.overflow-hidden img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Academy logo containers */
+        .academy-card .bg-white,
+        .bg-white.rounded-lg {
+            background-color: white !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Ensure all images have minimum dimensions */
+        .academy-card img,
+        .partner-logo img,
+        .bg-white img {
+            min-width: 40px;
+            min-height: 40px;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* Image loading fallback */
+        img[src*="readdy.ai"] {
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+        }
+
+        /* Fix for testimonial images */
+        .rounded-full.overflow-hidden {
+            background-color: #A0C24F !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rounded-full.overflow-hidden img {
+            opacity: 1;
+            display: block;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .particle,
+            .card-hover,
+            .partner-logo {
+                animation: none;
+                transition: none;
+            }
+
+            .partner-logo img {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="w-full px-6 py-4">
+            <div class="flex items-center justify-between max-w-7xl mx-auto">
+                <div class="flex items-center gap-3">
+                    <img src="assets/imgs/logo-white.svg" alt="Sport Planet Logo" class="h-12">
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-white hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="#how-it-works" class="text-white hover:text-primary transition-colors duration-200">How It
+                        Works</a>
+                    <a href="#sports" class="text-white hover:text-primary transition-colors duration-200">Sports</a>
+                    <a href="#success-stories"
+                        class="text-white hover:text-primary transition-colors duration-200">Success Stories</a>
+                    <a href="#clubs" class="text-white hover:text-primary transition-colors duration-200">Clubs</a>
+                    <a href="#academies"
+                        class="text-white hover:text-primary transition-colors duration-200">Academies</a>
+                    <a href="#partners"
+                        class="text-white hover:text-primary transition-colors duration-200">Partners</a>
+
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#login"
+                        class="text-white hover:text-secondary transition-colors duration-200 hidden sm:block">Login</a>
+                    <button
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">Sign
+                        Up</button>
+                    <button
+                        class="border border-secondary text-secondary px-6 py-2 !rounded-button hover:bg-secondary hover:text-black transition-all duration-200 whitespace-nowrap">Download
+                        App</button>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <div class="w-6 h-6 flex items-center justify-center">
+                        <i class="ri-menu-line ri-lg"></i>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+            <div class="particles">
+                <div class="particle" style="width: 4px; height: 4px; left: 10%; top: 20%; animation-delay: 0s;"></div>
+                <div class="particle" style="width: 6px; height: 6px; left: 80%; top: 30%; animation-delay: 2s;"></div>
+                <div class="particle" style="width: 3px; height: 3px; left: 60%; top: 60%; animation-delay: 4s;"></div>
+                <div class="particle" style="width: 5px; height: 5px; left: 20%; top: 80%; animation-delay: 1s;"></div>
+                <div class="particle" style="width: 4px; height: 4px; left: 90%; top: 70%; animation-delay: 3s;"></div>
+            </div>
+            <div class="hero-content w-full max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Discover. Connect. <span class="text-primary">Succeed.</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Join the platform that redefines sports talent discovery across all disciplines worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <button
+                        class="bg-primary text-white px-8 py-4 text-lg font-semibold !rounded-button hover:bg-[#8BAA42] transition-all duration-200 glow-effect whitespace-nowrap">
+                        Sign Up Now
+                    </button>
+                    <button
+                        class="border-2 border-secondary text-secondary px-8 py-4 text-lg font-semibold !rounded-button hover:bg-secondary hover:text-black transition-all duration-200 whitespace-nowrap">
+                        Download App
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="how-it-works" class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">What We Do & How It Works</h3>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-xl text-gray-300 leading-relaxed">
+                            Sport Planet enables players to showcase their talent and connect with scouts, agents, and
+                            clubs globally across all sports disciplines.
+                        </p>
+                        <p class="text-lg text-gray-400 leading-relaxed">
+                            Our platform breaks down geographical barriers and creates opportunities for athletes at
+                            every level to be discovered by the right people at the right time.
+                        </p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                                1</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Sign Up & Build Your Profile</h4>
+                                <p class="text-gray-400">Create your comprehensive athlete profile with stats, videos,
+                                    and achievements.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                                2</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Choose Your Sport</h4>
+                                <p class="text-gray-400">Select from dozens of sports and connect with the right
+                                    community.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">
+                                3</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Get Discovered & Connect</h4>
+                                <p class="text-gray-400">Let scouts, agents, and clubs find you and start meaningful
+                                    conversations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button
+                        class="border border-primary text-primary px-8 py-3 !rounded-button hover:bg-primary hover:text-white transition-all duration-200 whitespace-nowrap">
+                        Explore Features
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="sports" class="py-20 bg-black">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">Explore All Sports in Sport Planet</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-football-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Football</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 45,678</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-ping-pong-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Tennis</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 23,456</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-sword-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Combat Sports</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 18,234</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-water-percent-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Swimming</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 15,789</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-hockey-puck-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Hockey</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 12,567</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-basketball-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Basketball</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 34,567</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                            <i class="ri-volleyball-line ri-2x text-white"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Volleyball</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 19,876</p>
+                    </div>
+                    <div class="card-hover bg-gray-900 rounded-lg p-6 text-center group cursor-pointer">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-secondary rounded-full flex items-center justify-center">
+                            <i class="ri-add-line ri-2x text-black"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">And More...</h4>
+                        <p class="text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200">50+
+                            sports available</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button
+                        class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">
+                        Browse Players by Sport
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="success-stories" class="py-20 bg-gray-900"></section>
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">They Made It</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black rounded-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20young%20male%20soccer%20player%20in%20green%20jersey%20smiling%20confidently%20at%20camera%20with%20stadium%20background%2C%20athletic%20build%2C%20determined%20expression%2C%20high%20quality%20sports%20portrait%20photography&width=200&height=200&seq=player-001&orientation=squarish"
+                            alt="Marcus Rodriguez" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Marcus Rodriguez</h4>
+                    <p class="text-gray-400 italic">"Sport Planet connected me with my current club. The platform
+                        changed my career trajectory completely."</p>
+                </div>
+                <div class="bg-black rounded-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20young%20female%20tennis%20player%20holding%20racket%20with%20confident%20smile%2C%20athletic%20wear%2C%20tennis%20court%20background%2C%20inspiring%20sports%20portrait%20photography%20with%20natural%20lighting&width=200&height=200&seq=player-002&orientation=squarish"
+                            alt="Sarah Chen" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Sarah Chen</h4>
+                    <p class="text-gray-400 italic">"From amateur tournaments to professional contracts - Sport
+                        Planet made it possible in just 8 months."</p>
+                </div>
+                <div class="bg-black rounded-lg p-6 text-center">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20young%20male%20basketball%20player%20in%20team%20uniform%20with%20basketball%2C%20confident%20athletic%20pose%2C%20indoor%20court%20background%2C%20inspiring%20sports%20portrait%20photography&width=200&height=200&seq=player-003&orientation=squarish"
+                            alt="James Thompson" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">James Thompson</h4>
+                    <p class="text-gray-400 italic">"The scouts found me through my profile. Now I'm playing
+                        professionally in Europe. Dreams do come true."</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="border border-secondary text-secondary px-8 py-3 !rounded-button hover:bg-secondary hover:text-black transition-all duration-200 whitespace-nowrap">
+                    Submit Your Story
+                </button>
+            </div>
+        </div>
+        </section>
+        <section id="clubs" class="py-20 bg-gray-900"></section>
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">Famous Clubs</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=real%20madrid%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-001&orientation=squarish"
+                                alt="Real Madrid" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Real Madrid</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Madrid, Spain</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=manchester%20united%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-002&orientation=squarish"
+                                alt="Manchester United" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Manchester United</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Manchester, UK</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=los%20angeles%20Lakers%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-003&orientation=squarish"
+                                alt="LA Lakers" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            LA Lakers</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Los Angeles, USA</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=bayern%20munich%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-004&orientation=squarish"
+                                alt="Bayern Munich" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Bayern Munich</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Munich, Germany</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=golden%20state%20warriors%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-005&orientation=squarish"
+                                alt="Golden State Warriors" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Golden State Warriors</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            San Francisco, USA</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=juventus%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-006&orientation=squarish"
+                                alt="Juventus" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Juventus FC</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Turin, Italy</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=chelsea%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-007&orientation=squarish"
+                                alt="Chelsea FC" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Chelsea FC</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            London, UK</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=new%20york%20yankees%20baseball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-008&orientation=squarish"
+                                alt="New York Yankees" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            New York Yankees</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            New York, USA</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=barcelona%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-009&orientation=squarish"
+                                alt="FC Barcelona" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            FC Barcelona</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Barcelona, Spain</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=boston%20celtics%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-010&orientation=squarish"
+                                alt="Boston Celtics" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Boston Celtics</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Boston, USA</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=paris%20saint%20germain%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-011&orientation=squarish"
+                                alt="Paris Saint-Germain" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Paris Saint-Germain</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Paris, France</p>
+                    </div>
+                </div>
+                <div
+                    class="card-hover bg-black rounded-lg p-6 flex items-center justify-center group cursor-pointer min-h-[120px]">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-2 bg-white rounded-full flex items-center justify-center">
+                            <img src="https://readdy.ai/api/search-image?query=liverpool%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-012&orientation=squarish"
+                                alt="Liverpool FC" class="w-12 h-12 object-contain">
+                        </div>
+                        <p
+                            class="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Liverpool FC</p>
+                        <p
+                            class="text-gray-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Liverpool, UK</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">
+                    See All Clubs
+                </button>
+            </div>
+        </div>
+        </section>
+        <section id="academies" class="py-20 bg-black"></section>
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl md:text-5xl font-bold text-center mb-8">Famous Academies</h3>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button id="filter-all"
+                    class="filter-btn bg-primary text-white px-4 py-2 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">All
+                    Sports</button>
+                <button id="filter-football"
+                    class="filter-btn bg-gray-700 text-white px-4 py-2 !rounded-button hover:bg-gray-600 transition-colors duration-200 whitespace-nowrap">Football</button>
+                <button id="filter-basketball"
+                    class="filter-btn bg-gray-700 text-white px-4 py-2 !rounded-button hover:bg-gray-600 transition-colors duration-200 whitespace-nowrap">Basketball</button>
+                <button id="filter-tennis"
+                    class="filter-btn bg-gray-700 text-white px-4 py-2 !rounded-button hover:bg-gray-600 transition-colors duration-200 whitespace-nowrap">Tennis</button>
+                <button id="filter-usa"
+                    class="filter-btn bg-gray-700 text-white px-4 py-2 !rounded-button hover:bg-gray-600 transition-colors duration-200 whitespace-nowrap">USA</button>
+                <button id="filter-europe"
+                    class="filter-btn bg-gray-700 text-white px-4 py-2 !rounded-button hover:bg-gray-600 transition-colors duration-200 whitespace-nowrap">Europe</button>
+            </div>
+            <div id="academies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="football"
+                    data-country="spain">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=la%20masia%20barcelona%20football%20academy%20logo%20design%2C%20white%20background%2C%20professional%20sports%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-001&orientation=squarish"
+                                alt="La Masia" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">La Masia</h4>
+                            <p class="text-gray-400">Football • Barcelona, Spain</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.9 (1,234 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">World-renowned football academy that has produced legends like
+                        Messi, Xavi, and Iniesta.</p>
+                </div>
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="basketball"
+                    data-country="usa">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=IMG%20academy%20logo%20design%2C%20white%20background%2C%20professional%20sports%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-002&orientation=squarish"
+                                alt="IMG Academy" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">IMG Academy</h4>
+                            <p class="text-gray-400">Multi-Sport • Florida, USA</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.7 (892 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Premier multi-sport academy training the next generation of
+                        professional athletes across all disciplines.</p>
+                </div>
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="tennis"
+                    data-country="spain">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=rafa%20nadal%20academy%20logo%20design%2C%20white%20background%2C%20professional%20tennis%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-003&orientation=squarish"
+                                alt="Rafa Nadal Academy" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Rafa Nadal Academy</h4>
+                            <p class="text-gray-400">Tennis • Mallorca, Spain</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.8 (567 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">World-class tennis academy founded by Rafael Nadal, developing
+                        future champions with innovative training methods.</p>
+                </div>
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="football"
+                    data-country="england">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=manchester%20united%20academy%20logo%20design%2C%20white%20background%2C%20professional%20football%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-004&orientation=squarish"
+                                alt="Manchester United Academy" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Manchester United Academy</h4>
+                            <p class="text-gray-400">Football • Manchester, England</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.6 (743 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Historic football academy that has nurtured talents like
+                        Beckham, Scholes, and Rashford.</p>
+                </div>
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="basketball"
+                    data-country="usa">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=oak%20hill%20academy%20logo%20design%2C%20white%20background%2C%20professional%20basketball%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-005&orientation=squarish"
+                                alt="Oak Hill Academy" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Oak Hill Academy</h4>
+                            <p class="text-gray-400">Basketball • Virginia, USA</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-line"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.5 (456 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Elite basketball preparatory school that has produced numerous
+                        NBA stars and college champions.</p>
+                </div>
+                <div class="academy-card card-hover bg-gray-900 rounded-lg p-6" data-sport="football"
+                    data-country="germany">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-white rounded-lg p-2 mr-4">
+                            <img src="https://readdy.ai/api/search-image?query=bayern%20munich%20academy%20logo%20design%2C%20white%20background%2C%20professional%20football%20training%20center%20emblem%2C%20clean%20minimalist%20style%2C%20official%20academy%20branding&width=64&height=64&seq=academy-006&orientation=squarish"
+                                alt="Bayern Munich Academy" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-white">Bayern Munich Academy</h4>
+                            <p class="text-gray-400">Football • Munich, Germany</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                        <span class="text-gray-300 ml-2">4.7 (621 reviews)</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">German excellence in football development, producing
+                        world-class players with precision and discipline.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">
+                    Browse Academies
+                </button>
+            </div>
+        </div>
+        </section>
+        <section id="partners" class="py-20 bg-gray-900"></section>
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-4xl md:text-5xl font-bold text-center mb-16">Our Partners</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12">
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=nike%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-001&orientation=landscape"
+                        alt="Nike"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=adidas%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-002&orientation=landscape"
+                        alt="Adidas"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=puma%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-003&orientation=landscape"
+                        alt="Puma"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=under%20armour%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-004&orientation=landscape"
+                        alt="Under Armour"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=reebok%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-005&orientation=landscape"
+                        alt="Reebok"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=new%20balance%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-006&orientation=landscape"
+                        alt="New Balance"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=spalding%20sports%20equipment%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-007&orientation=landscape"
+                        alt="Spalding"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=wilson%20sports%20equipment%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-008&orientation=landscape"
+                        alt="Wilson"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=gatorade%20sports%20drink%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20nutrition%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-009&orientation=landscape"
+                        alt="Gatorade"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=powerade%20sports%20drink%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20nutrition%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-010&orientation=landscape"
+                        alt="Powerade"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=red%20bull%20energy%20drink%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20sponsorship%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-011&orientation=landscape"
+                        alt="Red Bull"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+                <div
+                    class="partner-logo bg-white rounded-lg p-6 flex items-center justify-center min-h-[100px] transition-all duration-300 hover:scale-105">
+                    <img src="https://readdy.ai/api/search-image?query=asics%20sports%20brand%20logo%20design%2C%20white%20background%2C%20professional%20sports%20company%20emblem%2C%20clean%20minimalist%20style%2C%20official%20brand%20logo&width=120&height=60&seq=partner-012&orientation=landscape"
+                        alt="ASICS"
+                        class="w-full h-auto object-contain filter grayscale hover:filter-none transition-all duration-300">
+                </div>
+            </div>
+            <div class="text-center">
+                <button
+                    class="border border-secondary text-secondary px-8 py-3 !rounded-button hover:bg-secondary hover:text-black transition-all duration-200 whitespace-nowrap">
+                    Become a Partner
+                </button>
+            </div>
+        </div>
+        </section>
+        <section id="download" class="py-20 bg-black">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-4xl md:text-5xl font-bold mb-6">Download the Sport Planet App</h3>
+                        <p class="text-xl text-gray-300 mb-8">Your career starts with a tap. Get instant access to
+                            opportunities, connect with scouts, and showcase your talent on the go.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <button
+                                class="flex items-center justify-center space-x-3 bg-white text-black px-6 py-3 !rounded-button hover:bg-gray-200 transition-colors duration-200 whitespace-nowrap">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-apple-fill ri-lg"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-xs">Download on the</div>
+                                    <div class="text-sm font-semibold">App Store</div>
+                                </div>
+                            </button>
+                            <button
+                                class="flex items-center justify-center space-x-3 bg-white text-black px-6 py-3 !rounded-button hover:bg-gray-200 transition-colors duration-200 whitespace-nowrap">
+                                <div class="w-6 h-6 flex items-center justify-center">
+                                    <i class="ri-google-play-fill ri-lg"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-xs">Get it on</div>
+                                    <div class="text-sm font-semibold">Google Play</div>
+                                </div>
+                            </button>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-[#8BAA42] transition-colors duration-200 whitespace-nowrap">
+                            Get the App
+                        </button>
+                    </div>
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative transform rotate-12">
+                            <div class="w-64 h-96 bg-gray-800 rounded-3xl p-4 shadow-2xl">
+                                <div class="w-full h-full bg-black rounded-2xl overflow-hidden">
+                                    <img src="https://readdy.ai/api/search-image?query=modern%20mobile%20app%20interface%20showing%20sports%20player%20profile%20with%20green%20accent%20colors%2C%20clean%20dark%20UI%20design%2C%20athlete%20statistics%20and%20connection%20features%2C%20professional%20sports%20app%20mockup%20design&width=240&height=400&seq=app-mockup-001&orientation=portrait"
+                                        alt="Sport Planet App" class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="assets/imgs/logo-white.svg" alt="Sport Planet Logo" class="h-8 w-8">
+                        <h4 class="text-xl font-pacifico text-white">Sport Planet</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Connecting sports talent worldwide through innovative technology and
+                        meaningful relationships.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-[#8BAA42] transition-colors duration-200">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-[#8BAA42] transition-colors duration-200">
+                            <i class="ri-twitter-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-[#8BAA42] transition-colors duration-200">
+                            <i class="ri-instagram-fill text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-[#8BAA42] transition-colors duration-200">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Contact</h5>
+                    <div class="space-y-2 text-gray-400">
+                        <p>hello@sportplanet.com</p>
+                        <p>support@sportplanet.com</p>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Quick Links</h5>
+                    <div class="space-y-2">
+                        <a href="#how-it-works"
+                            class="block text-gray-400 hover:text-primary transition-colors duration-200">How It
+                            Works</a>
+                        <a href="#sports"
+                            class="block text-gray-400 hover:text-primary transition-colors duration-200">Sports</a>
+                        <a href="#clubs"
+                            class="block text-gray-400 hover:text-primary transition-colors duration-200">Clubs</a>
+                        <a href="#academies"
+                            class="block text-gray-400 hover:text-primary transition-colors duration-200">Academies</a>
+                        <a href="#download"
+                            class="block text-gray-400 hover:text-primary transition-colors duration-200">Download
+                            App</a>
+                    </div>
+                </div>
+                <div></div>
+                <h5 class="text-lg font-semibold text-white mb-4">Legal</h5>
+                <div class="space-y-2">
+                    <a href="#" class="block text-gray-400 hover:text-primary transition-colors duration-200">Privacy
+                        Policy</a>
+                    <a href="#" class="block text-gray-400 hover:text-primary transition-colors duration-200">Terms of
+                        Service</a>
+                    <a href="#" class="block text-gray-400 hover:text-primary transition-colors duration-200">Cookie
+                        Policy</a>
+                </div>
+            </div>
+            <div>
+                <h5 class="text-lg font-semibold text-white mb-4">Language</h5>
+                <select class="bg-gray-800 text-white border border-gray-700 rounded px-3 py-2 pr-8">
+                    <option>English</option>
+                    <option>Español</option>
+                    <option>Français</option>
+                    <option>Deutsch</option>
+                </select>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Sport Planet. All rights reserved.</p>
+        </div>
+        </div>
+    </footer>
+    <script id="header-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-blur');
+                } else {
+                    header.classList.remove('header-blur');
+                }
+            });
+        });
+    </script>
+    <script id="mobile-menu">
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            mobileMenuBtn.addEventListener('click', function () {
+                const menu = nav.querySelector('.hidden.md\\:flex');
+                if (menu) {
+                    menu.classList.toggle('hidden');
+                    menu.classList.toggle('flex');
+                    menu.classList.toggle('flex-col');
+                    menu.classList.toggle('absolute');
+                    menu.classList.toggle('top-full');
+                    menu.classList.toggle('left-0');
+                    menu.classList.toggle('right-0');
+                    menu.classList.toggle('bg-gray-900');
+                    menu.classList.toggle('p-4');
+                    menu.classList.toggle('space-x-0');
+                    menu.classList.toggle('space-y-4');
+                }
+            });
+        });
+    </script>
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = document.getElementById('header').offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script id="lazy-loading">
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('img[src*="readdy.ai"]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.opacity = '0';
+                        img.style.transition = 'opacity 0.3s ease';
+                        img.onload = function () {
+                            img.style.opacity = '1';
+                        };
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            images.forEach(img => {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+    <script id="academy-filters">
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const academyCards = document.querySelectorAll('.academy-card');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary');
+                        btn.classList.add('bg-gray-700');
+                    });
+                    this.classList.remove('bg-gray-700');
+                    this.classList.add('bg-primary');
+                    const filterId = this.id.replace('filter-', '');
+                    academyCards.forEach(card => {
+                        if (filterId === 'all') {
+                            card.style.display = 'block';
+                        } else if (filterId === 'usa') {
+                            if (card.dataset.country === 'usa') {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        } else if (filterId === 'europe') {
+                            if (card.dataset.country === 'spain' || card.dataset.country === 'england' || card.dataset.country === 'germany') {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        } else {
+                            if (card.dataset.sport === filterId) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script id="image-fallback-handler">
+        // Handle image loading errors and add fallback
+        document.addEventListener('DOMContentLoaded', function () {
+            const allImages = document.querySelectorAll('img');
+
+            allImages.forEach(img => {
+                // Add error handler
+                img.addEventListener('error', function () {
+                    // Create fallback based on context
+                    const parent = this.parentElement;
+
+                    if (parent.classList.contains('partner-logo') || parent.classList.contains('bg-white')) {
+                        // For partner/academy logos, show initials
+                        const alt = this.alt || 'Logo';
+                        const initials = alt.split(' ').map(word => word[0]).join('').substring(0, 2).toUpperCase();
+
+                        const fallback = document.createElement('div');
+                        fallback.style.cssText = 'width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; color: #1a2e2e; background: linear-gradient(135deg, #A0C24F 0%, #CFE29E 100%);';
+                        fallback.textContent = initials;
+
+                        this.style.display = 'none';
+                        parent.appendChild(fallback);
+                    } else if (parent.classList.contains('overflow-hidden') && parent.classList.contains('rounded-full')) {
+                        // For profile images, show icon
+                        const fallback = document.createElement('div');
+                        fallback.style.cssText = 'width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, #A0C24F 0%, #CFE29E 100%);';
+                        fallback.innerHTML = '<i class="ri-user-line text-white"></i>';
+
+                        this.style.display = 'none';
+                        parent.appendChild(fallback);
+                    }
+                });
+
+                // Force visibility
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+            });
+        });
+    </script>
+</body>
+
+</html>
