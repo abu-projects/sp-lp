@@ -247,10 +247,13 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) rotate(0deg);
                 opacity: 0.4;
             }
+
             50% {
                 transform: translateY(-20px) rotate(180deg);
                 opacity: 0.7;
@@ -258,10 +261,48 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .particle, .card-hover, .partner-logo {
+
+            .particle,
+            .card-hover,
+            .partner-logo {
                 animation: none;
                 transition: none;
             }
+        }
+
+        /* Custom Dropdown Styles */
+        .custom-dropdown .dropdown-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .custom-dropdown .dropdown-trigger.open i:last-child {
+            transform: rotate(180deg);
+        }
+
+        .custom-dropdown .dropdown-trigger:hover {
+            border-color: rgba(14, 165, 233, 0.4);
+        }
+
+        .custom-dropdown .dropdown-item {
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+        }
+
+        .custom-dropdown .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .custom-dropdown .dropdown-item:hover i {
+            color: #0EA5E9;
+        }
+
+        .custom-dropdown .dropdown-item.selected {
+            background: rgba(14, 165, 233, 0.1);
+        }
+
+        .custom-dropdown .dropdown-item.selected span {
+            color: #0EA5E9;
         }
     </style>
 </head>
@@ -275,18 +316,31 @@
                     <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8">
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#home" class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
-                    <a href="#how-it-works" class="text-text-secondary hover:text-primary transition-colors duration-200">How It Works</a>
-                    <a href="#sports" class="text-text-secondary hover:text-primary transition-colors duration-200">Sports</a>
-                    <a href="#success-stories" class="text-text-secondary hover:text-primary transition-colors duration-200">Success Stories</a>
-                    <a href="#clubs" class="text-text-secondary hover:text-primary transition-colors duration-200">Clubs</a>
-                    <a href="#academies" class="text-text-secondary hover:text-primary transition-colors duration-200">Academies</a>
-                    <a href="#partners" class="text-text-secondary hover:text-primary transition-colors duration-200">Partners</a>
+                    <a href="#home"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="#how-it-works"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">How It Works</a>
+                    <a href="#sports"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Sports</a>
+                    <a href="#success-stories"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Success
+                        Stories</a>
+                    <a href="#clubs"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Clubs</a>
+                    <a href="#academies"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Academies</a>
+                    <a href="#partners"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Partners</a>
                 </div>
                 <div class="flex items-center space-x-3">
-                    <a href="#login" class="text-text-secondary hover:text-primary transition-colors duration-200 hidden sm:block">Login</a>
-                    <button class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium">Sign Up</button>
-                    <button class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium">Download App</button>
+                    <a href="#login"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200 hidden sm:block">Login</a>
+                    <button
+                        class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium">Sign
+                        Up</button>
+                    <button
+                        class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium">Download
+                        App</button>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-text-secondary">
                     <i class="ri-menu-line ri-lg"></i>
@@ -323,10 +377,12 @@
                     Join the platform that redefines sports talent discovery across all disciplines worldwide.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <button class="bg-primary text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-primary-hover transition-all duration-200 glow-effect whitespace-nowrap">
+                    <button
+                        class="bg-primary text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-primary-hover transition-all duration-200 glow-effect whitespace-nowrap">
                         Sign Up Now
                     </button>
-                    <button class="action-btn text-text-secondary px-8 py-4 text-lg font-semibold rounded-xl whitespace-nowrap">
+                    <button
+                        class="action-btn text-text-secondary px-8 py-4 text-lg font-semibold rounded-xl whitespace-nowrap">
                         Download App
                     </button>
                 </div>
@@ -336,7 +392,8 @@
         <!-- How It Works Section -->
         <section id="how-it-works" class="py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">What We Do & How It Works</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">What We Do & How It Works
+                </h3>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="section-card rounded-2xl p-8">
                         <p class="text-xl text-text-secondary leading-relaxed mb-6">
@@ -350,30 +407,41 @@
                     </div>
                     <div class="space-y-6">
                         <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">1</div>
+                            <div
+                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                                1</div>
                             <div>
-                                <h4 class="text-xl font-semibold mb-2 text-text-primary">Sign Up & Build Your Profile</h4>
-                                <p class="text-text-muted">Create your comprehensive athlete profile with stats, videos, and achievements.</p>
+                                <h4 class="text-xl font-semibold mb-2 text-text-primary">Sign Up & Build Your Profile
+                                </h4>
+                                <p class="text-text-muted">Create your comprehensive athlete profile with stats, videos,
+                                    and achievements.</p>
                             </div>
                         </div>
                         <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">2</div>
+                            <div
+                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                                2</div>
                             <div>
                                 <h4 class="text-xl font-semibold mb-2 text-text-primary">Choose Your Sport</h4>
-                                <p class="text-text-muted">Select from dozens of sports and connect with the right community.</p>
+                                <p class="text-text-muted">Select from dozens of sports and connect with the right
+                                    community.</p>
                             </div>
                         </div>
                         <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">3</div>
+                            <div
+                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                                3</div>
                             <div>
                                 <h4 class="text-xl font-semibold mb-2 text-text-primary">Get Discovered & Connect</h4>
-                                <p class="text-text-muted">Let scouts, agents, and clubs find you and start meaningful conversations.</p>
+                                <p class="text-text-muted">Let scouts, agents, and clubs find you and start meaningful
+                                    conversations.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <button class="action-btn text-primary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-all duration-200">
+                    <button
+                        class="action-btn text-primary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-all duration-200">
                         Explore Features
                     </button>
                 </div>
@@ -383,67 +451,78 @@
         <!-- Sports Section -->
         <section id="sports" class="py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Explore All Sports in Sportex</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Explore All Sports in
+                    Sportex</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-football-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Football</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 45,678</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 45,678</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-ping-pong-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Tennis</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 23,456</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 23,456</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-sword-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Combat Sports</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 18,234</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 18,234</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-water-percent-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Swimming</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 15,789</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 15,789</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-hockey-puck-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Hockey</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 12,567</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 12,567</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-basketball-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Basketball</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 34,567</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 34,567</p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-volleyball-line ri-2x text-white"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Volleyball</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">Registered players: 19,876</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            Registered players: 19,876</p>
                     </div>
-                    <div class="card-hover rounded-xl p-6 text-center group cursor-pointer" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0.05) 100%);">
+                    <div class="card-hover rounded-xl p-6 text-center group cursor-pointer"
+                        style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0.05) 100%);">
                         <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-secondary">
                             <i class="ri-add-line ri-2x text-dark-bg"></i>
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">And More...</h4>
-                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">50+ sports available</p>
+                        <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">50+
+                            sports available</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                    <button
+                        class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
                         Browse Players by Sport
                     </button>
                 </div>
@@ -461,7 +540,8 @@
                                 alt="Marcus Rodriguez" class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Marcus Rodriguez</h4>
-                        <p class="text-text-muted italic">"Sportex connected me with my current club. The platform changed my career trajectory completely."</p>
+                        <p class="text-text-muted italic">"Sportex connected me with my current club. The platform
+                            changed my career trajectory completely."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
                         <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
@@ -469,7 +549,8 @@
                                 alt="Sarah Chen" class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Sarah Chen</h4>
-                        <p class="text-text-muted italic">"From amateur tournaments to professional contracts - Sportex made it possible in just 8 months."</p>
+                        <p class="text-text-muted italic">"From amateur tournaments to professional contracts - Sportex
+                            made it possible in just 8 months."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
                         <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
@@ -477,12 +558,14 @@
                                 alt="James Thompson" class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">James Thompson</h4>
-                        <p class="text-text-muted italic">"The scouts found me through my profile. Now I'm playing professionally in Europe. Dreams do come true."</p>
+                        <p class="text-text-muted italic">"The scouts found me through my profile. Now I'm playing
+                            professionally in Europe. Dreams do come true."</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <button class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
-                        Submit Your Story
+                    <button
+                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
+                        Start Your Story
                     </button>
                 </div>
             </div>
@@ -493,129 +576,202 @@
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Famous Clubs</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=real%20madrid%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-001&orientation=squarish"
                                     alt="Real Madrid" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Real Madrid</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Madrid, Spain</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Real Madrid</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Madrid, Spain</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=manchester%20united%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-002&orientation=squarish"
                                     alt="Manchester United" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Manchester United</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Manchester, UK</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Manchester United</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Manchester, UK</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=los%20angeles%20Lakers%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-003&orientation=squarish"
                                     alt="LA Lakers" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">LA Lakers</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Los Angeles, USA</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                LA Lakers</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Los Angeles, USA</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=bayern%20munich%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-004&orientation=squarish"
                                     alt="Bayern Munich" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Bayern Munich</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Munich, Germany</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Bayern Munich</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Munich, Germany</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=golden%20state%20warriors%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-005&orientation=squarish"
                                     alt="Golden State Warriors" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Golden State Warriors</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">San Francisco, USA</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Golden State Warriors</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                San Francisco, USA</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=juventus%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-006&orientation=squarish"
                                     alt="Juventus" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Juventus FC</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Turin, Italy</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Juventus FC</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Turin, Italy</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=chelsea%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-007&orientation=squarish"
                                     alt="Chelsea FC" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Chelsea FC</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">London, UK</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Chelsea FC</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                London, UK</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=new%20york%20yankees%20baseball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-008&orientation=squarish"
                                     alt="New York Yankees" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">New York Yankees</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">New York, USA</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                New York Yankees</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                New York, USA</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=barcelona%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-009&orientation=squarish"
                                     alt="FC Barcelona" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">FC Barcelona</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Barcelona, Spain</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                FC Barcelona</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Barcelona, Spain</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=boston%20celtics%20basketball%20team%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-010&orientation=squarish"
                                     alt="Boston Celtics" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Boston Celtics</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Boston, USA</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Boston Celtics</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Boston, USA</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=paris%20saint%20germain%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-011&orientation=squarish"
                                     alt="Paris Saint-Germain" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Paris Saint-Germain</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Paris, France</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Paris Saint-Germain</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Paris, France</p>
                         </div>
                     </div>
-                    <div class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
+                    <div
+                        class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
+                            <div
+                                class="w-16 h-16 mx-auto mb-3 bg-dark-surface rounded-full flex items-center justify-center border border-primary/20">
                                 <img src="https://readdy.ai/api/search-image?query=liverpool%20football%20club%20logo%20design%2C%20white%20background%2C%20professional%20sports%20team%20emblem%2C%20clean%20minimalist%20style%2C%20official%20club%20branding&width=64&height=64&seq=club-012&orientation=squarish"
                                     alt="Liverpool FC" class="w-12 h-12 object-contain">
                             </div>
-                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">Liverpool FC</p>
-                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">Liverpool, UK</p>
+                            <p
+                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
+                                Liverpool FC</p>
+                            <p
+                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Liverpool, UK</p>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                    <button
+                        class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
                         See All Clubs
                     </button>
                 </div>
@@ -627,12 +783,19 @@
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-8 text-text-primary">Famous Academies</h3>
                 <div class="flex flex-wrap justify-center gap-3 mb-12">
-                    <button id="filter-all" class="filter-btn active text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">All Sports</button>
-                    <button id="filter-football" class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Football</button>
-                    <button id="filter-basketball" class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Basketball</button>
-                    <button id="filter-tennis" class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Tennis</button>
-                    <button id="filter-usa" class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">USA</button>
-                    <button id="filter-europe" class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Europe</button>
+                    <button id="filter-all"
+                        class="filter-btn active text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">All
+                        Sports</button>
+                    <button id="filter-football"
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Football</button>
+                    <button id="filter-basketball"
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Basketball</button>
+                    <button id="filter-tennis"
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Tennis</button>
+                    <button id="filter-usa"
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">USA</button>
+                    <button id="filter-europe"
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Europe</button>
                 </div>
                 <div id="academies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="spain">
@@ -656,7 +819,8 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.9 (1,234 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">World-renowned football academy that has produced legends like Messi, Xavi, and Iniesta.</p>
+                        <p class="text-text-muted text-sm">World-renowned football academy that has produced legends
+                            like Messi, Xavi, and Iniesta.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="basketball" data-country="usa">
                         <div class="flex items-center mb-4">
@@ -679,7 +843,8 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.7 (892 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Premier multi-sport academy training the next generation of professional athletes across all disciplines.</p>
+                        <p class="text-text-muted text-sm">Premier multi-sport academy training the next generation of
+                            professional athletes across all disciplines.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="tennis" data-country="spain">
                         <div class="flex items-center mb-4">
@@ -702,7 +867,8 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.8 (567 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">World-class tennis academy founded by Rafael Nadal, developing future champions with innovative training methods.</p>
+                        <p class="text-text-muted text-sm">World-class tennis academy founded by Rafael Nadal,
+                            developing future champions with innovative training methods.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="england">
                         <div class="flex items-center mb-4">
@@ -725,7 +891,8 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.6 (743 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Historic football academy that has nurtured talents like Beckham, Scholes, and Rashford.</p>
+                        <p class="text-text-muted text-sm">Historic football academy that has nurtured talents like
+                            Beckham, Scholes, and Rashford.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="basketball" data-country="usa">
                         <div class="flex items-center mb-4">
@@ -748,7 +915,8 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.5 (456 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Elite basketball preparatory school that has produced numerous NBA stars and college champions.</p>
+                        <p class="text-text-muted text-sm">Elite basketball preparatory school that has produced
+                            numerous NBA stars and college champions.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="germany">
                         <div class="flex items-center mb-4">
@@ -771,11 +939,13 @@
                             </div>
                             <span class="text-text-secondary ml-2 text-sm">4.7 (621 reviews)</span>
                         </div>
-                        <p class="text-text-muted text-sm">German excellence in football development, producing world-class players with precision and discipline.</p>
+                        <p class="text-text-muted text-sm">German excellence in football development, producing
+                            world-class players with precision and discipline.</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
-                    <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                    <button
+                        class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
                         Browse Academies
                     </button>
                 </div>
@@ -837,7 +1007,8 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
+                    <button
+                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
                         Become a Partner
                     </button>
                 </div>
@@ -849,17 +1020,21 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="section-card rounded-2xl p-8">
-                        <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary">Download the Sport Planet App</h3>
-                        <p class="text-xl text-text-secondary mb-8">Your career starts with a tap. Get instant access to opportunities, connect with scouts, and showcase your talent on the go.</p>
+                        <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary">Download the Sportex App
+                        </h3>
+                        <p class="text-xl text-text-secondary mb-8">Your career starts with a tap. Get instant access to
+                            opportunities, connect with scouts, and showcase your talent on the go.</p>
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <button class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
+                            <button
+                                class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
                                 <i class="ri-apple-fill ri-lg text-text-primary"></i>
                                 <div class="text-left">
                                     <div class="text-xs text-text-muted">Download on the</div>
                                     <div class="text-sm font-semibold text-text-primary">App Store</div>
                                 </div>
                             </button>
-                            <button class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
+                            <button
+                                class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
                                 <i class="ri-google-play-fill ri-lg text-text-primary"></i>
                                 <div class="text-left">
                                     <div class="text-xs text-text-muted">Get it on</div>
@@ -867,7 +1042,8 @@
                                 </div>
                             </button>
                         </div>
-                        <button class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                        <button
+                            class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
                             Get the App
                         </button>
                     </div>
@@ -875,11 +1051,124 @@
                         <div class="relative transform rotate-6 hover:rotate-0 transition-transform duration-300">
                             <div class="w-64 h-96 bg-dark-tertiary rounded-3xl p-4 shadow-2xl border border-primary/20">
                                 <div class="w-full h-full bg-dark-bg rounded-2xl overflow-hidden">
-                                    <img src="https://readdy.ai/api/search-image?query=modern%20mobile%20app%20interface%20showing%20sports%20player%20profile%20with%20green%20accent%20colors%2C%20clean%20dark%20UI%20design%2C%20athlete%20statistics%20and%20connection%20features%2C%20professional%20sports%20app%20mockup%20design&width=240&height=400&seq=app-mockup-001&orientation=portrait"
-                                        alt="Sport Planet App" class="w-full h-full object-cover object-top">
+                                    <img src="assets/imgs/screenshots/iPhone-14-Plus-localhost (1).png"
+                                        alt="Sportex App" class="w-full h-full object-cover object-top">
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Screenshots Section -->
+        <section id="app-screenshots" class="py-20 bg-dark-secondary relative overflow-hidden">
+            <!-- Background elements -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary">
+                        Experience <span class="text-primary">Sportex</span> Everywhere
+                    </h3>
+                    <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                        Seamlessly connected across all your devices. From in-depth analysis on desktop to quick
+                        connections on mobile.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[800px]">
+                    <!-- Main Desktop View (Large) -->
+                    <div
+                        class="md:col-span-2 md:row-span-2 group relative rounded-3xl overflow-hidden border border-white/10 bg-dark-tertiary">
+                        <div class="absolute inset-0 bg-gradient-to-br from-dark-surface to-dark-bg z-0"></div>
+                        <div class="relative z-10 p-8 h-full flex flex-col">
+                            <div class="flex items-center justify-between mb-6">
+                                <div>
+                                    <h4 class="text-2xl font-bold text-white mb-2">Command Center</h4>
+                                    <p class="text-text-muted">Full control over your sports career.</p>
+                                </div>
+                                <div
+                                    class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                    <i class="ri-macbook-line text-2xl"></i>
+                                </div>
+                            </div>
+                            <div
+                                class="flex-1 relative mt-4 rounded-t-xl overflow-hidden shadow-2xl border-t border-l border-r border-white/10 bg-dark-bg transform transition-transform duration-500 group-hover:scale-[1.02] group-hover:-translate-y-2 origin-bottom">
+                                <img src="assets/imgs/screenshots/Macbook-Air-localhost.png" alt="Desktop Dashboard"
+                                    class="w-full h-auto object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile View (Tall) -->
+                    <div
+                        class="md:col-span-1 md:row-span-2 group relative rounded-3xl overflow-hidden border border-white/10 bg-dark-tertiary">
+                        <div class="absolute inset-0 bg-gradient-to-b from-dark-surface to-dark-bg z-0"></div>
+                        <div class="relative z-10 p-8 h-full flex flex-col">
+                            <div class="mb-6">
+                                <h4 class="text-2xl font-bold text-white mb-2">On The Go</h4>
+                                <p class="text-text-muted">Connect anytime, anywhere.</p>
+                            </div>
+                            <div class="flex-1 flex justify-center items-end">
+                                <div
+                                    class="relative w-[280px] rounded-t-[3rem] overflow-hidden shadow-2xl border-t border-x border-white/10 bg-dark-bg transform transition-transform duration-500 group-hover:translate-y-0 translate-y-4">
+                                    <img src="assets/imgs/screenshots/Samsung-Galaxy-S20-localhost.png" alt="Mobile App"
+                                        class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Grid (Tablet & Features) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <!-- Tablet View -->
+                    <div
+                        class="md:col-span-2 group relative rounded-3xl overflow-hidden border border-white/10 bg-dark-tertiary h-[300px]">
+                        <div class="absolute inset-0 bg-gradient-to-r from-dark-surface to-dark-bg z-0"></div>
+                        <div class="relative z-10 p-8 h-full flex items-center gap-8">
+                            <div class="w-1/2">
+                                <h4 class="text-2xl font-bold text-white mb-2">Tablet Optimized</h4>
+                                <p class="text-text-muted mb-6">Perfect for coaches and scouts on the field.</p>
+                                <button
+                                    class="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                                    Learn more <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </div>
+                            <div class="w-1/2 relative h-full">
+                                <div
+                                    class="absolute top-4 left-0 w-full h-full rounded-tl-xl overflow-hidden shadow-2xl border-t border-l border-white/10 bg-dark-bg transform transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2">
+                                    <img src="assets/imgs/screenshots/iPad-PRO-11-localhost.png" alt="Tablet View"
+                                        class="w-full h-full object-cover object-top">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Highlight -->
+                    <div
+                        class="md:col-span-1 group relative rounded-3xl overflow-hidden border border-white/10 bg-primary h-[300px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark z-0"></div>
+                        <div class="relative z-10 p-8 h-full flex flex-col justify-between text-white">
+                            <div>
+                                <div
+                                    class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center mb-4 backdrop-blur-sm">
+                                    <i class="ri-flashlight-fill text-2xl"></i>
+                                </div>
+                                <h4 class="text-2xl font-bold mb-2">Fast & Fluid</h4>
+                                <p class="text-white/80">Built with the latest tech for instant interactions.</p>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm font-medium opacity-80">
+                                <span>Try it now</span> <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </div>
+                        <!-- Decorative circles -->
+                        <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl"></div>
+                        <div class="absolute top-12 right-12 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
                     </div>
                 </div>
             </div>
@@ -892,21 +1181,25 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                 <div>
                     <div class="flex items-center gap-2 mb-4">
-                        <img src="assets/imgs/logo-white.svg" alt="Sport Planet Logo" class="h-8 w-8">
-                        <h4 class="text-xl font-pacifico text-text-primary">Sport Planet</h4>
+                        <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 ">
                     </div>
-                    <p class="text-text-muted mb-4 text-sm">Connecting sports talent worldwide through innovative technology and meaningful relationships.</p>
+                    <p class="text-text-muted mb-4 text-sm">Connecting sports talent worldwide through innovative
+                        technology and meaningful relationships.</p>
                     <div class="flex space-x-3">
-                        <a href="#" class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                        <a href="#"
+                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
                             <i class="ri-facebook-fill text-text-secondary"></i>
                         </a>
-                        <a href="#" class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                        <a href="#"
+                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
                             <i class="ri-twitter-x-line text-text-secondary"></i>
                         </a>
-                        <a href="#" class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                        <a href="#"
+                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
                             <i class="ri-instagram-line text-text-secondary"></i>
                         </a>
-                        <a href="#" class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                        <a href="#"
+                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
                             <i class="ri-linkedin-fill text-text-secondary"></i>
                         </a>
                     </div>
@@ -914,37 +1207,87 @@
                 <div>
                     <h5 class="text-lg font-semibold text-text-primary mb-4">Contact</h5>
                     <div class="space-y-2 text-text-muted text-sm">
-                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i> hello@sportplanet.com</p>
-                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i> support@sportplanet.com</p>
-                        <p class="flex items-center gap-2"><i class="ri-phone-line text-primary"></i> +1 (555) 123-4567</p>
+                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i>
+                            hello@sportplanet.com</p>
+                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i>
+                            support@sportplanet.com</p>
+                        <p class="flex items-center gap-2"><i class="ri-phone-line text-primary"></i> +1 (555) 123-4567
+                        </p>
                     </div>
                 </div>
                 <div>
                     <h5 class="text-lg font-semibold text-text-primary mb-4">Quick Links</h5>
                     <div class="space-y-2">
-                        <a href="#how-it-works" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">How It Works</a>
-                        <a href="#sports" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Sports</a>
-                        <a href="#clubs" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Clubs</a>
-                        <a href="#academies" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Academies</a>
-                        <a href="#download" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Download App</a>
+                        <a href="#how-it-works"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">How
+                            It Works</a>
+                        <a href="#sports"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Sports</a>
+                        <a href="#clubs"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Clubs</a>
+                        <a href="#academies"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Academies</a>
+                        <a href="#download"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Download
+                            App</a>
                     </div>
                 </div>
                 <div>
                     <h5 class="text-lg font-semibold text-text-primary mb-4">Legal</h5>
                     <div class="space-y-2">
-                        <a href="#" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Privacy Policy</a>
-                        <a href="#" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Terms of Service</a>
-                        <a href="#" class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Cookie Policy</a>
+                        <a href="#"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Privacy
+                            Policy</a>
+                        <a href="#"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Terms
+                            of Service</a>
+                        <a href="#"
+                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Cookie
+                            Policy</a>
                     </div>
                 </div>
                 <div>
                     <h5 class="text-lg font-semibold text-text-primary mb-4">Language</h5>
-                    <select class="bg-dark-tertiary text-text-secondary border border-primary/20 rounded-lg px-3 py-2 pr-8 text-sm w-full focus:outline-none focus:border-primary">
-                        <option>English</option>
-                        <option>Español</option>
-                        <option>Français</option>
-                        <option>Deutsch</option>
-                    </select>
+                    <!-- Custom Dropdown -->
+                    <div class="custom-dropdown relative" id="language-dropdown">
+                        <button type="button"
+                            class="dropdown-trigger flex items-center justify-between w-full bg-dark-tertiary text-text-secondary border border-primary/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-200">
+                            <div class="flex items-center gap-3">
+                                <i class="ri-global-line text-text-muted text-lg"></i>
+                                <span class="selected-text">English</span>
+                            </div>
+                            <i class="ri-arrow-down-s-line text-lg transition-transform duration-200"></i>
+                        </button>
+                        <div class="dropdown-menu absolute bottom-full left-0 right-0 mb-2 rounded-2xl opacity-0 invisible transform translate-y-2 transition-all duration-200 overflow-hidden z-50"
+                            style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.15); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+                            <div class="py-3">
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
+                                    data-value="English">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="font-medium">English</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
+                                    data-value="Español">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="font-medium">Español</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
+                                    data-value="Français">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="font-medium">Français</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
+                                    data-value="Deutsch">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="font-medium">Deutsch</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-primary/10 pt-8 text-center text-text-muted text-sm">
@@ -1111,6 +1454,57 @@
                 });
                 img.style.opacity = '1';
                 img.style.visibility = 'visible';
+            });
+        });
+
+        // Custom Dropdown
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdown = document.getElementById('language-dropdown');
+            if (!dropdown) return;
+
+            const trigger = dropdown.querySelector('.dropdown-trigger');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const items = dropdown.querySelectorAll('.dropdown-item');
+            const selectedText = dropdown.querySelector('.selected-text');
+
+            // Set initial selected state
+            items[0].classList.add('selected');
+
+            // Toggle dropdown
+            trigger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = menu.classList.contains('show');
+                if (isOpen) {
+                    menu.classList.remove('show');
+                    trigger.classList.remove('open');
+                } else {
+                    menu.classList.add('show');
+                    trigger.classList.add('open');
+                }
+            });
+
+            // Select item
+            items.forEach(item => {
+                item.addEventListener('click', function () {
+                    const value = this.dataset.value;
+                    selectedText.textContent = value;
+
+                    // Update selected state
+                    items.forEach(i => i.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    // Close dropdown
+                    menu.classList.remove('show');
+                    trigger.classList.remove('open');
+                });
+            });
+
+            // Close on outside click
+            document.addEventListener('click', function (e) {
+                if (!dropdown.contains(e.target)) {
+                    menu.classList.remove('show');
+                    trigger.classList.remove('open');
+                }
             });
         });
     </script>
