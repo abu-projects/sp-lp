@@ -4,13 +4,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -32,7 +32,7 @@ navLinks.forEach(link => {
         e.preventDefault();
         const targetId = link.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         if (targetSection) {
             const offsetTop = targetSection.offsetTop - 80;
             window.scrollTo({
@@ -40,11 +40,11 @@ navLinks.forEach(link => {
                 behavior: 'smooth'
             });
         }
-        
+
         // Close mobile menu after click
         if (nav) nav.classList.remove('active');
         if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
-        
+
         // Update active link
         navLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
@@ -56,16 +56,16 @@ const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (window.pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -129,16 +129,16 @@ buttons.forEach(button => {
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
-        
+
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
-        
+
         button.appendChild(ripple);
-        
+
         setTimeout(() => ripple.remove(), 600);
-        
+
         // Log button action
         const buttonText = button.textContent.trim();
         console.log(`Button clicked: ${buttonText}`);
@@ -175,7 +175,7 @@ document.head.appendChild(style);
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.animated-bg');
-    
+
     parallaxElements.forEach(el => {
         const speed = 0.5;
         el.style.transform = `translateY(${scrolled * speed}px)`;
@@ -183,8 +183,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Console welcome message
-console.log('%c🏆 Welcome to Sport Planet! 🏆', 'color: #A0C24F; font-size: 20px; font-weight: bold;');
-console.log('%cDiscover. Connect. Succeed.', 'color: #CFE29E; font-size: 14px;');
+console.log('%c🏆 Welcome to Sportex! 🏆', 'color: #0EA5E9; font-size: 20px; font-weight: bold;');
+console.log('%cDiscover. Connect. Succeed.', 'color: #38BDF8; font-size: 14px;');
 
 // Hero background slider (background-only, no controls)
 (() => {

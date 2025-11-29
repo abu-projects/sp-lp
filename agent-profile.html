@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Profile - Michael Ross | Sportex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0EA5E9',
+                        'primary-hover': '#38BDF8',
+                        secondary: '#7CB342',
+                        'dark-bg': '#0A0E14',
+                        'dark-secondary': '#131920',
+                        'dark-tertiary': '#1A2332',
+                        'dark-surface': '#1E293B',
+                        'text-primary': '#F8FAFC',
+                        'text-secondary': '#CBD5E1',
+                        'text-muted': '#64748B'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0E14;
+            color: #F8FAFC;
+            font-family: 'Poppins', system-ui, sans-serif;
+        }
+        
+        .agent-header-card {
+            background: linear-gradient(180deg, #131920 0%, #1A2332 100%);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        .profile-card {
+            background: #131920;
+            border: 1px solid rgba(14, 165, 233, 0.15);
+        }
+        
+        .info-tag {
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+        }
+        
+        .tab-active {
+            background: #0EA5E9;
+            color: white;
+        }
+        
+        .tab-inactive {
+            background: transparent;
+            color: #CBD5E1;
+        }
+        
+        .tab-inactive:hover {
+            background: rgba(14, 165, 233, 0.1);
+        }
+        
+        .player-card {
+            background: #F8FAFC;
+            transition: all 0.3s ease;
+        }
+        
+        .player-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .action-btn {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn:hover {
+            background: rgba(14, 165, 233, 0.2);
+            border-color: #0EA5E9;
+        }
+        
+        .action-btn-danger:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #EF4444;
+        }
+        
+        .filter-btn {
+            background: #1A2332;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        .filter-btn:hover {
+            background: rgba(14, 165, 233, 0.1);
+        }
+        
+        .view-toggle {
+            background: #1A2332;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+        }
+        
+        .view-toggle-active {
+            background: #0EA5E9;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22C55E;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Agent Header -->
+    <header class="agent-header-card rounded-2xl mx-4 mt-4 p-4 md:p-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <!-- Left: Back button + Agent Info -->
+            <div class="flex items-center gap-4">
+                <button class="action-btn w-10 h-10 rounded-full flex items-center justify-center">
+                    <i class="ri-arrow-left-line text-lg text-text-secondary"></i>
+                </button>
+                
+                <!-- Agent Avatar -->
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary overflow-hidden bg-dark-tertiary flex items-center justify-center">
+                    <img src="assets/imgs/logo-w.png" alt="Agent Logo" class="w-12 h-12 md:w-14 md:h-14 object-contain">
+                </div>
+                
+                <!-- Agent Basic Info -->
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-text-primary">Michael Ross</h1>
+                    <div class="flex flex-wrap items-center gap-2 text-sm text-text-secondary">
+                        <span class="text-primary font-medium">FIFA Licensed Agent</span>
+                        <span class="text-text-muted">•</span>
+                        <span>United Kingdom</span>
+                        <span class="text-text-muted">•</span>
+                        <span>Global Sports Management</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right: Action Buttons -->
+            <div class="flex items-center gap-2">
+                <button class="action-btn w-10 h-10 rounded-full flex items-center justify-center" title="Edit">
+                    <i class="ri-pencil-line text-lg text-text-secondary"></i>
+                </button>
+                <button class="action-btn w-10 h-10 rounded-full flex items-center justify-center" title="Block">
+                    <i class="ri-forbid-line text-lg text-text-secondary"></i>
+                </button>
+                <button class="action-btn action-btn-danger w-10 h-10 rounded-full flex items-center justify-center bg-red-500/20" title="Delete">
+                    <i class="ri-delete-bin-line text-lg text-red-400"></i>
+                </button>
+                <div class="w-px h-8 bg-dark-surface mx-2"></div>
+                <button class="action-btn w-10 h-10 rounded-full flex items-center justify-center" title="Previous">
+                    <i class="ri-arrow-left-s-line text-lg text-text-secondary"></i>
+                </button>
+                <button class="action-btn w-10 h-10 rounded-full flex items-center justify-center" title="Next">
+                    <i class="ri-arrow-right-s-line text-lg text-text-secondary"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-4 py-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column: Agent Details -->
+            <div class="lg:col-span-1">
+                <div class="profile-card rounded-2xl p-6">
+                    <h2 class="text-2xl font-bold text-text-primary mb-2">Michael Ross</h2>
+                    <p class="text-primary font-medium mb-6">FIFA Licensed Agent</p>
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="ri-map-pin-line text-text-muted text-lg"></i>
+                            <span class="text-text-secondary">Dubai, UAE</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-mail-line text-text-muted text-lg"></i>
+                            <span class="text-text-secondary">michaelross@agent.sportex.com</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-phone-line text-text-muted text-lg"></i>
+                            <span class="text-text-secondary">+966 555 987 654</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-calendar-line text-text-muted text-lg"></i>
+                            <span class="text-text-secondary">Experience: <strong class="text-text-primary">15 Years</strong></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="flex flex-wrap gap-3">
+                        <div class="info-tag px-4 py-2 rounded-lg flex items-center gap-2">
+                            <i class="ri-award-line text-primary"></i>
+                            <span class="text-text-secondary text-sm">FIFA</span>
+                        </div>
+                        <div class="info-tag px-4 py-2 rounded-lg flex items-center gap-2">
+                            <i class="ri-briefcase-line text-primary"></i>
+                            <span class="text-text-secondary text-sm">15 Years Exp</span>
+                        </div>
+                        <div class="info-tag px-4 py-2 rounded-lg flex items-center gap-2">
+                            <i class="ri-translate-2 text-primary"></i>
+                            <span class="text-text-secondary text-sm">English, Spanish, French</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Players Section -->
+            <div class="lg:col-span-2">
+                <!-- Tabs -->
+                <div class="flex flex-wrap items-center gap-2 mb-6">
+                    <button class="tab-active px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-all">
+                        <i class="ri-group-line"></i>
+                        Active Players
+                    </button>
+                    <button class="tab-inactive px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-all">
+                        <i class="ri-hourglass-line"></i>
+                        Pending Players
+                    </button>
+                    <button class="tab-inactive px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-all">
+                        <i class="ri-list-check"></i>
+                        My List
+                    </button>
+                    <button class="tab-inactive px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium transition-all">
+                        <i class="ri-user-forbid-line"></i>
+                        Blocked Players
+                    </button>
+                </div>
+                
+                <!-- Filters Row -->
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                    <p class="text-text-secondary text-sm">Players Found</p>
+                    <div class="flex items-center gap-3">
+                        <button class="filter-btn px-4 py-2 rounded-lg flex items-center gap-2 text-sm text-text-secondary">
+                            <i class="ri-filter-3-line"></i>
+                            Filters
+                        </button>
+                        <div class="view-toggle flex rounded-lg overflow-hidden">
+                            <button class="view-toggle-active w-10 h-10 flex items-center justify-center">
+                                <i class="ri-grid-fill text-white"></i>
+                            </button>
+                            <button class="w-10 h-10 flex items-center justify-center text-text-muted hover:text-text-secondary">
+                                <i class="ri-list-check"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Players Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                    <!-- Player Card 1 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400&h=300&fit=crop" 
+                                 alt="Ahmed Al-Rashid" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Ahmed Al-Rashid</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Striker (Forward)</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">124</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Card 2 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=400&h=300&fit=crop" 
+                                 alt="Mohammed Hassan" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Mohammed Hassan</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Center Back (Defender)</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">98</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Card 3 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=400&h=300&fit=crop" 
+                                 alt="Khalid Al-Otaibi" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Khalid Al-Otaibi</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Right Winger (Forward)</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">76</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Card 4 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop" 
+                                 alt="Omar Saleh" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Omar Saleh</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Goalkeeper</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">89</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Card 5 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=400&h=300&fit=crop" 
+                                 alt="Yusuf Ibrahim" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Yusuf Ibrahim</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Midfielder</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">112</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Card 6 -->
+                    <div class="player-card rounded-xl overflow-hidden">
+                        <div class="h-48 bg-gray-200 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=400&h=300&fit=crop" 
+                                 alt="Faisal Ahmed" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 bg-dark-secondary">
+                            <h3 class="text-lg font-semibold text-text-primary mb-1">Faisal Ahmed</h3>
+                            <div class="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                <span class="status-dot"></span>
+                                <span>Left Back (Defender)</span>
+                                <span class="text-text-muted">•</span>
+                                <span>Football</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2 text-text-muted">
+                                    <i class="ri-heart-line"></i>
+                                    <span class="text-sm">67</span>
+                                </div>
+                                <button class="flex items-center gap-2 text-text-secondary text-sm hover:text-primary transition-colors">
+                                    <i class="ri-add-circle-line"></i>
+                                    Add to list
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex items-center justify-center gap-2 mt-8">
+                    <button class="action-btn w-10 h-10 rounded-lg flex items-center justify-center">
+                        <i class="ri-arrow-left-s-line text-text-secondary"></i>
+                    </button>
+                    <button class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center text-sm font-medium">1</button>
+                    <button class="action-btn w-10 h-10 rounded-lg flex items-center justify-center text-text-secondary text-sm">2</button>
+                    <button class="action-btn w-10 h-10 rounded-lg flex items-center justify-center text-text-secondary text-sm">3</button>
+                    <span class="text-text-muted px-2">...</span>
+                    <button class="action-btn w-10 h-10 rounded-lg flex items-center justify-center text-text-secondary text-sm">12</button>
+                    <button class="action-btn w-10 h-10 rounded-lg flex items-center justify-center">
+                        <i class="ri-arrow-right-s-line text-text-secondary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-6 border-t border-dark-surface">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-text-muted text-sm">© 2025 SportEX. All Rights Reserved</p>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-global-line text-lg"></i>
+                </a>
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-phone-line text-lg"></i>
+                </a>
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-facebook-fill text-lg"></i>
+                </a>
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-twitter-x-line text-lg"></i>
+                </a>
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-instagram-line text-lg"></i>
+                </a>
+                <a href="#" class="text-text-muted hover:text-primary transition-colors">
+                    <i class="ri-linkedin-fill text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('[class*="tab-"]').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('[class*="tab-"]').forEach(t => {
+                    t.classList.remove('tab-active');
+                    t.classList.add('tab-inactive');
+                });
+                this.classList.remove('tab-inactive');
+                this.classList.add('tab-active');
+            });
+        });
+
+        // View toggle functionality
+        document.querySelectorAll('.view-toggle button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-toggle button').forEach(b => {
+                    b.classList.remove('view-toggle-active');
+                });
+                this.classList.add('view-toggle-active');
+            });
+        });
+    </script>
+</body>
+
+</html>

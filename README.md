@@ -1,25 +1,25 @@
-# 🏆 Sport Planet - Landing Page
+# 🏆 Sportex - Landing Page
 
-A modern, fully responsive dark-themed landing page for Sport Planet, the global sports discovery platform that connects players, agents, scouts, coaches, and clubs.
+A modern, fully responsive dark-themed landing page for Sportex, the global sports discovery platform that connects players, agents, scouts, coaches, and clubs.
 
 ## 🎨 Brand Colors
 
 ### Primary Colors
 - **Deep Space Blue** - `#0C2328` - Main background
-- **Planet Green** - `#A0C24F` - Primary accent, buttons, highlights
+- **Electric Blue** - `#0EA5E9` - Primary accent, buttons, highlights
 - **Pure White** - `#FFFFFF` - Primary text
 
 ### Secondary Colors
 - **Slate Blue Gray** - `#20383F` - Secondary backgrounds, header
 - **Card Background** - `#122C31` - Cards, panels
 - **Light Gray** - `#E6EAE9` - Body text
-- **Soft Green Tint** - `#CFE29E` - Hover effects, secondary accent
+- **Sky Blue Tint** - `#38BDF8` - Hover effects, secondary accent
 - **Muted Text** - `#A9B4B2` - Captions, small notes
 
 ## 🚀 Features
 
 - ✅ Fully responsive design (mobile-first)
-- ✅ Dark theme with Sport Planet brand colors
+- ✅ Dark theme with Sportex brand colors
 - ✅ Smooth scroll navigation
 - ✅ Animated hero section
 - ✅ Interactive sport cards with hover effects
@@ -35,7 +35,7 @@ A modern, fully responsive dark-themed landing page for Sport Planet, the global
 ## 📁 File Structure
 
 ```
-sport-planet-landing/
+sportex-landing/
 ├── index.html          # Main HTML structure
 ├── styles.css          # Complete styling with brand colors
 ├── script.js           # Interactive features & animations
@@ -55,7 +55,7 @@ sport-planet-landing/
 ## 🎨 Design Principles
 
 - **High Contrast** - WCAG AA compliant color combinations
-- **Consistency** - Planet Green used for all interactive elements
+- **Consistency** - Electric Blue used for all interactive elements
 - **Visual Hierarchy** - Clear hierarchy with color intensity
 - **Accessibility** - Semantic HTML and proper ARIA labels
 - **Performance** - Optimized CSS and vanilla JavaScript
@@ -82,9 +82,9 @@ Edit the CSS variables in `styles.css`:
 
 ```css
 :root {
-    --dark-base: #0C2328;
-    --primary-accent: #A0C24F;
-    --secondary-accent: #CFE29E;
+    /* Design System Variables */
+    --primary: #0EA5E9;
+    --primary-light: #38BDF8;
     /* ... */
 }
 ```
@@ -118,7 +118,7 @@ The page supports RTL languages (Arabic, Hebrew, etc.). The language switcher au
 
 ## 📝 License
 
-© 2025 Sport Planet. All rights reserved.
+© 2025 Sportex. All rights reserved.
 
 ## 🤝 Contributing
 
@@ -128,4 +128,4 @@ For theme customization or feature requests, please refer to the brand guideline
 
 **Version:** 1.0  
 **Last Updated:** January 2025  
-**Theme:** Sport Planet Dark Mode
+**Theme:** Sportex Dark Mode

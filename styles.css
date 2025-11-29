@@ -6,15 +6,33 @@
 }
 
 :root {
-    --dark-base: #0C2328;
-    --primary-accent: #A0C24F;
-    --secondary-accent: #CFE29E;
-    --text-primary: #FFFFFF;
-    --text-secondary: #E6EAE9;
-    --text-muted: #A9B4B2;
-    --card-bg: #122C31;
-    --secondary-bg: #20383F;
-    --hover-bg: #20383F;
+    /* Design System Variables */
+    --primary: #0EA5E9;
+    --primary-light: #38BDF8;
+    --primary-dark: #0284C7;
+    --primary-hover: rgba(14, 165, 233, 0.1);
+
+    --secondary: #7CB342;
+    --secondary-light: #9CCC65;
+    --secondary-dark: #689F38;
+    --secondary-hover: rgba(124, 179, 66, 0.1);
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #64748B;
+    --bg-primary: #0A0E14;
+    --bg-secondary: #131920;
+    --bg-tertiary: #1A2332;
+    --bg-surface: #1E293B;
+    --hover-bg: #1F2937;
+
+    /* Mappings for existing styles to new system */
+    --dark-base: var(--bg-primary);
+    --primary-accent: var(--primary);
+    /* Mapping Blue as primary accent */
+    --secondary-accent: var(--primary-light);
+    /* Mapping Light Blue as secondary accent */
+    --card-bg: var(--bg-tertiary);
 }
 
 html {
@@ -44,12 +62,12 @@ body {
     background-color: rgba(32, 56, 63, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(160, 194, 79, 0.1);
+    box-shadow: 0 2px 20px rgba(14, 165, 233, 0.1);
     transition: all 0.3s ease;
 }
 
 .header.scrolled {
-    box-shadow: 0 2px 30px rgba(160, 194, 79, 0.2);
+    box-shadow: 0 2px 30px rgba(14, 165, 233, 0.2);
 }
 
 .header-content {
@@ -151,8 +169,8 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #CFE29E;
-    box-shadow: 0 4px 20px rgba(160, 194, 79, 0.4);
+    background-color: #38BDF8;
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
     transform: translateY(-2px);
 }
 
@@ -256,16 +274,25 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(160, 194, 79, 0.15) 0%, transparent 50%),
+    background:
+        radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(207, 226, 158, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(160, 194, 79, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 40% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
     animation: pulse 8s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.05); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
 }
 
 .hero-content {
@@ -282,6 +309,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -361,7 +389,7 @@ section {
 
 .step:hover {
     transform: translateX(10px);
-    box-shadow: 0 4px 20px rgba(160, 194, 79, 0.2);
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.2);
 }
 
 .step-icon {
@@ -405,7 +433,7 @@ section {
 
 .sport-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(160, 194, 79, 0.3);
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.3);
     background-color: var(--hover-bg);
 }
 
@@ -425,7 +453,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(160, 194, 79, 0.95);
+    background-color: rgba(14, 165, 233, 0.95);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,7 +500,7 @@ section {
 
 .story-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(160, 194, 79, 0.2);
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.2);
 }
 
 .story-image {
@@ -537,7 +565,7 @@ section {
     background: linear-gradient(135deg, var(--primary-accent) 0%, var(--dark-base) 100%);
     border-radius: 40px;
     padding: 15px;
-    box-shadow: 0 20px 60px rgba(160, 194, 79, 0.4);
+    box-shadow: 0 20px 60px rgba(14, 165, 233, 0.4);
     transform: rotate(-5deg);
     transition: transform 0.3s ease;
 }
