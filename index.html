@@ -306,6 +306,22 @@
         .custom-dropdown .dropdown-item.selected span {
             color: #0EA5E9;
         }
+
+        .lang-code {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 34px;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: rgba(14, 165, 233, 0.12);
+            color: #E2E8F0;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+        }
     </style>
 </head>
 
@@ -321,7 +337,7 @@
                     <a href="#home"
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
                     <a href="#how-it-works"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">How It Works</a>
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">About </a>
                     <a href="#sports"
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Sports</a>
                     <a href="#success-stories"
@@ -333,6 +349,8 @@
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Academies</a>
                     <a href="#partners"
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Partners</a>
+                    <a href="#contact"
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
                 </div>
                 <div class="flex items-center space-x-3">
                     <a href="#login"
@@ -392,61 +410,362 @@
         </section>
 
         <!-- How It Works Section -->
-        <section id="how-it-works" class="py-20 bg-dark-secondary">
-            <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">What We Do & How It Works
-                </h3>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="section-card rounded-2xl p-8">
-                        <p class="text-xl text-text-secondary leading-relaxed mb-6">
-                            Sportex enables players to showcase their talent and connect with scouts, agents, and
-                            clubs globally across all sports disciplines.
-                        </p>
-                        <p class="text-lg text-text-muted leading-relaxed">
-                            Our platform breaks down geographical barriers and creates opportunities for athletes at
-                            every level to be discovered by the right people at the right time.
-                        </p>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div
-                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
-                                1</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2 text-text-primary">Choose Your Sport</h4>
-                                <p class="text-text-muted">Select from dozens of sports and connect with the right
-                                    community.</p>
-                            </div>
-                        </div>
-                        <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div
-                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
-                                2</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2 text-text-primary">Sign Up & Build Your Profile
-                                </h4>
-                                <p class="text-text-muted">Create your comprehensive athlete profile with stats, videos,
-                                    and achievements.</p>
-                            </div>
-                        </div>
+        <section id="how-it-works" class="py-20 bg-dark-secondary relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -left-16 top-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="absolute right-0 bottom-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-14">
+                    <p class="text-primary font-semibold uppercase tracking-wide mb-3">About Sportex</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-text-primary">What We Do & How It Works</h3>
+                    <p class="text-text-secondary mt-4 max-w-3xl mx-auto">Sportex connects athletes, scouts, agents,
+                        and clubs on one trusted platform so talent can be discovered and opportunities happen faster.
+                    </p>
+                </div>
 
-                        <div class="card-hover rounded-xl p-6 flex items-start space-x-4">
-                            <div
-                                class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
-                                3</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2 text-text-primary">Get Discovered & Connect</h4>
-                                <p class="text-text-muted">Let scouts, agents, and clubs find you and start meaningful
-                                    conversations.</p>
+                <div class="grid lg:grid-cols-2 gap-10 items-center mb-12">
+                    <div
+                        class="section-card rounded-3xl p-8 border border-primary/20 shadow-xl bg-gradient-to-br from-dark-tertiary via-dark-bg to-dark-secondary">
+                        <h4 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">Built for modern sports
+                            talent</h4>
+                        <p class="text-lg text-text-secondary leading-relaxed mb-6">We make it simple for players to
+                            showcase skills, for clubs to scout intelligently, and for agents to manage careers with
+                            clarity.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                    <i class="ri-global-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-text-primary font-semibold">Global reach</p>
+                                    <p class="text-text-muted text-sm">Break down borders and get seen by the right
+                                        people anywhere.</p>
+                                </div>
                             </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                    <i class="ri-shake-hands-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-text-primary font-semibold">Trusted connections</p>
+                                    <p class="text-text-muted text-sm">Verified scouts, agents, and clubs so every
+                                        conversation starts with confidence.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                    <i class="ri-bar-chart-grouped-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-text-primary font-semibold">Insight-first</p>
+                                    <p class="text-text-muted text-sm">Showcase highlights, metrics, and achievements in
+                                        one compelling profile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card rounded-3xl overflow-hidden border border-primary/20 shadow-xl">
+                        <div class="relative aspect-video video-cover cursor-pointer w-full"
+                            data-video-url="https://www.youtube.com/embed/i-fgquO3sb4">
+                            <img src="assets/imgs/screenshots/Macbook-Air-localhost (1).png"
+                                alt="Sportex platform preview" class="w-full h-full object-cover block">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/70"></div>
+                            <div
+                                class="absolute top-4 left-4 bg-dark-bg/80 px-3 py-2 rounded-full border border-white/10 text-sm text-text-primary flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                Watch Sportex in action
+                            </div>
+                            <button type="button"
+                                class="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/10 border border-white/30 backdrop-blur flex items-center justify-center text-white hover:bg-white/20 transition"
+                                data-play-video>
+                                <i class="ri-play-fill text-3xl translate-x-[2px]"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-12">
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card-hover rounded-2xl p-6 border border-primary/20 flex flex-col gap-3 bg-dark-bg/80">
+                        <div
+                            class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                            1</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Choose Your Sport</h4>
+                            <p class="text-text-muted">Select from dozens of sports and connect with the right
+                                community.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover rounded-2xl p-6 border border-primary/20 flex flex-col gap-3 bg-dark-bg/80">
+                        <div
+                            class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                            2</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Sign Up & Build Your Profile</h4>
+                            <p class="text-text-muted">Add stats, highlights, and achievements to stand out.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover rounded-2xl p-6 border border-primary/20 flex flex-col gap-3 bg-dark-bg/80">
+                        <div
+                            class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
+                            3</div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Get Discovered & Connect</h4>
+                            <p class="text-text-muted">Let scouts, agents, and clubs reach out and start meaningful
+                                conversations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Figures Section -->
+        <section id="figures" class="py-16 bg-dark-bg relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-10 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-10 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                    <div>
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-2">Sportex in Numbers</p>
+                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary">The community at a glance</h3>
+                        <p class="text-text-secondary mt-2">Trusted by athletes and professionals worldwide.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-tertiary border border-primary/20 text-text-secondary text-sm">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                            Live metrics
+                        </span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="section-card rounded-2xl p-5 border border-primary/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                <i class="ri-user-3-line"></i>
+                            </div>
+                            <p class="text-text-muted text-sm">Players</p>
+                        </div>
+                        <p class="text-3xl font-bold text-text-primary">120k+</p>
+                        <p class="text-text-secondary text-sm">Profiles active</p>
+                    </div>
+                    <div class="section-card rounded-2xl p-5 border border-primary/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                <i class="ri-run-line"></i>
+                            </div>
+                            <p class="text-text-muted text-sm">Coaches</p>
+                        </div>
+                        <p class="text-3xl font-bold text-text-primary">8.2k</p>
+                        <p class="text-text-secondary text-sm">Training leaders</p>
+                    </div>
+                    <div class="section-card rounded-2xl p-5 border border-primary/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                <i class="ri-shield-user-line"></i>
+                            </div>
+                            <p class="text-text-muted text-sm">Agents</p>
+                        </div>
+                        <p class="text-3xl font-bold text-text-primary">5.4k</p>
+                        <p class="text-text-secondary text-sm">Verified agents</p>
+                    </div>
+                    <div class="section-card rounded-2xl p-5 border border-primary/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                <i class="ri-trophy-line"></i>
+                            </div>
+                            <p class="text-text-muted text-sm">Clubs</p>
+                        </div>
+                        <p class="text-3xl font-bold text-text-primary">2.1k</p>
+                        <p class="text-text-secondary text-sm">Partner clubs</p>
+                    </div>
+                    <div class="section-card rounded-2xl p-5 border border-primary/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
+                                <i class="ri-focus-2-line"></i>
+                            </div>
+                            <p class="text-text-muted text-sm">Scouts</p>
+                        </div>
+                        <p class="text-3xl font-bold text-text-primary">11k</p>
+                        <p class="text-text-secondary text-sm">Active scouts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Players Section -->
+        <section id="players" class="py-20 bg-dark-bg">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
+                    <div>
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-2">Top Talent</p>
+                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary">Featured Players</h3>
+                        <p class="text-text-secondary mt-2">Discover rising athletes and connect with them directly.</p>
+                    </div>
                     <button
-                        class="action-btn text-primary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-all duration-200">
-                        Explore Features
+                        class="action-btn text-primary border border-primary/40 px-5 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors duration-200 whitespace-nowrap">
+                        View All Players
                     </button>
+                </div>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Player 1 -->
+                    <div class="rounded-3xl overflow-hidden bg-dark-tertiary border border-primary/20 shadow-lg">
+                        <div class="h-56 w-full overflow-hidden relative">
+                            <img src="assets/imgs/temp/child-soccer-player-white-background-39144048.webp"
+                                alt="Ahmed Al-Rashid" class="w-full h-full object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Forward</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="text-2xl font-bold text-text-primary">Ahmed Al-Rashid</h4>
+                                <p class="text-text-secondary flex items-center gap-2 mt-1">
+                                    <i class="ri-football-line text-primary"></i>
+                                    Striker • Football
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 text-text-secondary">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-heart-line"></i><span>124</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-2xl font-bold text-primary">$250,000</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 text-text-primary">
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-lg font-semibold">22 yrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-lg font-semibold">188 cm</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-lg font-semibold">82 kg</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-lg font-semibold">Saudi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player 2 -->
+                    <div class="rounded-3xl overflow-hidden bg-dark-tertiary border border-primary/20 shadow-lg">
+                        <div class="h-56 w-full overflow-hidden relative">
+                            <img src="assets/imgs/temp/photo1.jpg" alt="Mohammed Hassan"
+                                class="w-full h-full object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Defender</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="text-2xl font-bold text-text-primary">Mohammed Hassan</h4>
+                                <p class="text-text-secondary flex items-center gap-2 mt-1">
+                                    <i class="ri-shield-line text-primary"></i>
+                                    Center Back • Football
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 text-text-secondary">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-heart-line"></i><span>98</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-2xl font-bold text-primary">$180,000</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 text-text-primary">
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-lg font-semibold">25 yrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-lg font-semibold">205 cm</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-lg font-semibold">95 kg</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-lg font-semibold">Egypt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player 3 -->
+                    <div class="rounded-3xl overflow-hidden bg-dark-tertiary border border-primary/20 shadow-lg">
+                        <div class="h-56 w-full overflow-hidden relative">
+                            <img src="assets/imgs/temp/photo2.jpg" alt="Khalid Al-Otaibi"
+                                class="w-full h-full object-cover">
+                            <span
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Winger</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <h4 class="text-2xl font-bold text-text-primary">Khalid Al-Otaibi</h4>
+                                <p class="text-text-secondary flex items-center gap-2 mt-1">
+                                    <i class="ri-run-line text-primary"></i>
+                                    Right Winger • Football
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 text-text-secondary">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-heart-line"></i><span>76</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
+                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-2xl font-bold text-primary">$320,000</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 text-text-primary">
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-lg font-semibold">20 yrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-lg font-semibold">195 cm</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-lg font-semibold">88 kg</p>
+                                </div>
+                                <div>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-lg font-semibold">Saudi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -543,7 +862,8 @@
                                 class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Ahmed Al-Shamri</h4>
-                        <p class="text-text-muted italic">"Sportex connected me with my current club. The platform changed my career trajectory completely."</p>
+                        <p class="text-text-muted italic">"Sportex connected me with my current club. The platform
+                            changed my career trajectory completely."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
                         <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
@@ -551,7 +871,8 @@
                                 class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Mohammed Al-Otaibi</h4>
-                        <p class="text-text-muted italic">"From amateur tournaments to professional contracts - Sportex made it possible in just 8 months."</p>
+                        <p class="text-text-muted italic">"From amateur tournaments to professional contracts - Sportex
+                            made it possible in just 8 months."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
                         <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
@@ -559,7 +880,8 @@
                                 class="w-full h-full object-cover object-top">
                         </div>
                         <h4 class="text-xl font-semibold mb-2 text-text-primary">Khaled Al-Dosari</h4>
-                        <p class="text-text-muted italic">"The scouts found me through my profile. Now I'm playing professionally in Europe. Dreams do come true."</p>
+                        <p class="text-text-muted italic">"The scouts found me through my profile. Now I'm playing
+                            professionally in Europe. Dreams do come true."</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
@@ -1051,8 +1373,8 @@
                         <div class="relative transform rotate-6 hover:rotate-0 transition-transform duration-300">
                             <div class="w-64 h-96 bg-dark-tertiary rounded-3xl p-4 shadow-2xl border border-primary/20">
                                 <div class="w-full h-full bg-dark-bg rounded-2xl overflow-hidden">
-                                    <img src="assets/imgs/screenshots/iPhone-14-Plus-localhost (1).png"
-                                        alt="Sportex App" class="w-full h-full object-cover object-top">
+                                    <img src="assets/imgs/screenshots/iPhone.png" alt="Sportex App"
+                                        class="w-full h-full object-cover object-top">
                                 </div>
                             </div>
                         </div>
@@ -1114,15 +1436,15 @@
                                 <h4 class="text-2xl font-bold text-white mb-2">On The Go</h4>
                                 <p class="text-text-muted">Connect anytime, anywhere.</p>
                             </div>
-                            <div class="flex-1 flex justify-center items-end gap-4">
+                            <div class="flex flex-col gap-4 mobile-snap ">
                                 <div
-                                    class="relative w-[140px] rounded-t-[2rem] overflow-hidden shadow-2xl border-t border-x border-white/10 bg-dark-bg transform transition-transform duration-500 group-hover:translate-y-0 translate-y-8">
-                                    <img src="assets/imgs/screenshots/Samsung-Galaxy-S20-localhost.png" alt="Mobile App"
+                                    class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-dark-bg">
+                                    <img src="assets/imgs/screenshots/iPhone.png" alt="Mobile App"
                                         class="w-full h-auto object-cover">
                                 </div>
                                 <div
-                                    class="relative w-[140px] rounded-t-[2rem] overflow-hidden shadow-2xl border-t border-x border-white/10 bg-dark-bg transform transition-transform duration-500 group-hover:translate-y-0 translate-y-4">
-                                    <img src="assets/imgs/screenshots/Samsung-Galaxy-S20-localhost.png" alt="Mobile App 2"
+                                    class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-dark-bg">
+                                    <img src="assets/imgs/screenshots/phone.png" alt="Mobile App 2"
                                         class="w-full h-auto object-cover">
                                 </div>
                             </div>
@@ -1150,6 +1472,131 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-dark-bg relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -left-20 top-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="absolute right-0 bottom-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="grid lg:grid-cols-5 gap-8 items-start">
+                    <div
+                        class="lg:col-span-2 bg-gradient-to-b from-dark-tertiary via-[#0b1622] to-dark-bg rounded-3xl p-8 border border-primary/20 shadow-xl">
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Get in Touch</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-4">Have questions
+                            or need assistance?</h3>
+                        <p class="text-text-secondary mb-8">We're here to help. Reach out to us through any of the
+                            channels below and we'll respond quickly.</p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary text-2xl">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                        Email</p>
+                                    <p class="text-lg font-semibold text-text-primary">support@sportex.com</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary text-2xl">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                        Phone</p>
+                                    <p class="text-lg font-semibold text-text-primary">+966 50 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary text-2xl">
+                                    <i class="ri-map-pin-2-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                        Address</p>
+                                    <p class="text-lg font-semibold text-text-primary">Riyadh, Saudi Arabia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 pt-6 border-t border-white/5">
+                            <p class="text-text-muted text-sm mb-3">Follow us</p>
+                            <div class="flex gap-3">
+                                <a href="#"
+                                    class="action-btn w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition">
+                                    <i class="ri-facebook-fill text-text-secondary"></i>
+                                </a>
+                                <a href="#"
+                                    class="action-btn w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition">
+                                    <i class="ri-twitter-x-line text-text-secondary"></i>
+                                </a>
+                                <a href="#"
+                                    class="action-btn w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition">
+                                    <i class="ri-instagram-line text-text-secondary"></i>
+                                </a>
+                                <a href="#"
+                                    class="action-btn w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition">
+                                    <i class="ri-linkedin-fill text-text-secondary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-3 section-card rounded-3xl p-8 border border-primary/20 shadow-xl">
+                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary mb-2">Send Us a Message</h3>
+                        <p class="text-text-secondary mb-8">Share a quick note and we'll get back within one business
+                            day.</p>
+                        <form id="contact-form" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label for="full-name" class="text-sm font-semibold text-text-primary">Full
+                                        Name</label>
+                                    <input id="full-name" name="name" type="text" placeholder="Enter your full name"
+                                        class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="email" class="text-sm font-semibold text-text-primary">Email</label>
+                                    <input id="email" name="email" type="email" placeholder="Enter your email address"
+                                        class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex flex-col gap-2">
+                                    <label for="phone" class="text-sm font-semibold text-text-primary">Mobile
+                                        Number</label>
+                                    <input id="phone" name="phone" type="tel" placeholder="+966 50 123 4567"
+                                        class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="subject" class="text-sm font-semibold text-text-primary">Subject</label>
+                                    <input id="subject" name="subject" type="text" placeholder="How can we help?"
+                                        class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label for="message" class="text-sm font-semibold text-text-primary">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Describe your issue or question..."
+                                    class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors"></textarea>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                                <button type="submit"
+                                    class="w-full sm:flex-1 bg-gradient-to-r from-primary to-primary-hover text-white font-semibold px-6 py-4 rounded-xl flex items-center justify-center gap-2 hover:from-primary-hover hover:to-primary-dark transition-all shadow-lg shadow-primary/20">
+                                    <i class="ri-send-plane-2-line text-lg"></i>
+                                    Send Message
+                                </button>
+                                <p id="contact-status"
+                                    class="hidden text-sm font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg px-3 py-2">
+                                </p>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -1235,7 +1682,10 @@
                             class="dropdown-trigger flex items-center justify-between w-full bg-dark-tertiary text-text-secondary border border-primary/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-200">
                             <div class="flex items-center gap-3">
                                 <i class="ri-global-line text-text-muted text-lg"></i>
-                                <span class="selected-text">English</span>
+                                <div class="selected-text flex items-center gap-2">
+                                    <span class="lang-code selected-code">En</span>
+                                    <span class="selected-name">English</span>
+                                </div>
                             </div>
                             <i class="ri-arrow-down-s-line text-lg transition-transform duration-200"></i>
                         </button>
@@ -1244,27 +1694,48 @@
                             <div class="py-3">
                                 <button
                                     class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="English">
+                                    data-value="English" data-code="En" data-name="English">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <span class="font-medium">English</span>
+                                    <div class="flex items-center gap-3">
+                                        <span class="lang-code">En</span>
+                                        <span class="font-medium">English</span>
+                                    </div>
                                 </button>
                                 <button
                                     class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Español">
+                                    data-value="Español" data-code="Es" data-name="Español">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <span class="font-medium">Español</span>
+                                    <div class="flex items-center gap-3">
+                                        <span class="lang-code">Es</span>
+                                        <span class="font-medium">Español</span>
+                                    </div>
                                 </button>
                                 <button
                                     class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Français">
+                                    data-value="Français" data-code="Fr" data-name="Français">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <span class="font-medium">Français</span>
+                                    <div class="flex items-center gap-3">
+                                        <span class="lang-code">Fr</span>
+                                        <span class="font-medium">Français</span>
+                                    </div>
                                 </button>
                                 <button
                                     class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Deutsch">
+                                    data-value="Deutsch" data-code="De" data-name="Deutsch">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <span class="font-medium">Deutsch</span>
+                                    <div class="flex items-center gap-3">
+                                        <span class="lang-code">De</span>
+                                        <span class="font-medium">Deutsch</span>
+                                    </div>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
+                                    data-value="العربية" data-code="Ar" data-name="العربية">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <div class="flex items-center gap-3">
+                                        <span class="lang-code">Ar</span>
+                                        <span class="font-medium">العربية</span>
+                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -1446,10 +1917,21 @@
             const trigger = dropdown.querySelector('.dropdown-trigger');
             const menu = dropdown.querySelector('.dropdown-menu');
             const items = dropdown.querySelectorAll('.dropdown-item');
-            const selectedText = dropdown.querySelector('.selected-text');
+            const selectedCode = dropdown.querySelector('.selected-code');
+            const selectedName = dropdown.querySelector('.selected-name');
 
-            // Set initial selected state
-            items[0].classList.add('selected');
+            if (!items.length) return;
+
+            const setSelected = (item) => {
+                const code = item.dataset.code || '';
+                const name = item.dataset.name || item.dataset.value || '';
+                if (selectedCode) selectedCode.textContent = code;
+                if (selectedName) selectedName.textContent = name;
+                items.forEach(i => i.classList.remove('selected'));
+                item.classList.add('selected');
+            };
+
+            setSelected(items[0]);
 
             // Toggle dropdown
             trigger.addEventListener('click', function (e) {
@@ -1467,14 +1949,8 @@
             // Select item
             items.forEach(item => {
                 item.addEventListener('click', function () {
-                    const value = this.dataset.value;
-                    selectedText.textContent = value;
+                    setSelected(this);
 
-                    // U
-                    items.forEach(i => i.classList.remove('selected'));
-                    this.classList.add('selected');
-
-                    // Close dropdown
                     menu.classList.remove('show');
                     trigger.classList.remove('open');
                 });
@@ -1486,6 +1962,50 @@
                     menu.classList.remove('show');
                     trigger.classList.remove('open');
                 }
+            });
+        });
+
+        // Contact form (demo handling)
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+            const status = document.getElementById('contact-status');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const name = (formData.get('name') || '').toString().trim() || 'there';
+
+                if (status) {
+                    status.textContent = `Thanks, ${name}! We've received your message.`;
+                    status.classList.remove('hidden');
+                }
+
+                form.reset();
+            });
+        });
+
+        // Video cover -> embed swap with autoplay
+        document.addEventListener('DOMContentLoaded', function () {
+            const covers = document.querySelectorAll('.video-cover');
+            covers.forEach(cover => {
+                const playBtn = cover.querySelector('[data-play-video]');
+                if (!playBtn) return;
+                playBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const videoUrl = cover.dataset.videoUrl;
+                    if (!videoUrl) return;
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `${videoUrl}?autoplay=1`;
+                    iframe.title = 'Sportex Overview';
+                    iframe.frameBorder = '0';
+                    iframe.allow =
+                        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                    iframe.allowFullscreen = true;
+                    iframe.className = 'absolute inset-0 w-full h-full';
+                    cover.innerHTML = '';
+                    cover.appendChild(iframe);
+                });
             });
         });
     </script>
