@@ -328,12 +328,12 @@
 <body class="min-h-screen">
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="header-card mx-4 mt-4 rounded-2xl px-6 py-4">
+        <nav class="header-card mx-4 mt-4 rounded-2xl px-6 py-4 relative z-50">
             <div class="flex items-center justify-between max-w-7xl mx-auto">
-                <div class="flex items-center gap-3">
-                    <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8">
+                <div class="flex items-center gap-3 shrink-0 transition-opacity duration-300">
+                    <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 w-auto shrink-0">
                 </div>
-                <div class="hidden md:flex items-center space-x-6">
+                <div class="hidden lg:flex items-center space-x-6">
                     <a href="#home"
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
                     <a href="#how-it-works"
@@ -352,9 +352,9 @@
                     <a href="#contact"
                         class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
                 </div>
-                <div class="flex items-center space-x-3">
+                <div class="hidden lg:flex items-center space-x-3">
                     <a href="#login"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200 hidden sm:block">Login</a>
+                        class="text-text-secondary hover:text-primary transition-colors duration-200">Login</a>
                     <button
                         class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium">Sign
                         Up</button>
@@ -362,11 +362,47 @@
                         class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium">Download
                         App</button>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-text-secondary">
+                <button id="mobile-menu-btn" class="lg:hidden text-text-secondary z-50 relative">
                     <i class="ri-menu-line ri-lg"></i>
                 </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay"
+            class="fixed inset-0 z-40 bg-dark-bg/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-center items-center h-screen w-screen">
+            <!-- Links -->
+            <div class="flex flex-col w-full px-6 text-xl">
+                <a href="#home"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Home</a>
+                <a href="#how-it-works"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">About</a>
+                <a href="#sports"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Sports</a>
+                <a href="#success-stories"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Success
+                    Stories</a>
+                <a href="#clubs"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Clubs</a>
+                <a href="#academies"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Academies</a>
+                <a href="#partners"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Partners</a>
+                <a href="#contact"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Contact</a>
+            </div>
+            <!-- Buttons -->
+            <div class="flex flex-col items-center space-y-4 mt-8 w-full px-8">
+                <a href="#login"
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors text-lg">Login</a>
+                <button
+                    class="bg-primary text-white px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors w-full max-w-xs text-lg font-medium">Sign
+                    Up</button>
+                <button
+                    class="action-btn text-text-secondary px-8 py-3 rounded-xl hover:bg-white/5 transition-colors w-full max-w-xs text-lg font-medium">Download
+                    App</button>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -1754,6 +1790,14 @@
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.getElementById('header');
             window.addEventListener('scroll', function () {
+                const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+                const isMenuOpen = mobileMenuOverlay && !mobileMenuOverlay.classList.contains('translate-x-full');
+
+                if (isMenuOpen) {
+                    header.querySelector('nav').classList.remove('header-blur');
+                    return;
+                }
+
                 if (window.scrollY > 50) {
                     header.querySelector('nav').classList.add('header-blur');
                 } else {
@@ -1765,27 +1809,58 @@
         // Mobile menu
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const icon = mobileMenuBtn.querySelector('i');
+
             const nav = document.querySelector('nav');
-            mobileMenuBtn.addEventListener('click', function () {
-                const menu = nav.querySelector('.hidden.md\\:flex');
-                if (menu) {
-                    menu.classList.toggle('hidden');
-                    menu.classList.toggle('flex');
-                    menu.classList.toggle('flex-col');
-                    menu.classList.toggle('absolute');
-                    menu.classList.toggle('top-full');
-                    menu.classList.toggle('left-0');
-                    menu.classList.toggle('right-0');
-                    menu.classList.toggle('bg-dark-secondary');
-                    menu.classList.toggle('p-4');
-                    menu.classList.toggle('space-x-0');
-                    menu.classList.toggle('space-y-4');
-                    menu.classList.toggle('rounded-xl');
-                    menu.classList.toggle('mt-2');
-                    menu.classList.toggle('mx-4');
-                    menu.classList.toggle('border');
-                    menu.classList.toggle('border-primary/20');
+            const logoContainer = document.querySelector('.flex.items-center.gap-3.shrink-0');
+
+            function toggleMenu() {
+                const isOpen = !mobileMenuOverlay.classList.contains('translate-x-full');
+
+                if (isOpen) {
+                    // Close menu
+                    mobileMenuOverlay.classList.add('translate-x-full');
+                    mobileMenuOverlay.classList.remove('translate-x-0');
+                    icon.classList.remove('ri-close-line');
+                    icon.classList.add('ri-menu-line');
+                    document.body.style.overflow = '';
+
+                    // Show header card and logo
+                    nav.classList.add('header-card');
+                    logoContainer.classList.remove('opacity-0');
+
+                    // Restore blur if scrolled
+                    if (window.scrollY > 50) {
+                        nav.classList.add('header-blur');
+                    }
+                } else {
+                    // Open menu
+                    mobileMenuOverlay.classList.remove('translate-x-full');
+                    mobileMenuOverlay.classList.add('translate-x-0');
+                    icon.classList.remove('ri-menu-line');
+                    icon.classList.add('ri-close-line');
+                    document.body.style.overflow = 'hidden';
+
+                    // Hide header card and logo
+                    nav.classList.remove('header-card');
+                    nav.classList.remove('header-blur');
+                    logoContainer.classList.add('opacity-0');
                 }
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMenu);
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Close menu when link clicked
+                    if (!mobileMenuOverlay.classList.contains('translate-x-full')) {
+                        toggleMenu();
+                    }
+                });
             });
         });
 
