@@ -1,0 +1,559 @@
+/* RTL (Right-to-Left) Styles for Arabic Language */
+
+/* Base RTL adjustments */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] body {
+    font-family: 'Poppins', 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+    text-align: right;
+}
+
+[dir="rtl"] * {
+    text-align: inherit;
+}
+
+/* Header RTL fixes */
+
+
+
+
+
+
+/* Logo positioning */
+[dir="rtl"] .logo::before {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Navigation spacing */
+[dir="rtl"] .nav {
+    gap: 2rem;
+}
+
+/* Mobile menu RTL */
+[dir="rtl"] #mobile-menu-overlay {
+    transform: translateX(-100%);
+}
+
+[dir="rtl"] #mobile-menu-overlay:not(.translate-x-full) {
+    transform: translateX(0);
+}
+
+/* Button groups RTL */
+
+
+/* Hero section RTL */
+
+
+/* Step cards RTL */
+
+
+[dir="rtl"] .step:hover {
+    transform: translateX(-10px);
+}
+
+/* Icon spacing RTL */
+
+
+/* Grid RTL - maintain visual order */
+[dir="rtl"] .grid {
+    direction: rtl;
+}
+
+/* Card content RTL */
+[dir="rtl"] .card-hover,
+[dir="rtl"] .section-card,
+[dir="rtl"] .testimonial-card {
+    text-align: right;
+}
+
+/* Two column layouts */
+[dir="rtl"] .two-column,
+[dir="rtl"] .download-content {
+    direction: rtl;
+}
+
+/* Stats and figures RTL */
+
+
+/* Form elements RTL */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] input::placeholder,
+[dir="rtl"] textarea::placeholder {
+    text-align: right;
+}
+
+/* Button icon spacing RTL */
+[dir="rtl"] button i,
+[dir="rtl"] a i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .btn-app {
+
+    text-align: right;
+}
+
+/* Footer RTL */
+[dir="rtl"] .footer-content {
+    direction: rtl;
+}
+
+[dir="rtl"] .footer-section {
+    text-align: right;
+}
+
+[dir="rtl"] .footer-section h5,
+[dir="rtl"] .footer-section h4,
+[dir="rtl"] .footer-section p,
+[dir="rtl"] .footer-section a {
+    text-align: right;
+}
+
+[dir="rtl"] .social-links {
+
+    justify-content: flex-start;
+}
+
+[dir="rtl"] footer .grid {
+    text-align: right;
+}
+
+[dir="rtl"] footer .flex {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .footer-bottom {
+    text-align: center;
+}
+
+/* Dropdown RTL */
+
+
+[dir="rtl"] .custom-dropdown .dropdown-item {
+
+    text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+/* Language code badge */
+[dir="rtl"] .lang-code {
+    direction: ltr;
+}
+
+/* Contact section RTL */
+[dir="rtl"] .contact-info {
+    text-align: right;
+}
+
+/* Academy and club cards RTL */
+[dir="rtl"] .academy-card,
+[dir="rtl"] .club-card {
+    text-align: right;
+}
+
+
+
+/* Player cards RTL */
+[dir="rtl"] .player-card {
+    text-align: right;
+}
+
+/* Arrows and icons that should flip */
+[dir="rtl"] .ri-arrow-right-line::before {
+    content: "\ea64";
+    /* arrow-left */
+}
+
+[dir="rtl"] .ri-arrow-left-line::before {
+    content: "\ea6e";
+    /* arrow-right */
+}
+
+/* Positioning adjustments */
+[dir="rtl"] .absolute.top-4.left-4 {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .absolute.top-4.right-4 {
+    right: auto;
+    left: 1rem;
+}
+
+/* Text alignment for specific sections */
+[dir="rtl"] .text-left {
+    text-align: right;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left;
+}
+
+/* Maintain center alignment */
+[dir="rtl"] .text-center {
+    text-align: center;
+}
+
+/* Flex row reverse for specific components */
+
+
+/* Border radius adjustments for RTL */
+[dir="rtl"] .rounded-l-xl {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+[dir="rtl"] .rounded-r-xl {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+/* Padding and margin adjustments */
+[dir="rtl"] .pl-4 {
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+[dir="rtl"] .pr-4 {
+    padding-right: 0;
+    padding-left: 1rem;
+}
+
+[dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-4 {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .mr-4 {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+/* Transform adjustments for hover effects */
+[dir="rtl"] .card-hover:hover {
+    transform: translateY(-4px);
+}
+
+/* Ensure numbers and codes remain LTR */
+[dir="rtl"] .phone-number,
+[dir="rtl"] .email,
+[dir="rtl"] .price,
+[dir="rtl"] .stat-number {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* Sport icons and badges */
+[dir="rtl"] .sport-icon-bg {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Video and image containers */
+[dir="rtl"] .video-cover,
+[dir="rtl"] .phone-mockup {
+    transform: scaleX(1);
+}
+
+/* Smooth transitions for language switch */
+body {
+    transition: opacity 0.2s ease;
+}
+
+/* RTL mode class for additional styling */
+.rtl-mode {
+    /* Additional RTL-specific styles can be added here */
+}
+
+/* Fix for Tailwind utility classes in RTL */
+[dir="rtl"] .space-x-3>*+* {
+    margin-left: 0;
+    margin-right: 0.75rem;
+}
+
+[dir="rtl"] .space-x-6>*+* {
+    margin-left: 0;
+    margin-right: 1.5rem;
+}
+
+/* Dropdown arrow rotation */
+[dir="rtl"] .dropdown-trigger i:last-child {
+    transform: rotate(0deg);
+}
+
+[dir="rtl"] .dropdown-trigger.open i:last-child {
+    transform: rotate(180deg);
+}
+
+/* Filter buttons RTL */
+[dir="rtl"] .filter-btn {
+    text-align: center;
+}
+
+/* Responsive RTL adjustments */
+@media (max-width: 768px) {
+    [dir="rtl"] .mobile-menu-toggle {
+        order: -1;
+    }
+
+    [dir="rtl"] #mobile-menu-overlay {
+        text-align: right;
+    }
+
+    [dir="rtl"] .mobile-link {
+        text-align: right;
+    }
+}
+
+/* Ensure proper font rendering for Arabic */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+[dir="rtl"] p {
+    line-height: 1.8;
+}
+
+/* Fix for specific Tailwind classes that need RTL adjustment */
+
+
+[dir="rtl"] .justify-start {
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .justify-end {
+    justify-content: flex-start;
+}
+
+/* Maintain proper alignment for centered content */
+[dir="rtl"] .justify-center,
+[dir="rtl"] .items-center {
+    /* Keep centered */
+}
+
+
+/* Additional comprehensive RTL fixes */
+
+/* Ensure all sections start from right */
+[dir="rtl"] section {
+    text-align: right;
+}
+
+[dir="rtl"] .max-w-7xl,
+[dir="rtl"] .container {
+    text-align: right;
+}
+
+/* Grid layouts RTL */
+[dir="rtl"] .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .grid>* {
+    text-align: right;
+}
+
+/* Flex containers */
+[dir="rtl"] .flex {
+    direction: rtl;
+}
+
+/* Statistics cards */
+[dir="rtl"] .section-card {
+    text-align: right;
+}
+
+
+
+/* Player cards */
+[dir="rtl"] .player-card,
+[dir="rtl"] .rounded-3xl {
+    text-align: right;
+}
+
+/* Sports cards */
+[dir="rtl"] .card-hover {
+    text-align: right;
+}
+
+/* Testimonial cards */
+[dir="rtl"] .testimonial-card {
+    text-align: right;
+}
+
+/* Club and Academy cards */
+[dir="rtl"] .club-card,
+[dir="rtl"] .academy-card {
+    text-align: right;
+}
+
+/* Partner logos */
+[dir="rtl"] .partner-logo {
+    text-align: center;
+}
+
+/* Download section */
+[dir="rtl"] .download-content {
+    text-align: right;
+}
+
+/* Contact section */
+[dir="rtl"] #contact .grid {
+    text-align: right;
+}
+
+/* All headings RTL */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    text-align: right;
+}
+
+/* All paragraphs RTL */
+[dir="rtl"] p {
+    text-align: right;
+}
+
+/* Lists RTL */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+    text-align: right;
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+/* Divs with text */
+[dir="rtl"] div {
+    text-align: inherit;
+}
+
+/* Specific section fixes */
+[dir="rtl"] .hero-content {
+    text-align: center;
+}
+
+[dir="rtl"] .text-center {
+    text-align: center !important;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+/* Footer specific */
+[dir="rtl"] footer {
+    text-align: right;
+}
+
+[dir="rtl"] footer .grid>div {
+    text-align: right;
+}
+
+[dir="rtl"] footer h5 {
+    text-align: right;
+}
+
+[dir="rtl"] footer p,
+[dir="rtl"] footer a {
+    text-align: right;
+}
+
+[dir="rtl"] .footer-bottom {
+    text-align: center !important;
+}
+
+/* Language dropdown RTL */
+[dir="rtl"] .custom-dropdown {
+    text-align: right;
+}
+
+[dir="rtl"] .dropdown-item {
+    text-align: right;
+
+}
+
+/* Ensure proper spacing in RTL */
+[dir="rtl"] .space-y-2>*+*,
+[dir="rtl"] .space-y-4>*+* {
+    margin-top: 0.5rem;
+    margin-right: 0;
+}
+
+/* Fix for inline-flex items */
+
+
+/* About section cards */
+[dir="rtl"] .about-card {
+    text-align: right;
+}
+
+/* Step cards with proper RTL */
+[dir="rtl"] .step-number {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+/* Icon positioning in RTL */
+[dir="rtl"] i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .flex.items-center i:first-child {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .flex.items-center i:last-child {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+/* Gap utilities RTL */
+[dir="rtl"] .gap-2,
+[dir="rtl"] .gap-3,
+[dir="rtl"] .gap-4 {
+    direction: rtl;
+}

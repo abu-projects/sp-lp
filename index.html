@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="rtl-styles.css">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
         tailwind.config = {
@@ -334,32 +335,36 @@
                     <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 w-auto shrink-0">
                 </div>
                 <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#home"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="#home" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_home">Home</a>
                     <a href="#how-it-works"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">About </a>
-                    <a href="#sports"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Sports</a>
+                        class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_about">About </a>
+                    <a href="#sports" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_sports">Sports</a>
                     <a href="#success-stories"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Success
+                        class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_success">Success
                         Stories</a>
-                    <a href="#clubs"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Clubs</a>
-                    <a href="#academies"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Academies</a>
-                    <a href="#partners"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Partners</a>
-                    <a href="#contact"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
+                    <a href="#clubs" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_clubs">Clubs</a>
+                    <a href="#academies" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_academies">Academies</a>
+                    <a href="#partners" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_partners">Partners</a>
+                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="nav_contact">Contact</a>
                 </div>
                 <div class="hidden lg:flex items-center space-x-3">
-                    <a href="#login"
-                        class="text-text-secondary hover:text-primary transition-colors duration-200">Login</a>
+                    <a href="#login" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="btn_login">Login</a>
                     <button
-                        class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium">Sign
+                        class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium"
+                        data-i18n="btn_signup">Sign
                         Up</button>
                     <button
-                        class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium">Download
+                        class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium"
+                        data-i18n="btn_download">Download
                         App</button>
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-text-secondary z-50 relative">
@@ -374,32 +379,42 @@
             <!-- Links -->
             <div class="flex flex-col w-full px-6 text-xl">
                 <a href="#home"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Home</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_home">Home</a>
                 <a href="#how-it-works"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">About</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_about">About</a>
                 <a href="#sports"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Sports</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_sports">Sports</a>
                 <a href="#success-stories"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Success
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_success">Success
                     Stories</a>
                 <a href="#clubs"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Clubs</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_clubs">Clubs</a>
                 <a href="#academies"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Academies</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_academies">Academies</a>
                 <a href="#partners"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Partners</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_partners">Partners</a>
                 <a href="#contact"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left">Contact</a>
+                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
+                    data-i18n="nav_contact">Contact</a>
             </div>
             <!-- Buttons -->
             <div class="flex flex-col items-center space-y-4 mt-8 w-full px-8">
-                <a href="#login"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors text-lg">Login</a>
+                <a href="#login" class="mobile-link text-text-secondary hover:text-primary transition-colors text-lg"
+                    data-i18n="btn_login">Login</a>
                 <button
-                    class="bg-primary text-white px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors w-full max-w-xs text-lg font-medium">Sign
+                    class="bg-primary text-white px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors w-full max-w-xs text-lg font-medium"
+                    data-i18n="btn_signup">Sign
                     Up</button>
                 <button
-                    class="action-btn text-text-secondary px-8 py-3 rounded-xl hover:bg-white/5 transition-colors w-full max-w-xs text-lg font-medium">Download
+                    class="action-btn text-text-secondary px-8 py-3 rounded-xl hover:bg-white/5 transition-colors w-full max-w-xs text-lg font-medium"
+                    data-i18n="btn_download">Download
                     App</button>
             </div>
         </div>
@@ -426,19 +441,22 @@
                 <div class="particle" style="width: 4px; height: 4px; left: 90%; top: 70%; animation-delay: 3s;"></div>
             </div>
             <div class="hero-content w-full max-w-7xl mx-auto px-6 text-center">
-                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-text-primary">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-text-primary" data-i18n="hero_title">
                     Discover. Connect. <span class="text-primary">Succeed.</span>
                 </h2>
-                <p class="text-xl md:text-2xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed"
+                    data-i18n="hero_subtitle">
                     Join the platform that redefines sports talent discovery across all disciplines worldwide.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button
-                        class="bg-primary text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-primary-hover transition-all duration-200 glow-effect whitespace-nowrap">
+                        class="bg-primary text-white px-8 py-4 text-lg font-semibold rounded-xl hover:bg-primary-hover transition-all duration-200 glow-effect whitespace-nowrap"
+                        data-i18n="btn_signup_now">
                         Sign Up Now
                     </button>
                     <button
-                        class="action-btn text-text-secondary px-8 py-4 text-lg font-semibold rounded-xl whitespace-nowrap">
+                        class="action-btn text-text-secondary px-8 py-4 text-lg font-semibold rounded-xl whitespace-nowrap"
+                        data-i18n="btn_download">
                         Download App
                     </button>
                 </div>
@@ -453,9 +471,12 @@
             </div>
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="text-center mb-14">
-                    <p class="text-primary font-semibold uppercase tracking-wide mb-3">About Sportex</p>
-                    <h3 class="text-4xl md:text-5xl font-bold text-text-primary">What We Do & How It Works</h3>
-                    <p class="text-text-secondary mt-4 max-w-3xl mx-auto">Sportex connects athletes, scouts, agents,
+                    <p class="text-primary font-semibold uppercase tracking-wide mb-3" data-i18n="about_tag">About
+                        Sportex</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-text-primary" data-i18n="about_title">What We Do &
+                        How It Works</h3>
+                    <p class="text-text-secondary mt-4 max-w-3xl mx-auto" data-i18n="about_subtitle">Sportex connects
+                        athletes, scouts, agents,
                         and clubs on one trusted platform so talent can be discovered and opportunities happen faster.
                     </p>
                 </div>
@@ -463,9 +484,11 @@
                 <div class="grid lg:grid-cols-2 gap-10 items-center mb-12">
                     <div
                         class="section-card rounded-3xl p-8 border border-primary/20 shadow-xl bg-gradient-to-br from-dark-tertiary via-dark-bg to-dark-secondary">
-                        <h4 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">Built for modern sports
+                        <h4 class="text-2xl md:text-3xl font-bold text-text-primary mb-4"
+                            data-i18n="about_feature_title">Built for modern sports
                             talent</h4>
-                        <p class="text-lg text-text-secondary leading-relaxed mb-6">We make it simple for players to
+                        <p class="text-lg text-text-secondary leading-relaxed mb-6" data-i18n="about_feature_desc">We
+                            make it simple for players to
                             showcase skills, for clubs to scout intelligently, and for agents to manage careers with
                             clarity.</p>
                         <div class="space-y-4">
@@ -475,8 +498,10 @@
                                     <i class="ri-global-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-text-primary font-semibold">Global reach</p>
-                                    <p class="text-text-muted text-sm">Break down borders and get seen by the right
+                                    <p class="text-text-primary font-semibold" data-i18n="about_feature1_title">Global
+                                        reach</p>
+                                    <p class="text-text-muted text-sm" data-i18n="about_feature1_desc">Break down
+                                        borders and get seen by the right
                                         people anywhere.</p>
                                 </div>
                             </div>
@@ -486,8 +511,10 @@
                                     <i class="ri-shake-hands-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-text-primary font-semibold">Trusted connections</p>
-                                    <p class="text-text-muted text-sm">Verified scouts, agents, and clubs so every
+                                    <p class="text-text-primary font-semibold" data-i18n="about_feature2_title">Trusted
+                                        connections</p>
+                                    <p class="text-text-muted text-sm" data-i18n="about_feature2_desc">Verified scouts,
+                                        agents, and clubs so every
                                         conversation starts with confidence.</p>
                                 </div>
                             </div>
@@ -497,8 +524,10 @@
                                     <i class="ri-bar-chart-grouped-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-text-primary font-semibold">Insight-first</p>
-                                    <p class="text-text-muted text-sm">Showcase highlights, metrics, and achievements in
+                                    <p class="text-text-primary font-semibold" data-i18n="about_feature3_title">
+                                        Insight-first</p>
+                                    <p class="text-text-muted text-sm" data-i18n="about_feature3_desc">Showcase
+                                        highlights, metrics, and achievements in
                                         one compelling profile.</p>
                                 </div>
                             </div>
@@ -514,7 +543,7 @@
                             <div
                                 class="absolute top-4 left-4 bg-dark-bg/80 px-3 py-2 rounded-full border border-white/10 text-sm text-text-primary flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                                Watch Sportex in action
+                                <span data-i18n="about_video_label">Watch Sportex in action</span>
                             </div>
                             <button type="button"
                                 class="absolute inset-0 m-auto h-16 w-16 rounded-full bg-white/10 border border-white/30 backdrop-blur flex items-center justify-center text-white hover:bg-white/20 transition"
@@ -531,8 +560,10 @@
                             class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
                             1</div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Choose Your Sport</h4>
-                            <p class="text-text-muted">Select from dozens of sports and connect with the right
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary" data-i18n="step1_title">Choose Your
+                                Sport</h4>
+                            <p class="text-text-muted" data-i18n="step1_desc">Select from dozens of sports and connect
+                                with the right
                                 community.</p>
                         </div>
                     </div>
@@ -541,8 +572,10 @@
                             class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
                             2</div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Sign Up & Build Your Profile</h4>
-                            <p class="text-text-muted">Add stats, highlights, and achievements to stand out.</p>
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary" data-i18n="step2_title">Sign Up &
+                                Build Your Profile</h4>
+                            <p class="text-text-muted" data-i18n="step2_desc">Add stats, highlights, and achievements to
+                                stand out.</p>
                         </div>
                     </div>
                     <div class="card-hover rounded-2xl p-6 border border-primary/20 flex flex-col gap-3 bg-dark-bg/80">
@@ -550,8 +583,10 @@
                             class="step-number w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold text-white flex-shrink-0">
                             3</div>
                         <div>
-                            <h4 class="text-xl font-semibold mb-1 text-text-primary">Get Discovered & Connect</h4>
-                            <p class="text-text-muted">Let scouts, agents, and clubs reach out and start meaningful
+                            <h4 class="text-xl font-semibold mb-1 text-text-primary" data-i18n="step3_title">Get
+                                Discovered & Connect</h4>
+                            <p class="text-text-muted" data-i18n="step3_desc">Let scouts, agents, and clubs reach out
+                                and start meaningful
                                 conversations.</p>
                         </div>
                     </div>
@@ -568,15 +603,18 @@
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
                     <div>
-                        <p class="text-primary font-semibold uppercase tracking-wide mb-2">Sportex in Numbers</p>
-                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary">The community at a glance</h3>
-                        <p class="text-text-secondary mt-2">Trusted by athletes and professionals worldwide.</p>
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-2" data-i18n="figures_tag">
+                            Sportex in Numbers</p>
+                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary" data-i18n="figures_title">The
+                            community at a glance</h3>
+                        <p class="text-text-secondary mt-2" data-i18n="figures_subtitle">Trusted by athletes and
+                            professionals worldwide.</p>
                     </div>
                     <div class="flex gap-3">
                         <span
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-tertiary border border-primary/20 text-text-secondary text-sm">
                             <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                            Live metrics
+                            <span data-i18n="figures_live">Live metrics</span>
                         </span>
                     </div>
                 </div>
@@ -587,10 +625,10 @@
                                 class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
                                 <i class="ri-user-3-line"></i>
                             </div>
-                            <p class="text-text-muted text-sm">Players</p>
+                            <p class="text-text-muted text-sm" data-i18n="figures_players">Players</p>
                         </div>
                         <p class="text-3xl font-bold text-text-primary">120k+</p>
-                        <p class="text-text-secondary text-sm">Profiles active</p>
+                        <p class="text-text-secondary text-sm" data-i18n="figures_players_desc">Profiles active</p>
                     </div>
                     <div class="section-card rounded-2xl p-5 border border-primary/20">
                         <div class="flex items-center gap-3 mb-3">
@@ -598,10 +636,10 @@
                                 class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
                                 <i class="ri-run-line"></i>
                             </div>
-                            <p class="text-text-muted text-sm">Coaches</p>
+                            <p class="text-text-muted text-sm" data-i18n="figures_coaches">Coaches</p>
                         </div>
                         <p class="text-3xl font-bold text-text-primary">8.2k</p>
-                        <p class="text-text-secondary text-sm">Training leaders</p>
+                        <p class="text-text-secondary text-sm" data-i18n="figures_coaches_desc">Training leaders</p>
                     </div>
                     <div class="section-card rounded-2xl p-5 border border-primary/20">
                         <div class="flex items-center gap-3 mb-3">
@@ -609,10 +647,10 @@
                                 class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
                                 <i class="ri-shield-user-line"></i>
                             </div>
-                            <p class="text-text-muted text-sm">Agents</p>
+                            <p class="text-text-muted text-sm" data-i18n="figures_agents">Agents</p>
                         </div>
                         <p class="text-3xl font-bold text-text-primary">5.4k</p>
-                        <p class="text-text-secondary text-sm">Verified agents</p>
+                        <p class="text-text-secondary text-sm" data-i18n="figures_agents_desc">Verified agents</p>
                     </div>
                     <div class="section-card rounded-2xl p-5 border border-primary/20">
                         <div class="flex items-center gap-3 mb-3">
@@ -620,10 +658,10 @@
                                 class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
                                 <i class="ri-trophy-line"></i>
                             </div>
-                            <p class="text-text-muted text-sm">Clubs</p>
+                            <p class="text-text-muted text-sm" data-i18n="figures_clubs">Clubs</p>
                         </div>
                         <p class="text-3xl font-bold text-text-primary">2.1k</p>
-                        <p class="text-text-secondary text-sm">Partner clubs</p>
+                        <p class="text-text-secondary text-sm" data-i18n="figures_clubs_desc">Partner clubs</p>
                     </div>
                     <div class="section-card rounded-2xl p-5 border border-primary/20">
                         <div class="flex items-center gap-3 mb-3">
@@ -631,10 +669,10 @@
                                 class="w-10 h-10 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary">
                                 <i class="ri-focus-2-line"></i>
                             </div>
-                            <p class="text-text-muted text-sm">Scouts</p>
+                            <p class="text-text-muted text-sm" data-i18n="figures_scouts_label">Scouts</p>
                         </div>
                         <p class="text-3xl font-bold text-text-primary">11k</p>
-                        <p class="text-text-secondary text-sm">Active scouts</p>
+                        <p class="text-text-secondary text-sm" data-i18n="figures_scouts_desc">Active scouts</p>
                     </div>
                 </div>
             </div>
@@ -645,12 +683,16 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
                     <div>
-                        <p class="text-primary font-semibold uppercase tracking-wide mb-2">Top Talent</p>
-                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary">Featured Players</h3>
-                        <p class="text-text-secondary mt-2">Discover rising athletes and connect with them directly.</p>
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-2" data-i18n="players_tag">Top
+                            Talent</p>
+                        <h3 class="text-4xl md:text-5xl font-bold text-text-primary" data-i18n="players_title">Featured
+                            Players</h3>
+                        <p class="text-text-secondary mt-2" data-i18n="players_subtitle">Discover rising athletes and
+                            connect with them directly.</p>
                     </div>
                     <button
-                        class="action-btn text-primary border border-primary/40 px-5 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors duration-200 whitespace-nowrap">
+                        class="action-btn text-primary border border-primary/40 px-5 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors duration-200 whitespace-nowrap"
+                        data-i18n="btn_view_all_players">
                         View All Players
                     </button>
                 </div>
@@ -662,14 +704,17 @@
                             <img src="assets/imgs/temp/child-soccer-player-white-background-39144048.webp"
                                 alt="Ahmed Al-Rashid" class="w-full h-full object-cover">
                             <span
-                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Forward</span>
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10"
+                                data-i18n="player_position_forward">Forward</span>
                         </div>
                         <div class="p-6 space-y-4">
                             <div>
-                                <h4 class="text-2xl font-bold text-text-primary">Ahmed Al-Rashid</h4>
+                                <h4 class="text-2xl font-bold text-text-primary" data-i18n="player_name1">Ahmed
+                                    Al-Rashid</h4>
                                 <p class="text-text-secondary flex items-center gap-2 mt-1">
                                     <i class="ri-football-line text-primary"></i>
-                                    Striker • Football
+                                    <span data-i18n="player_striker">Striker</span> • <span
+                                        data-i18n="player_football">Football</span>
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 text-text-secondary">
@@ -677,28 +722,33 @@
                                     <i class="ri-heart-line"></i><span>124</span>
                                 </div>
                                 <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
-                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                    <i class="ri-add-line"></i><span data-i18n="player_add">Add to list</span>
                                 </div>
                             </div>
                             <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
-                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1"
+                                    data-i18n="player_price">Price</p>
                                 <p class="text-2xl font-bold text-primary">$250,000</p>
                             </div>
                             <div class="grid grid-cols-2 gap-4 text-text-primary">
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_age">Age</p>
                                     <p class="text-lg font-semibold">22 yrs</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_height">Height</p>
                                     <p class="text-lg font-semibold">188 cm</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_weight">Weight</p>
                                     <p class="text-lg font-semibold">82 kg</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_nationality">Nationality</p>
                                     <p class="text-lg font-semibold">Saudi</p>
                                 </div>
                             </div>
@@ -711,14 +761,17 @@
                             <img src="assets/imgs/temp/photo1.jpg" alt="Mohammed Hassan"
                                 class="w-full h-full object-cover">
                             <span
-                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Defender</span>
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10"
+                                data-i18n="player_position_defender">Defender</span>
                         </div>
                         <div class="p-6 space-y-4">
                             <div>
-                                <h4 class="text-2xl font-bold text-text-primary">Mohammed Hassan</h4>
+                                <h4 class="text-2xl font-bold text-text-primary" data-i18n="player_name2">Mohammed
+                                    Hassan</h4>
                                 <p class="text-text-secondary flex items-center gap-2 mt-1">
                                     <i class="ri-shield-line text-primary"></i>
-                                    Center Back • Football
+                                    <span data-i18n="player_centerback">Center Back</span> • <span
+                                        data-i18n="player_football">Football</span>
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 text-text-secondary">
@@ -726,28 +779,33 @@
                                     <i class="ri-heart-line"></i><span>98</span>
                                 </div>
                                 <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
-                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                    <i class="ri-add-line"></i><span data-i18n="player_add">Add to list</span>
                                 </div>
                             </div>
                             <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
-                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1"
+                                    data-i18n="player_price">Price</p>
                                 <p class="text-2xl font-bold text-primary">$180,000</p>
                             </div>
                             <div class="grid grid-cols-2 gap-4 text-text-primary">
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_age">Age</p>
                                     <p class="text-lg font-semibold">25 yrs</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_height">Height</p>
                                     <p class="text-lg font-semibold">205 cm</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_weight">Weight</p>
                                     <p class="text-lg font-semibold">95 kg</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_nationality">Nationality</p>
                                     <p class="text-lg font-semibold">Egypt</p>
                                 </div>
                             </div>
@@ -760,14 +818,17 @@
                             <img src="assets/imgs/temp/photo2.jpg" alt="Khalid Al-Otaibi"
                                 class="w-full h-full object-cover">
                             <span
-                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10">Winger</span>
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur px-3 py-1 text-xs font-semibold text-white rounded-full border border-white/10"
+                                data-i18n="player_position_winger">Winger</span>
                         </div>
                         <div class="p-6 space-y-4">
                             <div>
-                                <h4 class="text-2xl font-bold text-text-primary">Khalid Al-Otaibi</h4>
+                                <h4 class="text-2xl font-bold text-text-primary" data-i18n="player_name3">Khalid
+                                    Al-Otaibi</h4>
                                 <p class="text-text-secondary flex items-center gap-2 mt-1">
                                     <i class="ri-run-line text-primary"></i>
-                                    Right Winger • Football
+                                    <span data-i18n="player_rightwinger">Right Winger</span> • <span
+                                        data-i18n="player_football">Football</span>
                                 </p>
                             </div>
                             <div class="flex items-center gap-3 text-text-secondary">
@@ -775,28 +836,33 @@
                                     <i class="ri-heart-line"></i><span>76</span>
                                 </div>
                                 <div class="flex items-center gap-2 px-4 py-2 rounded-xl border border-primary/20">
-                                    <i class="ri-add-line"></i><span>Add to list</span>
+                                    <i class="ri-add-line"></i><span data-i18n="player_add">Add to list</span>
                                 </div>
                             </div>
                             <div class="rounded-2xl border border-primary/30 bg-dark-bg px-4 py-4">
-                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1">Price</p>
+                                <p class="text-text-muted text-xs tracking-[0.08em] uppercase mb-1"
+                                    data-i18n="player_price">Price</p>
                                 <p class="text-2xl font-bold text-primary">$320,000</p>
                             </div>
                             <div class="grid grid-cols-2 gap-4 text-text-primary">
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Age</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_age">Age</p>
                                     <p class="text-lg font-semibold">20 yrs</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Height</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_height">Height</p>
                                     <p class="text-lg font-semibold">195 cm</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Weight</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_weight">Weight</p>
                                     <p class="text-lg font-semibold">88 kg</p>
                                 </div>
                                 <div>
-                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]">Nationality</p>
+                                    <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
+                                        data-i18n="player_nationality">Nationality</p>
                                     <p class="text-lg font-semibold">Saudi</p>
                                 </div>
                             </div>
@@ -809,78 +875,93 @@
         <!-- Sports Section -->
         <section id="sports" class="py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Explore All Sports in
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="sports_title">
+                    Explore All Sports in
                     Sportex</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-football-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Football</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_football">Football
+                        </h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 45,678</p>
+                            <span data-i18n="registered_players">Registered players</span>: 45,678
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-ping-pong-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Tennis</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_tennis">Tennis</h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 23,456</p>
+                            <span data-i18n="registered_players">Registered players</span>: 23,456
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-sword-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Combat Sports</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_combat">Combat Sports
+                        </h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 18,234</p>
+                            <span data-i18n="registered_players">Registered players</span>: 18,234
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-water-percent-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Swimming</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_swimming">Swimming
+                        </h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 15,789</p>
+                            <span data-i18n="registered_players">Registered players</span>: 15,789
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-game-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Hockey</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_hockey">Hockey</h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 12,567</p>
+                            <span data-i18n="registered_players">Registered players</span>: 12,567
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-basketball-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Basketball</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_basketball">Basketball
+                        </h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 34,567</p>
+                            <span data-i18n="registered_players">Registered players</span>: 34,567
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-dribbble-line ri-2x text-white"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Volleyball</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_volleyball">Volleyball
+                        </h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            Registered players: 19,876</p>
+                            <span data-i18n="registered_players">Registered players</span>: 19,876
+                        </p>
                     </div>
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer"
                         style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0.05) 100%);">
                         <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center bg-secondary">
                             <i class="ri-add-line ri-2x text-dark-bg"></i>
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">And More...</h4>
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="sport_more">And More...</h4>
                         <p class="text-text-muted opacity-0 group-hover:opacity-100 transition-opacity duration-200">50+
-                            sports available</p>
+                            <span data-i18n="sports_available">sports available</span>
+                        </p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
                     <button
-                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap"
+                        data-i18n="btn_browse_sport">
                         Browse Players by Sport
                     </button>
                 </div>
@@ -890,15 +971,18 @@
         <!-- Success Stories Section -->
         <section id="success-stories" class="py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">They Made It</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
+                    data-i18n="success_title">They Made It</h3>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="testimonial-card rounded-xl p-6 text-center">
                         <div class="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary">
                             <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Ahmed Al-Shamri"
                                 class="w-full h-full object-cover object-top">
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Ahmed Al-Shamri</h4>
-                        <p class="text-text-muted italic">"Sportex connected me with my current club. The platform
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="success_name1">Ahmed
+                            Al-Shamri</h4>
+                        <p class="text-text-muted italic" data-i18n="success_quote1">"Sportex connected me with my
+                            current club. The platform
                             changed my career trajectory completely."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
@@ -906,8 +990,10 @@
                             <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Mohammed Al-Otaibi"
                                 class="w-full h-full object-cover object-top">
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Mohammed Al-Otaibi</h4>
-                        <p class="text-text-muted italic">"From amateur tournaments to professional contracts - Sportex
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="success_name2">Mohammed
+                            Al-Otaibi</h4>
+                        <p class="text-text-muted italic" data-i18n="success_quote2">"From amateur tournaments to
+                            professional contracts - Sportex
                             made it possible in just 8 months."</p>
                     </div>
                     <div class="testimonial-card rounded-xl p-6 text-center">
@@ -915,14 +1001,17 @@
                             <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Khaled Al-Dosari"
                                 class="w-full h-full object-cover object-top">
                         </div>
-                        <h4 class="text-xl font-semibold mb-2 text-text-primary">Khaled Al-Dosari</h4>
-                        <p class="text-text-muted italic">"The scouts found me through my profile. Now I'm playing
+                        <h4 class="text-xl font-semibold mb-2 text-text-primary" data-i18n="success_name3">Khaled
+                            Al-Dosari</h4>
+                        <p class="text-text-muted italic" data-i18n="success_quote3">"The scouts found me through my
+                            profile. Now I'm playing
                             professionally in Europe. Dreams do come true."</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
                     <button
-                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
+                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200"
+                        data-i18n="btn_start_story">
                         Start Your Story
                     </button>
                 </div>
@@ -932,7 +1021,8 @@
         <!-- Clubs Section -->
         <section id="clubs" class="py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Famous Clubs</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="clubs_title">
+                    Famous Clubs</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     <div
                         class="club-card rounded-xl p-6 flex items-center justify-center group cursor-pointer min-h-[140px]">
@@ -1129,7 +1219,8 @@
                 </div>
                 <div class="text-center mt-12">
                     <button
-                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap"
+                        data-i18n="btn_see_all_clubs">
                         See All Clubs
                     </button>
                 </div>
@@ -1139,21 +1230,28 @@
         <!-- Academies Section -->
         <section id="academies" class="py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-8 text-text-primary">Famous Academies</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-8 text-text-primary"
+                    data-i18n="academies_title">Famous Academies</h3>
                 <div class="flex flex-wrap justify-center gap-3 mb-12">
                     <button id="filter-all"
-                        class="filter-btn active text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">All
+                        class="filter-btn active text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_all">All
                         Sports</button>
                     <button id="filter-football"
-                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Football</button>
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_football">Football</button>
                     <button id="filter-basketball"
-                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Basketball</button>
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_basketball">Basketball</button>
                     <button id="filter-tennis"
-                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Tennis</button>
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_tennis">Tennis</button>
                     <button id="filter-usa"
-                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">USA</button>
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_usa">USA</button>
                     <button id="filter-europe"
-                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap">Europe</button>
+                        class="filter-btn text-text-secondary px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap"
+                        data-i18n="filter_europe">Europe</button>
                 </div>
                 <div id="academies-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="spain">
@@ -1163,8 +1261,10 @@
                                     alt="La Masia" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">La Masia</h4>
-                                <p class="text-text-muted text-sm">Football • Barcelona, Spain</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_lamasia">La
+                                    Masia</h4>
+                                <p class="text-text-muted text-sm"><span data-i18n="academy_football">Football</span> •
+                                    <span data-i18n="academy_loc_lamasia">Barcelona, Spain</span></p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1175,9 +1275,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.9 (1,234 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.9 (1,234 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">World-renowned football academy that has produced legends
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_lamasia">World-renowned football
+                            academy that has produced legends
                             like Messi, Xavi, and Iniesta.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="basketball" data-country="usa">
@@ -1187,8 +1289,11 @@
                                     alt="IMG Academy" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">IMG Academy</h4>
-                                <p class="text-text-muted text-sm">Multi-Sport • Florida, USA</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_img">IMG
+                                    Academy</h4>
+                                <p class="text-text-muted text-sm"><span
+                                        data-i18n="academy_multisport">Multi-Sport</span> • <span
+                                        data-i18n="academy_loc_img">Florida, USA</span></p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1199,9 +1304,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-half-fill"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.7 (892 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.7 (892 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Premier multi-sport academy training the next generation of
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_img">Premier multi-sport academy
+                            training the next generation of
                             professional athletes across all disciplines.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="tennis" data-country="spain">
@@ -1211,8 +1318,11 @@
                                     alt="Rafa Nadal Academy" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">Rafa Nadal Academy</h4>
-                                <p class="text-text-muted text-sm">Tennis • Mallorca, Spain</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_rafa">Rafa
+                                    Nadal Academy</h4>
+                                <p class="text-text-muted text-sm"><span data-i18n="academy_tennis">Tennis</span> •
+                                    <span data-i18n="academy_loc_rafa">Mallorca, Spain</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1223,9 +1333,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-fill"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.8 (567 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.8 (567 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">World-class tennis academy founded by Rafael Nadal,
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_rafa">World-class tennis academy
+                            founded by Rafael Nadal,
                             developing future champions with innovative training methods.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="england">
@@ -1235,8 +1347,11 @@
                                     alt="Manchester United Academy" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">Manchester United Academy</h4>
-                                <p class="text-text-muted text-sm">Football • Manchester, England</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_manutd">
+                                    Manchester United Academy</h4>
+                                <p class="text-text-muted text-sm"><span data-i18n="academy_football">Football</span> •
+                                    <span data-i18n="academy_loc_manutd">Manchester, England</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1247,9 +1362,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-half-fill"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.6 (743 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.6 (743 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Historic football academy that has nurtured talents like
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_manutd">Historic football academy
+                            that has nurtured talents like
                             Beckham, Scholes, and Rashford.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="basketball" data-country="usa">
@@ -1259,8 +1376,11 @@
                                     alt="Oak Hill Academy" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">Oak Hill Academy</h4>
-                                <p class="text-text-muted text-sm">Basketball • Virginia, USA</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_oakhill">Oak
+                                    Hill Academy</h4>
+                                <p class="text-text-muted text-sm"><span
+                                        data-i18n="academy_basketball">Basketball</span> • <span
+                                        data-i18n="academy_loc_oakhill">Virginia, USA</span></p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1271,9 +1391,11 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-line"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.5 (456 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.5 (456 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">Elite basketball preparatory school that has produced
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_oakhill">Elite basketball preparatory
+                            school that has produced
                             numerous NBA stars and college champions.</p>
                     </div>
                     <div class="academy-card rounded-xl p-6" data-sport="football" data-country="germany">
@@ -1283,8 +1405,11 @@
                                     alt="Bayern Munich Academy" class="w-full h-full object-contain rounded-lg">
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-text-primary">Bayern Munich Academy</h4>
-                                <p class="text-text-muted text-sm">Football • Munich, Germany</p>
+                                <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_bayern">
+                                    Bayern Munich Academy</h4>
+                                <p class="text-text-muted text-sm"><span data-i18n="academy_football">Football</span> •
+                                    <span data-i18n="academy_loc_bayern">Munich, Germany</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1295,15 +1420,18 @@
                                 <i class="ri-star-fill"></i>
                                 <i class="ri-star-half-fill"></i>
                             </div>
-                            <span class="text-text-secondary ml-2 text-sm">4.7 (621 reviews)</span>
+                            <span class="text-text-secondary ml-2 text-sm">4.7 (621 <span
+                                    data-i18n="academy_reviews">reviews</span>)</span>
                         </div>
-                        <p class="text-text-muted text-sm">German excellence in football development, producing
+                        <p class="text-text-muted text-sm" data-i18n="academy_desc_bayern">German excellence in football
+                            development, producing
                             world-class players with precision and discipline.</p>
                     </div>
                 </div>
                 <div class="text-center mt-12">
                     <button
-                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                        class="bg-secondary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap"
+                        data-i18n="btn_browse_academies">
                         Browse Academies
                     </button>
                 </div>
@@ -1313,7 +1441,8 @@
         <!-- Partners Section -->
         <section id="partners" class="py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
-                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary">Our Partners</h3>
+                <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
+                    data-i18n="partners_title">Our Partners</h3>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
                     <div class="partner-logo rounded-xl p-6 flex items-center justify-center min-h-[100px]">
                         <img src="https://ui-avatars.com/api/?name=Nike&background=0c1117&color=0EA5E9" alt="Nike"
@@ -1366,7 +1495,8 @@
                 </div>
                 <div class="text-center">
                     <button
-                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200">
+                        class="action-btn text-secondary px-8 py-3 rounded-lg font-medium whitespace-nowrap hover:bg-secondary hover:text-dark-bg transition-all duration-200"
+                        data-i18n="btn_become_partner">
                         Become a Partner
                     </button>
                 </div>
@@ -1378,30 +1508,36 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="section-card rounded-2xl p-8">
-                        <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary">Download the Sportex App
+                        <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary" data-i18n="download_title">
+                            Download the Sportex App
                         </h3>
-                        <p class="text-xl text-text-secondary mb-8">Your career starts with a tap. Get instant access to
+                        <p class="text-xl text-text-secondary mb-8" data-i18n="download_subtitle">Your career starts
+                            with a tap. Get instant access to
                             opportunities, connect with scouts, and showcase your talent on the go.</p>
                         <div class="flex flex-col sm:flex-row gap-4 mb-8">
                             <button
                                 class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
                                 <i class="ri-apple-fill ri-lg text-text-primary"></i>
                                 <div class="text-left">
-                                    <div class="text-xs text-text-muted">Download on the</div>
-                                    <div class="text-sm font-semibold text-text-primary">App Store</div>
+                                    <div class="text-xs text-text-muted" data-i18n="download_appstore">Download on the
+                                    </div>
+                                    <div class="text-sm font-semibold text-text-primary"
+                                        data-i18n="download_appstore_name">App Store</div>
                                 </div>
                             </button>
                             <button
                                 class="action-btn flex items-center justify-center space-x-3 px-6 py-3 rounded-xl whitespace-nowrap">
                                 <i class="ri-google-play-fill ri-lg text-text-primary"></i>
                                 <div class="text-left">
-                                    <div class="text-xs text-text-muted">Get it on</div>
-                                    <div class="text-sm font-semibold text-text-primary">Google Play</div>
+                                    <div class="text-xs text-text-muted" data-i18n="download_playstore">Get it on</div>
+                                    <div class="text-sm font-semibold text-text-primary"
+                                        data-i18n="download_playstore_name">Google Play</div>
                                 </div>
                             </button>
                         </div>
                         <button
-                            class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap">
+                            class="bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap"
+                            data-i18n="btn_get_app">
                             Get the App
                         </button>
                     </div>
@@ -1429,10 +1565,10 @@
 
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="text-center mb-16">
-                    <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary">
+                    <h3 class="text-4xl md:text-5xl font-bold mb-6 text-text-primary" data-i18n="screenshots_title">
                         Experience <span class="text-primary">Sportex</span> Everywhere
                     </h3>
-                    <p class="text-xl text-text-secondary max-w-2xl mx-auto">
+                    <p class="text-xl text-text-secondary max-w-2xl mx-auto" data-i18n="screenshots_subtitle">
                         Seamlessly connected across all your devices. From in-depth analysis on desktop to quick
                         connections on mobile.
                     </p>
@@ -1446,8 +1582,10 @@
                         <div class="relative z-10 p-8 h-full flex flex-col justify-between">
                             <div class="flex items-center justify-between mb-6">
                                 <div>
-                                    <h4 class="text-2xl font-bold text-white mb-2">Command Center</h4>
-                                    <p class="text-text-muted">Full control over your sports career.</p>
+                                    <h4 class="text-2xl font-bold text-white mb-2" data-i18n="screenshots_desktop">
+                                        Command Center</h4>
+                                    <p class="text-text-muted" data-i18n="screenshots_desktop_desc">Full control over
+                                        your sports career.</p>
                                 </div>
                                 <div
                                     class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
@@ -1469,8 +1607,10 @@
                         <div class="absolute inset-0 bg-gradient-to-b from-dark-surface to-dark-bg z-0"></div>
                         <div class="relative z-10 p-8 h-full flex flex-col">
                             <div class="mb-6">
-                                <h4 class="text-2xl font-bold text-white mb-2">On The Go</h4>
-                                <p class="text-text-muted">Connect anytime, anywhere.</p>
+                                <h4 class="text-2xl font-bold text-white mb-2" data-i18n="screenshots_mobile">On The Go
+                                </h4>
+                                <p class="text-text-muted" data-i18n="screenshots_mobile_desc">Connect anytime,
+                                    anywhere.</p>
                             </div>
                             <div class="flex flex-col gap-4 mobile-snap ">
                                 <div
@@ -1493,10 +1633,13 @@
                         <div class="absolute inset-0 bg-gradient-to-r from-dark-surface to-dark-bg z-0"></div>
                         <div class="relative z-10 p-8 h-full flex items-center gap-8">
                             <div class="w-1/2">
-                                <h4 class="text-2xl font-bold text-white mb-2">Tablet Optimized</h4>
-                                <p class="text-text-muted mb-6">Perfect for coaches and scouts on the field.</p>
+                                <h4 class="text-2xl font-bold text-white mb-2" data-i18n="screenshots_tablet">Tablet
+                                    Optimized</h4>
+                                <p class="text-text-muted mb-6" data-i18n="screenshots_tablet_desc">Perfect for coaches
+                                    and scouts on the field.</p>
                                 <button
-                                    class="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                                    class="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all"
+                                    data-i18n="btn_learn_more">
                                     Learn more <i class="ri-arrow-right-line"></i>
                                 </button>
                             </div>
@@ -1523,10 +1666,13 @@
                 <div class="grid lg:grid-cols-5 gap-8 items-start">
                     <div
                         class="lg:col-span-2 bg-gradient-to-b from-dark-tertiary via-[#0b1622] to-dark-bg rounded-3xl p-8 border border-primary/20 shadow-xl">
-                        <p class="text-primary font-semibold uppercase tracking-wide mb-3">Get in Touch</p>
-                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-4">Have questions
+                        <p class="text-primary font-semibold uppercase tracking-wide mb-3" data-i18n="contact_tag">Get
+                            in Touch</p>
+                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary leading-tight mb-4"
+                            data-i18n="contact_title">Have questions
                             or need assistance?</h3>
-                        <p class="text-text-secondary mb-8">We're here to help. Reach out to us through any of the
+                        <p class="text-text-secondary mb-8" data-i18n="contact_subtitle">We're here to help. Reach out
+                            to us through any of the
                             channels below and we'll respond quickly.</p>
                         <div class="space-y-6">
                             <div class="flex gap-4 items-start">
@@ -1535,7 +1681,8 @@
                                     <i class="ri-mail-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]"
+                                        data-i18n="contact_email">
                                         Email</p>
                                     <p class="text-lg font-semibold text-text-primary">support@sportex.com</p>
                                 </div>
@@ -1546,7 +1693,8 @@
                                     <i class="ri-phone-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]"
+                                        data-i18n="contact_phone">
                                         Phone</p>
                                     <p class="text-lg font-semibold text-text-primary">+966 50 123 4567</p>
                                 </div>
@@ -1557,14 +1705,16 @@
                                     <i class="ri-map-pin-2-line"></i>
                                 </div>
                                 <div>
-                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]">
+                                    <p class="text-xs uppercase text-text-muted font-semibold mb-1 tracking-[0.08em]"
+                                        data-i18n="contact_address">
                                         Address</p>
-                                    <p class="text-lg font-semibold text-text-primary">Riyadh, Saudi Arabia</p>
+                                    <p class="text-lg font-semibold text-text-primary"
+                                        data-i18n="contact_address_value">Riyadh, Saudi Arabia</p>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-10 pt-6 border-t border-white/5">
-                            <p class="text-text-muted text-sm mb-3">Follow us</p>
+                            <p class="text-text-muted text-sm mb-3" data-i18n="contact_follow">Follow us</p>
                             <div class="flex gap-3">
                                 <a href="#"
                                     class="action-btn w-11 h-11 rounded-xl flex items-center justify-center hover:bg-primary hover:border-primary transition">
@@ -1586,45 +1736,58 @@
                         </div>
                     </div>
                     <div class="lg:col-span-3 section-card rounded-3xl p-8 border border-primary/20 shadow-xl">
-                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary mb-2">Send Us a Message</h3>
-                        <p class="text-text-secondary mb-8">Share a quick note and we'll get back within one business
+                        <h3 class="text-3xl md:text-4xl font-bold text-text-primary mb-2"
+                            data-i18n="contact_form_title">Send Us a Message</h3>
+                        <p class="text-text-secondary mb-8" data-i18n="contact_form_subtitle">Share a quick note and
+                            we'll get back within one business
                             day.</p>
                         <form id="contact-form" class="space-y-4">
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <label for="full-name" class="text-sm font-semibold text-text-primary">Full
+                                    <label for="full-name" class="text-sm font-semibold text-text-primary"
+                                        data-i18n="form_name">Full
                                         Name</label>
                                     <input id="full-name" name="name" type="text" placeholder="Enter your full name"
+                                        data-i18n="form_name_placeholder"
                                         class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
                                 </div>
                                 <div class="flex flex-col gap-2">
-                                    <label for="email" class="text-sm font-semibold text-text-primary">Email</label>
+                                    <label for="email" class="text-sm font-semibold text-text-primary"
+                                        data-i18n="form_email">Email</label>
                                     <input id="email" name="email" type="email" placeholder="Enter your email address"
+                                        data-i18n="form_email_placeholder"
                                         class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-4">
                                 <div class="flex flex-col gap-2">
-                                    <label for="phone" class="text-sm font-semibold text-text-primary">Mobile
+                                    <label for="phone" class="text-sm font-semibold text-text-primary"
+                                        data-i18n="form_phone">Mobile
                                         Number</label>
                                     <input id="phone" name="phone" type="tel" placeholder="+966 50 123 4567"
+                                        data-i18n="form_phone_placeholder"
                                         class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
                                 </div>
                                 <div class="flex flex-col gap-2">
-                                    <label for="subject" class="text-sm font-semibold text-text-primary">Subject</label>
+                                    <label for="subject" class="text-sm font-semibold text-text-primary"
+                                        data-i18n="form_subject">Subject</label>
                                     <input id="subject" name="subject" type="text" placeholder="How can we help?"
+                                        data-i18n="form_subject_placeholder"
                                         class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors">
                                 </div>
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label for="message" class="text-sm font-semibold text-text-primary">Message</label>
-                                <textarea id="message" name="message" rows="5"
+                                <label for="message" class="text-sm font-semibold text-text-primary"
+                                    data-i18n="form_message">Message</label>
+                                <textarea id="message" name="message" rows="4"
                                     placeholder="Describe your issue or question..."
-                                    class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors"></textarea>
+                                    data-i18n="form_message_placeholder"
+                                    class="w-full rounded-xl bg-dark-bg border border-primary/15 px-4 py-3 text-text-primary placeholder-text-muted focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition-colors resize-none"></textarea>
                             </div>
                             <div class="flex flex-col sm:flex-row sm:items-center gap-4">
                                 <button type="submit"
-                                    class="w-full sm:flex-1 bg-gradient-to-r from-primary to-primary-hover text-white font-semibold px-6 py-4 rounded-xl flex items-center justify-center gap-2 hover:from-primary-hover hover:to-primary-dark transition-all shadow-lg shadow-primary/20">
+                                    class="w-full sm:flex-1 bg-gradient-to-r from-primary to-primary-hover text-white font-semibold px-6 py-4 rounded-xl flex items-center justify-center gap-2 hover:from-primary-hover hover:to-primary-dark transition-all shadow-lg shadow-primary/20"
+                                    data-i18n="btn_send">
                                     <i class="ri-send-plane-2-line text-lg"></i>
                                     Send Message
                                 </button>
@@ -1644,57 +1807,66 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                 <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 ">
-                    </div>
-                    <p class="text-text-muted mb-4 text-sm">Connecting sports talent worldwide through innovative
-                        technology and meaningful relationships.</p>
-                    <div class="flex space-x-3">
-                        <a href="#"
-                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
-                            <i class="ri-facebook-fill text-text-secondary"></i>
-                        </a>
-                        <a href="#"
-                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
-                            <i class="ri-twitter-x-line text-text-secondary"></i>
-                        </a>
-                        <a href="#"
-                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
-                            <i class="ri-instagram-line text-text-secondary"></i>
-                        </a>
-                        <a href="#"
-                            class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
-                            <i class="ri-linkedin-fill text-text-secondary"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="text-lg font-semibold text-text-primary mb-4">Contact</h5>
-                    <div class="space-y-2 text-text-muted text-sm">
-                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i>
-                            hello@sportplanet.com</p>
-                        <p class="flex items-center gap-2"><i class="ri-mail-line text-primary"></i>
-                            support@sportplanet.com</p>
-                        <p class="flex items-center gap-2"><i class="ri-phone-line text-primary"></i> +1 (555) 123-4567
-                        </p>
+                    <div class="max-w-xs">
+                        <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 w-auto mb-6">
+                        <p class="text-text-secondary mb-6 leading-relaxed" data-i18n="footer_desc">Connecting sports
+                            talent worldwide through
+                            innovative technology and meaningful relationships.</p>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                                <i class="ri-facebook-fill text-text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                                <i class="ri-twitter-x-line text-text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                                <i class="ri-instagram-line text-text-secondary"></i>
+                            </a>
+                            <a href="#"
+                                class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
+                                <i class="ri-linkedin-fill text-text-secondary"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold text-text-primary mb-4">Quick Links</h5>
-                    <div class="space-y-2">
-                        <a href="#how-it-works"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">How
-                            It Works</a>
-                        <a href="#sports"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Sports</a>
-                        <a href="#clubs"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Clubs</a>
-                        <a href="#academies"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Academies</a>
-                        <a href="#download"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Download
-                            App</a>
-                    </div>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer_contact">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-text-secondary">
+                            <i class="ri-map-pin-line mt-1 text-primary"></i>
+                            <span data-i18n="contact_address_value">Riyadh, Saudi Arabia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <i class="ri-phone-line text-primary"></i>
+                            <span>+966 50 123 4567</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-text-secondary">
+                            <i class="ri-mail-line text-primary"></i>
+                            <span>support@sportex.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer_quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#how-it-works" class="text-text-secondary hover:text-primary transition-colors"
+                                data-i18n="footer_how_works">How
+                                It Works</a></li>
+                        <li><a href="#sports" class="text-text-secondary hover:text-primary transition-colors"
+                                data-i18n="nav_sports">Sports</a>
+                        </li>
+                        <li><a href="#success-stories" class="text-text-secondary hover:text-primary transition-colors"
+                                data-i18n="nav_success">Success Stories</a></li>
+                        <li><a href="#partners" class="text-text-secondary hover:text-primary transition-colors"
+                                data-i18n="nav_partners">Partners</a>
+                        </li>
+                        <li><a href="#download" class="text-text-secondary hover:text-primary transition-colors"
+                                data-i18n="footer_download">Download
+                                App</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h5 class="text-lg font-semibold text-text-primary mb-4">Legal</h5>
@@ -1711,17 +1883,14 @@
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold text-text-primary mb-4">Language</h5>
+                    <h4 class="text-white font-bold mb-6" data-i18n="footer_language">Language</h4>
                     <!-- Custom Dropdown -->
                     <div class="custom-dropdown relative" id="language-dropdown">
                         <button type="button"
-                            class="dropdown-trigger flex items-center justify-between w-full bg-dark-tertiary text-text-secondary border border-primary/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-200">
-                            <div class="flex items-center gap-3">
+                            class="dropdown-trigger flex items-center justify-between  bg-dark-tertiary text-text-secondary border border-primary/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary transition-all duration-200">
+                            <div class="flex items-center gap-2">
                                 <i class="ri-global-line text-text-muted text-lg"></i>
-                                <div class="selected-text flex items-center gap-2">
-                                    <span class="lang-code selected-code">En</span>
-                                    <span class="selected-name">English</span>
-                                </div>
+                                <span class="lang-code selected-code">EN</span>
                             </div>
                             <i class="ri-arrow-down-s-line text-lg transition-transform duration-200"></i>
                         </button>
@@ -1729,62 +1898,38 @@
                             style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.15); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
                             <div class="py-3">
                                 <button
-                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="English" data-code="En" data-name="English">
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-2 transition-colors duration-150"
+                                    data-lang="en" data-code="EN">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <div class="flex items-center gap-3">
-                                        <span class="lang-code">En</span>
-                                        <span class="font-medium">English</span>
-                                    </div>
+                                    <span class="lang-code">EN</span>
                                 </button>
                                 <button
-                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Español" data-code="Es" data-name="Español">
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-2 transition-colors duration-150"
+                                    data-lang="ar" data-code="AR">
                                     <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <div class="flex items-center gap-3">
-                                        <span class="lang-code">Es</span>
-                                        <span class="font-medium">Español</span>
-                                    </div>
-                                </button>
-                                <button
-                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Français" data-code="Fr" data-name="Français">
-                                    <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <div class="flex items-center gap-3">
-                                        <span class="lang-code">Fr</span>
-                                        <span class="font-medium">Français</span>
-                                    </div>
-                                </button>
-                                <button
-                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="Deutsch" data-code="De" data-name="Deutsch">
-                                    <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <div class="flex items-center gap-3">
-                                        <span class="lang-code">De</span>
-                                        <span class="font-medium">Deutsch</span>
-                                    </div>
-                                </button>
-                                <button
-                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-4 transition-colors duration-150"
-                                    data-value="العربية" data-code="Ar" data-name="العربية">
-                                    <i class="ri-global-line text-text-muted text-xl"></i>
-                                    <div class="flex items-center gap-3">
-                                        <span class="lang-code">Ar</span>
-                                        <span class="font-medium">العربية</span>
-                                    </div>
+                                    <span class="lang-code">AR</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-primary/10 pt-8 text-center text-text-muted text-sm">
-                <p>© 2025 SportEX. All Rights Reserved</p>
+            <div class="border-t border-white/10 mt-16 pt-8 text-center">
+                <p class="text-text-muted" data-i18n="footer_copyright">© 2025 SportEX. All Rights Reserved</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="lang/en.js"></script>
+    <script src="lang/ar.js"></script>
+    <script>
+        // Register languages after they're loaded
+        if (typeof en !== 'undefined') registerLanguage('en', en);
+        if (typeof ar !== 'undefined') registerLanguage('ar', ar);
+    </script>
+    <script src="language-switcher.js"></script>
     <script>
         // H effect
         document.addEventListener('DOMContentLoaded', function () {
@@ -1984,61 +2129,7 @@
             });
         });
 
-        // Custom Dropdown
-        document.addEventListener('DOMContentLoaded', function () {
-            const dropdown = document.getElementById('language-dropdown');
-            if (!dropdown) return;
 
-            const trigger = dropdown.querySelector('.dropdown-trigger');
-            const menu = dropdown.querySelector('.dropdown-menu');
-            const items = dropdown.querySelectorAll('.dropdown-item');
-            const selectedCode = dropdown.querySelector('.selected-code');
-            const selectedName = dropdown.querySelector('.selected-name');
-
-            if (!items.length) return;
-
-            const setSelected = (item) => {
-                const code = item.dataset.code || '';
-                const name = item.dataset.name || item.dataset.value || '';
-                if (selectedCode) selectedCode.textContent = code;
-                if (selectedName) selectedName.textContent = name;
-                items.forEach(i => i.classList.remove('selected'));
-                item.classList.add('selected');
-            };
-
-            setSelected(items[0]);
-
-            // Toggle dropdown
-            trigger.addEventListener('click', function (e) {
-                e.stopPropagation();
-                const isOpen = menu.classList.contains('show');
-                if (isOpen) {
-                    menu.classList.remove('show');
-                    trigger.classList.remove('open');
-                } else {
-                    menu.classList.add('show');
-                    trigger.classList.add('open');
-                }
-            });
-
-            // Select item
-            items.forEach(item => {
-                item.addEventListener('click', function () {
-                    setSelected(this);
-
-                    menu.classList.remove('show');
-                    trigger.classList.remove('open');
-                });
-            });
-
-            // Close on outside click
-            document.addEventListener('click', function (e) {
-                if (!dropdown.contains(e.target)) {
-                    menu.classList.remove('show');
-                    trigger.classList.remove('open');
-                }
-            });
-        });
 
         // Contact form (demo handling)
         document.addEventListener('DOMContentLoaded', function () {

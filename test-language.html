@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test - Sportex</title>
+    <link rel="stylesheet" href="rtl-styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #0A0E14;
+            color: #F8FAFC;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-section {
+            background: #131920;
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .test-section h2 {
+            color: #0EA5E9;
+            margin-bottom: 20px;
+        }
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .lang-btn {
+            background: #0EA5E9;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .lang-btn:hover {
+            background: #38BDF8;
+            transform: translateY(-2px);
+        }
+        .lang-btn.active {
+            background: #7CB342;
+        }
+        .test-item {
+            background: #1A2332;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #0EA5E9;
+        }
+        [dir="rtl"] .test-item {
+            border-left: none;
+            border-right: 3px solid #0EA5E9;
+        }
+        .flex-test {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .status.ltr {
+            background: rgba(14, 165, 233, 0.2);
+            color: #38BDF8;
+        }
+        .status.rtl {
+            background: rgba(124, 179, 66, 0.2);
+            color: #9CCC65;
+        }
+        code {
+            background: #0A0E14;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #9CCC65;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 Multi-Language System Test</h1>
+    
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('ar')">AR</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Current Language Status</h2>
+        <div class="test-item">
+            <strong>Language:</strong> <span id="current-lang">en</span>
+            <span class="status ltr" id="dir-status">LTR</span>
+        </div>
+        <div class="test-item">
+            <strong>HTML dir attribute:</strong> <code id="html-dir">ltr</code>
+        </div>
+        <div class="test-item">
+            <strong>HTML lang attribute:</strong> <code id="html-lang">en</code>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Translation Tests</h2>
+        <div class="test-item">
+            <strong>Navigation:</strong>
+            <div class="flex-test">
+                <span data-i18n="nav_home">Home</span> |
+                <span data-i18n="nav_about">About</span> |
+                <span data-i18n="nav_sports">Sports</span> |
+                <span data-i18n="nav_contact">Contact</span>
+            </div>
+        </div>
+        <div class="test-item">
+            <strong>Hero Title:</strong>
+            <div data-i18n="hero_title" style="font-size: 24px; font-weight: bold; margin-top: 10px;">
+                Discover. Connect. <span style="color: #0EA5E9;">Succeed.</span>
+            </div>
+        </div>
+        <div class="test-item">
+            <strong>Buttons:</strong>
+            <div class="flex-test" style="margin-top: 10px;">
+                <button class="lang-btn" data-i18n="btn_signup">Sign Up</button>
+                <button class="lang-btn" data-i18n="btn_login">Login</button>
+                <button class="lang-btn" data-i18n="btn_download">Download App</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>RTL Layout Tests</h2>
+        <div class="test-item">
+            <strong>Flex Direction Test:</strong>
+            <div class="flex-test" style="margin-top: 10px;">
+                <div style="background: #0EA5E9; padding: 10px; border-radius: 4px;">Box 1</div>
+                <div style="background: #7CB342; padding: 10px; border-radius: 4px;">Box 2</div>
+                <div style="background: #0EA5E9; padding: 10px; border-radius: 4px;">Box 3</div>
+            </div>
+            <p style="margin-top: 10px; font-size: 12px; color: #64748B;">
+                ℹ️ These boxes should flip order in RTL mode
+            </p>
+        </div>
+        <div class="test-item">
+            <strong>Text Alignment Test:</strong>
+            <p style="margin-top: 10px;" data-i18n="about_subtitle">
+                Sportex connects athletes, scouts, agents, and clubs on one trusted platform.
+            </p>
+            <p style="margin-top: 10px; font-size: 12px; color: #64748B;">
+                ℹ️ Text should align right in RTL mode
+            </p>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>Form Input Tests</h2>
+        <div class="test-item">
+            <input type="text" 
+                   placeholder="Enter your name" 
+                   data-i18n="form_name_placeholder"
+                   style="width: 100%; padding: 12px; background: #0A0E14; border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 8px; color: #F8FAFC; margin-top: 10px;">
+        </div>
+        <div class="test-item">
+            <input type="email" 
+                   placeholder="Enter your email" 
+                   data-i18n="form_email_placeholder"
+                   style="width: 100%; padding: 12px; background: #0A0E14; border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 8px; color: #F8FAFC; margin-top: 10px;">
+        </div>
+        <p style="margin-top: 10px; font-size: 12px; color: #64748B;">
+            ℹ️ Placeholders should translate and text should align right in RTL
+        </p>
+    </div>
+
+    <div class="test-section">
+        <h2>API Tests</h2>
+        <div class="test-item">
+            <button class="lang-btn" onclick="testAPI()">Run API Tests</button>
+            <pre id="api-results" style="margin-top: 15px; background: #0A0E14; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 12px;"></pre>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="lang/en.js"></script>
+    <script src="lang/ar.js"></script>
+    <script>
+        // Register languages after they're loaded
+        if (typeof en !== 'undefined') registerLanguage('en', en);
+        if (typeof ar !== 'undefined') registerLanguage('ar', ar);
+    </script>
+    <script src="language-switcher.js"></script>
+    <script>
+        function switchLang(lang) {
+            window.SportexLang.switch(lang);
+            updateStatus();
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function updateStatus() {
+            const currentLang = window.SportexLang.current();
+            const isRTL = window.SportexLang.isRTL();
+            const dir = document.documentElement.getAttribute('dir');
+            const lang = document.documentElement.getAttribute('lang');
+
+            document.getElementById('current-lang').textContent = currentLang;
+            document.getElementById('html-dir').textContent = dir;
+            document.getElementById('html-lang').textContent = lang;
+            
+            const dirStatus = document.getElementById('dir-status');
+            dirStatus.textContent = isRTL ? 'RTL' : 'LTR';
+            dirStatus.className = 'status ' + (isRTL ? 'rtl' : 'ltr');
+        }
+
+        function testAPI() {
+            const results = {
+                'Current Language': window.SportexLang.current(),
+                'Is RTL': window.SportexLang.isRTL(),
+                'Get hero_title': window.SportexLang.get('hero_title'),
+                'Get nav_home': window.SportexLang.get('nav_home'),
+                'Get btn_signup': window.SportexLang.get('btn_signup'),
+                'HTML dir': document.documentElement.getAttribute('dir'),
+                'HTML lang': document.documentElement.getAttribute('lang'),
+                'Body has rtl-mode class': document.body.classList.contains('rtl-mode')
+            };
+
+            document.getElementById('api-results').textContent = JSON.stringify(results, null, 2);
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', function(event) {
+            console.log('✅ Language changed event fired:', event.detail);
+            updateStatus();
+        });
+
+        // Initial status update
+        setTimeout(updateStatus, 100);
+    </script>
+</body>
+</html>

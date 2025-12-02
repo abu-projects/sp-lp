@@ -755,17 +755,11 @@ section {
     direction: rtl;
 }
 
-[dir="rtl"] .nav {
-    flex-direction: row-reverse;
-}
 
-[dir="rtl"] .header-actions {
-    flex-direction: row-reverse;
-}
 
-[dir="rtl"] .step {
-    flex-direction: row-reverse;
-}
+
+
+
 
 [dir="rtl"] .step:hover {
     transform: translateX(-10px);
