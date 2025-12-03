@@ -12,16 +12,31 @@
 /* Prevent horizontal scroll in RTL */
 [dir="rtl"] body {
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 [dir="rtl"] html {
     overflow-x: hidden;
+    max-width: 100vw;
+}
+
+[dir="rtl"] * {
+    max-width: 100%;
 }
 
 [dir="rtl"] body {
     font-family: 'Poppins', 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
     text-align: right;
     direction: rtl;
+}
+
+/* Prevent sections from overflowing */
+[dir="rtl"] section,
+
+[dir="rtl"] footer,
+[dir="rtl"] main {
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 [dir="rtl"] * {
@@ -445,7 +460,7 @@
    ============================================ */
 [dir="rtl"] .academy-card,
 [dir="rtl"] .club-card {
-    text-align: right;
+    text-align: center;
     direction: rtl;
 }
 
@@ -731,7 +746,7 @@ body {
 
 /* Sports cards */
 [dir="rtl"] .card-hover {
-    text-align: right;
+    text-align: center;
 }
 
 /* Testimonial cards */
@@ -742,7 +757,7 @@ body {
 /* Club and Academy cards */
 [dir="rtl"] .club-card,
 [dir="rtl"] .academy-card {
-    text-align: right;
+    text-align: center;
 }
 
 /* Partner logos */
@@ -903,14 +918,33 @@ body {
 /* ============================================
    TAILWIND SPACE-X UTILITIES RTL FIX
    ============================================ */
+/* Fix space-x utilities to prevent overflow */
+[dir="rtl"] .space-x-1>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-2>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-3>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-4>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-5>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-6>:not([hidden])~:not([hidden]),
+[dir="rtl"] .space-x-8>:not([hidden])~:not([hidden]) {
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .space-x-1>:not([hidden])~:not([hidden]) { margin-right: 0.25rem; }
+[dir="rtl"] .space-x-2>:not([hidden])~:not([hidden]) { margin-right: 0.5rem; }
+[dir="rtl"] .space-x-3>:not([hidden])~:not([hidden]) { margin-right: 0.75rem; }
+[dir="rtl"] .space-x-4>:not([hidden])~:not([hidden]) { margin-right: 1rem; }
+[dir="rtl"] .space-x-5>:not([hidden])~:not([hidden]) { margin-right: 1.25rem; }
+[dir="rtl"] .space-x-6>:not([hidden])~:not([hidden]) { margin-right: 1.5rem; }
+[dir="rtl"] .space-x-8>:not([hidden])~:not([hidden]) { margin-right: 2rem; }
+
 /* Header navigation spacing */
 [dir="rtl"] .header-card .space-x-6>:not([hidden])~:not([hidden]) { 
-    margin-left: 0; 
+    margin-left: 0 !important; 
     margin-right: 1.5rem; 
 }
 
 [dir="rtl"] .header-card .space-x-3>:not([hidden])~:not([hidden]) { 
-    margin-left: 0; 
+    margin-left: 0 !important; 
     margin-right: 0.75rem; 
 }
 
@@ -1325,7 +1359,22 @@ body {
 }
 
 [dir="rtl"] .sports-section .card-hover {
-    text-align: center;
+    text-align: center !important;
+}
+
+[dir="rtl"] .sports-section .card-hover h4,
+[dir="rtl"] .sports-section .card-hover p {
+    text-align: center !important;
+}
+
+[dir="rtl"] .sport-card {
+    text-align: center !important;
+}
+
+[dir="rtl"] .sport-card h3,
+[dir="rtl"] .sport-card h4,
+[dir="rtl"] .sport-card p {
+    text-align: center !important;
 }
 
 /* Success stories section */
@@ -1364,7 +1413,7 @@ body {
 }
 
 [dir="rtl"] .academies-section .academy-card {
-    text-align: right;
+    text-align: center;
 }
 
 /* Partners section */
@@ -1543,4 +1592,7 @@ html[dir="rtl"] {
 [dir="rtl"] .header-content .hidden.lg\\:flex.items-center.space-x-3 > * {
     margin-left: 0;
     margin-right: 0;
+}
+[dir="rtl"] .sports-cards h4 , [dir="rtl"] .sports-cards p{
+    text-align: center !important;
 }

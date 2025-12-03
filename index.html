@@ -377,10 +377,16 @@
                         data-i18n="nav_contact">Contact</a>
                 </div>
                 <div class="hidden lg:flex items-center space-x-3">
+                    <a href="#login" class="text-text-secondary hover:text-primary transition-colors duration-200"
+                        data-i18n="btn_login">Login</a>
+                    <button
+                        class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium"
+                        data-i18n="btn_signup">Sign
+                        Up</button>
                     <!-- Language Dropdown -->
                     <div class="custom-dropdown relative" id="header-language-dropdown">
                         <button type="button"
-                            class="dropdown-trigger flex items-center gap-2 bg-dark-tertiary text-text-secondary border border-primary/30 rounded-2xl px-4 py-2 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200">
+                            class="dropdown-trigger flex items-center gap-2 bg-dark-tertiary text-text-secondary rounded-2xl px-4 py-2 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200">
                             <span class="lang-code selected-code">EN</span>
                             <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
                         </button>
@@ -402,13 +408,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#login" class="text-text-secondary hover:text-primary transition-colors duration-200"
-                        data-i18n="btn_login">Login</a>
-                    <button
-                        class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium"
-                        data-i18n="btn_signup">Sign
-                        Up</button>
-               
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-text-secondary z-50 relative">
                     <i class="ri-menu-line ri-lg"></i>
@@ -921,7 +920,7 @@
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="sports_title">
                     Explore All Sports in
                     Sportex</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div class=" sports-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div class="card-hover rounded-xl p-6 text-center group cursor-pointer">
                         <div class="sport-icon-bg w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                             <i class="ri-football-line ri-2x text-white"></i>
