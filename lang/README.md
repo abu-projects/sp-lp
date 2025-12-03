@@ -7,6 +7,8 @@ This folder contains individual language files for the Sportex multi-language sy
 Each language has its own file:
 - `en.js` - English translations
 - `ar.js` - Arabic translations (RTL)
+- `de.js` - German translations
+- `fr.js` - French translations
 
 ## File Format
 
@@ -203,9 +205,9 @@ lang/
 ├── README.md          # This file
 ├── en.js             # English (LTR)
 ├── ar.js             # Arabic (RTL)
+├── de.js             # German (LTR)
+├── fr.js             # French (LTR)
 ├── es.js             # Spanish (LTR) - future
-├── fr.js             # French (LTR) - future
-├── de.js             # German (LTR) - future
 └── ...               # More languages
 ```
 
@@ -224,13 +226,13 @@ lang/
 |------|----------|-----------|--------|------|
 | EN   | English  | LTR       | ✅ Complete | `en.js` |
 | AR   | Arabic   | RTL       | ✅ Complete | `ar.js` |
+| DE   | German   | LTR       | ✅ Complete | `de.js` |
+| FR   | French   | LTR       | ✅ Complete | `fr.js` |
 
 ## Future Languages
 
 Potential additions:
 - ES - Spanish (Español)
-- FR - French (Français)
-- DE - German (Deutsch)
 - PT - Portuguese (Português)
 - IT - Italian (Italiano)
 - TR - Turkish (Türkçe)
@@ -248,6 +250,6 @@ For questions about translations:
 
 ---
 
-**Last Updated:** December 2, 2025  
-**Languages:** 2 (English, Arabic)  
+**Last Updated:** December 3, 2025  
+**Languages:** 4 (English, Arabic, German, French)  
 **Total Keys:** 150+

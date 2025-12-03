@@ -436,6 +436,18 @@
                                     <i class="ri-global-line text-text-muted text-lg"></i>
                                     <span class="text-sm font-medium">العربية</span>
                                 </button>
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="de" data-code="DE">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">Deutsch</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="fr" data-code="FR">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">Français</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -502,6 +514,18 @@
                                 data-lang="ar" data-code="AR">
                                 <i class="ri-global-line text-text-muted text-lg"></i>
                                 <span class="text-sm font-medium">العربية</span>
+                            </button>
+                            <button
+                                class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                data-lang="de" data-code="DE">
+                                <i class="ri-global-line text-text-muted text-lg"></i>
+                                <span class="text-sm font-medium">Deutsch</span>
+                            </button>
+                            <button
+                                class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                data-lang="fr" data-code="FR">
+                                <i class="ri-global-line text-text-muted text-lg"></i>
+                                <span class="text-sm font-medium">Français</span>
                             </button>
                         </div>
                     </div>
@@ -2144,6 +2168,18 @@
                                     <i class="ri-global-line text-text-muted text-xl"></i>
                                     <span class="lang-code">AR</span>
                                 </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-2 transition-colors duration-150"
+                                    data-lang="de" data-code="DE">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="lang-code">DE</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-5 py-4 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-2 transition-colors duration-150"
+                                    data-lang="fr" data-code="FR">
+                                    <i class="ri-global-line text-text-muted text-xl"></i>
+                                    <span class="lang-code">FR</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -2159,10 +2195,14 @@
     <script src="translations.js"></script>
     <script src="lang/en.js"></script>
     <script src="lang/ar.js"></script>
+    <script src="lang/de.js"></script>
+    <script src="lang/fr.js"></script>
     <script>
         // Register languages after they're loaded
         if (typeof en !== 'undefined') registerLanguage('en', en);
         if (typeof ar !== 'undefined') registerLanguage('ar', ar);
+        if (typeof de !== 'undefined') registerLanguage('de', de);
+        if (typeof fr !== 'undefined') registerLanguage('fr', fr);
     </script>
     <script src="language-switcher.js"></script>
     <script>

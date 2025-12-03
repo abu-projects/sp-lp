@@ -17,6 +17,8 @@ const translations = {};
         try {
             translations.en = require('./lang/en.js');
             translations.ar = require('./lang/ar.js');
+            translations.de = require('./lang/de.js');
+            translations.fr = require('./lang/fr.js');
         } catch (e) {
             console.error('Error loading language files:', e);
         }
