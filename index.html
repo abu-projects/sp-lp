@@ -20,6 +20,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="rtl-styles.css">
+        <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
         tailwind.config = {
@@ -344,6 +345,36 @@
             padding: 6px 10px;
             min-width: 40px;
         }
+
+        /* Mobile Language Dropdown Fix */
+        #mobile-language-dropdown .dropdown-menu {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            width: 100% !important;
+            transform: none !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: none;
+            margin-top: 0.5rem;
+            box-shadow: none !important;
+        }
+
+        #mobile-language-dropdown .dropdown-menu.show {
+            display: block;
+            animation: fadeIn 0.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -417,7 +448,8 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay"
-            class="fixed top-20 left-4 right-4 z-40 bg-dark-tertiary/95 backdrop-blur-xl rounded-2xl border border-primary/20 transform translate-y-[-120%] opacity-0 transition-all duration-300 lg:hidden overflow-hidden" style="overflow-y: auto !important;">
+            class="fixed top-20 left-4 right-4 z-40 bg-dark-tertiary/95 backdrop-blur-xl rounded-2xl border border-primary/20 transform translate-y-[-120%] opacity-0 transition-all duration-300 lg:hidden overflow-hidden"
+            style="overflow-y: auto !important;">
             <div class="p-6">
                 <!-- Navigation Links -->
                 <div class="flex flex-col space-y-1 mb-6">
@@ -446,45 +478,45 @@
                         class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
                         data-i18n="nav_contact">Contact</a>
                 </div>
-                
+
                 <!-- Divider -->
                 <div class="border-t border-white/10 mb-6"></div>
-                   <!-- Language Dropdown for Mobile -->
-                    <div class="custom-dropdown relative" id="mobile-language-dropdown">
-                        <button type="button"
-                            class="dropdown-trigger flex items-center justify-center gap-2 bg-dark-bg text-text-secondary rounded-lg px-4 py-3 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200 w-full border border-primary/20">
-                            <span class="lang-code selected-code">EN</span>
-                            <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
-                        </button>
-                        <div class="dropdown-menu absolute top-full left-0 right-0 mt-2 rounded-lg opacity-0 invisible transform translate-y-2 transition-all duration-200 overflow-hidden z-50"
-                            style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.2); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
-                            <div class="py-2">
-                                <button
-                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
-                                    data-lang="en" data-code="EN">
-                                    <i class="ri-global-line text-text-muted text-lg"></i>
-                                    <span class="text-sm font-medium">English</span>
-                                </button>
-                                <button
-                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
-                                    data-lang="ar" data-code="AR">
-                                    <i class="ri-global-line text-text-muted text-lg"></i>
-                                    <span class="text-sm font-medium">العربية</span>
-                                </button>
-                            </div>
+                <!-- Language Dropdown for Mobile -->
+                <div class="custom-dropdown relative" id="mobile-language-dropdown">
+                    <button type="button"
+                        class="dropdown-trigger flex items-center justify-center gap-2 bg-dark-bg text-text-secondary rounded-lg px-4 py-3 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200 w-full border border-primary/20">
+                        <span class="lang-code selected-code">EN</span>
+                        <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
+                    </button>
+                    <div class="dropdown-menu absolute top-full left-0 right-0 mt-2 rounded-lg opacity-0 invisible transform translate-y-2 transition-all duration-200 overflow-hidden z-50"
+                        style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.2); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+                        <div class="py-2">
+                            <button
+                                class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                data-lang="en" data-code="EN">
+                                <i class="ri-global-line text-text-muted text-lg"></i>
+                                <span class="text-sm font-medium">English</span>
+                            </button>
+                            <button
+                                class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                data-lang="ar" data-code="AR">
+                                <i class="ri-global-line text-text-muted text-lg"></i>
+                                <span class="text-sm font-medium">العربية</span>
+                            </button>
                         </div>
                     </div>
-                
+                </div>
+
                 <!-- Action Buttons -->
                 <div class="flex flex-col space-y-3">
-                    <a href="#login" 
+                    <a href="#login"
                         class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg text-center"
                         data-i18n="btn_login">Login</a>
                     <button
                         class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-hover transition-colors font-medium"
                         data-i18n="btn_signup">Sign Up</button>
-                    
-                 
+
+
                 </div>
             </div>
         </div>
@@ -1334,7 +1366,8 @@
                                 <h4 class="text-xl font-semibold text-text-primary" data-i18n="academy_name_lamasia">La
                                     Masia</h4>
                                 <p class="text-text-muted text-sm"><span data-i18n="academy_football">Football</span> •
-                                    <span data-i18n="academy_loc_lamasia">Barcelona, Spain</span></p>
+                                    <span data-i18n="academy_loc_lamasia">Barcelona, Spain</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center mb-4">
@@ -1707,7 +1740,7 @@
                                     Optimized</h4>
                                 <p class="text-text-muted mb-6" data-i18n="screenshots_tablet_desc">Perfect for coaches
                                     and scouts on the field.</p>
-                          
+
                             </div>
                             <div class="w-1/2 relative h-full flex items-end">
                                 <div
@@ -2039,7 +2072,7 @@
             }
 
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', function(e) {
+                mobileMenuBtn.addEventListener('click', function (e) {
                     e.stopPropagation();
                     toggleMenu();
                 });
@@ -2055,7 +2088,7 @@
             });
 
             // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 const isOpen = mobileMenuOverlay.classList.contains('translate-y-0');
                 if (isOpen && !mobileMenuOverlay.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
                     toggleMenu();
