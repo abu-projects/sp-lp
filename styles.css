@@ -613,7 +613,7 @@ section {
 .footer-section a {
     color: var(--text-muted);
     text-decoration: none;
-    display: block;
+
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
@@ -797,4 +797,113 @@ section {
 #mobile-menu-overlay{
     overflow-y: auto;
     height: 100vh;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 10px;
+    border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--bg-secondary);
+}
+/*
+ Legal Modal Mobile Fix */
+#legal-modal {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+#legal-modal:not(.hidden) {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    #legal-modal {
+        padding: 1rem;
+    }
+    
+    #legal-modal > div {
+        max-height: 85vh;
+        border-radius: 1.5rem;
+    }
+    
+    #legal-modal .sticky.top-0 {
+        padding: 1rem;
+    }
+    
+    #legal-modal h2 {
+        font-size: 1.5rem;
+    }
+    
+    #legal-modal .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Ensure modal is clickable on mobile */
+#legal-modal {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+#legal-modal a,
+#legal-modal button {
+    -webkit-tap-highlight-color: rgba(14, 165, 233, 0.3);
+    touch-action: manipulation;
+}
+
+/* Legal modal trigger buttons */
+[data-legal-modal] {
+    background: none;
+    border: none;
+    padding: 0.5rem 0;
+    font: inherit;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(14, 165, 233, 0.3);
+    touch-action: manipulation;
+    user-select: none;
+    position: relative;
+    z-index: 10;
+}
+
+[data-legal-modal]:active {
+    opacity: 0.7;
+}
+
+/* Footer grid items proper spacing on mobile */
+@media (max-width: 768px) {
+    .footer-section .grid > div {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .footer-section [data-legal-modal] {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 0;
+    }
+}
+#mobile-menu-overlay.opacity-0{
+    display: none;
 }

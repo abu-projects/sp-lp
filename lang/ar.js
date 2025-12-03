@@ -83,6 +83,8 @@ const ar = {
     player_name2: 'محمد حسن',
     player_name3: 'خالد العتيبي',
     player_add: 'أضف للقائمة',
+    nationality_saudi: 'السعودية',
+    nationality_egypt: 'مصر',
 
     // Sports
     sports_title: 'استكشف جميع الرياضات في سبورتكس',
@@ -114,6 +116,30 @@ const ar = {
     clubs_title: 'أندية مشهورة',
     btn_see_all_clubs: 'عرض جميع الأندية',
     club_location: 'الموقع',
+    club_real_madrid: 'ريال مدريد',
+    club_loc_real_madrid: 'مدريد، إسبانيا',
+    club_man_united: 'مانشستر يونايتد',
+    club_loc_man_united: 'مانشستر، المملكة المتحدة',
+    club_la_lakers: 'لوس أنجلوس ليكرز',
+    club_loc_la_lakers: 'لوس أنجلوس، الولايات المتحدة',
+    club_bayern: 'بايرن ميونخ',
+    club_loc_bayern: 'ميونخ، ألمانيا',
+    club_warriors: 'غولدن ستيت ووريورز',
+    club_loc_warriors: 'سان فرانسيسكو، الولايات المتحدة',
+    club_juventus: 'يوفنتوس',
+    club_loc_juventus: 'تورينو، إيطاليا',
+    club_chelsea: 'تشيلسي',
+    club_loc_chelsea: 'لندن، المملكة المتحدة',
+    club_yankees: 'نيويورك يانكيز',
+    club_loc_yankees: 'نيويورك، الولايات المتحدة',
+    club_barcelona: 'برشلونة',
+    club_loc_barcelona: 'برشلونة، إسبانيا',
+    club_celtics: 'بوسطن سيلتيكس',
+    club_loc_celtics: 'بوسطن، الولايات المتحدة',
+    club_psg: 'باريس سان جيرمان',
+    club_loc_psg: 'باريس، فرنسا',
+    club_liverpool: 'ليفربول',
+    club_loc_liverpool: 'ليفربول، المملكة المتحدة',
 
     // Academies
     academies_title: 'أكاديميات مشهورة',
@@ -207,7 +233,41 @@ const ar = {
     footer_privacy: 'سياسة الخصوصية',
     footer_terms: 'شروط الخدمة',
     footer_cookies: 'سياسة ملفات تعريف الارتباط',
-    footer_copyright: '© ٢٠٢٥ سبورتكس. جميع الحقوق محفوظة'
+    footer_copyright: '© ٢٠٢٥ سبورتكس. جميع الحقوق محفوظة',
+
+    // Legal Modal
+    legal_title: 'قانوني',
+    legal_privacy_title: 'سياسة الخصوصية',
+    legal_terms_title: 'شروط الخدمة',
+    legal_cookies_title: 'سياسة ملفات تعريف الارتباط',
+    btn_close: 'إغلاق',
+    
+    // Privacy Policy Content
+    privacy_intro: 'خصوصيتك مهمة بالنسبة لنا. توضح سياسة الخصوصية هذه كيفية جمع سبورتكس لمعلوماتك الشخصية واستخدامها وحمايتها.',
+    privacy_collection_title: 'المعلومات التي نجمعها',
+    privacy_collection_text: 'نجمع المعلومات التي تقدمها لنا مباشرة، بما في ذلك الاسم والبريد الإلكتروني ورقم الهاتف وبيانات الملف الرياضي وإحصائيات الأداء.',
+    privacy_usage_title: 'كيف نستخدم معلوماتك',
+    privacy_usage_text: 'نستخدم معلوماتك لتقديم خدماتنا، وربطك بالكشافة والأندية، وتحسين منصتنا، والتواصل معك بشأن الفرص.',
+    privacy_protection_title: 'حماية البيانات',
+    privacy_protection_text: 'نطبق تدابير أمنية متوافقة مع معايير الصناعة لحماية معلوماتك الشخصية من الوصول غير المصرح به أو الكشف أو إساءة الاستخدام.',
+    
+    // Terms of Service Content
+    terms_intro: 'باستخدام سبورتكس، فإنك توافق على شروط الخدمة هذه. يرجى قراءتها بعناية.',
+    terms_account_title: 'مسؤوليات الحساب',
+    terms_account_text: 'أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حسابك وعن جميع الأنشطة التي تحدث تحت حسابك.',
+    terms_conduct_title: 'سلوك المستخدم',
+    terms_conduct_text: 'توافق على استخدام سبورتكس بطريقة قانونية وعدم الانخراط في أي نشاط قد يضر بالمنصة أو المستخدمين الآخرين.',
+    terms_termination_title: 'الإنهاء',
+    terms_termination_text: 'نحتفظ بالحق في تعليق أو إنهاء حسابك إذا انتهكت هذه الشروط أو انخرطت في نشاط احتيالي.',
+    
+    // Cookie Policy Content
+    cookies_intro: 'تستخدم سبورتكس ملفات تعريف الارتباط لتحسين تجربتك على منصتنا.',
+    cookies_what_title: 'ما هي ملفات تعريف الارتباط',
+    cookies_what_text: 'ملفات تعريف الارتباط هي ملفات نصية صغيرة مخزنة على جهازك تساعدنا على تذكر تفضيلاتك وتحسين تجربة المستخدم الخاصة بك.',
+    cookies_usage_title: 'كيف نستخدم ملفات تعريف الارتباط',
+    cookies_usage_text: 'نستخدم ملفات تعريف الارتباط للمصادقة والتحليلات والتخصيص ولتذكر تفضيلات اللغة الخاصة بك.',
+    cookies_control_title: 'التحكم في ملفات تعريف الارتباط',
+    cookies_control_text: 'يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح الخاص بك. لاحظ أن تعطيل ملفات تعريف الارتباط قد يؤثر على بعض ميزات منصتنا.'
 };
 
 // Export for use

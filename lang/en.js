@@ -86,6 +86,8 @@ const en = {
     player_name2: 'Mohammed Hassan',
     player_name3: 'Khalid Al-Otaibi',
     player_add: 'Add to list',
+    nationality_saudi: 'Saudi',
+    nationality_egypt: 'Egypt',
 
     // Sports
     sports_title: 'Explore All Sports in Sportex',
@@ -117,6 +119,30 @@ const en = {
     clubs_title: 'Famous Clubs',
     btn_see_all_clubs: 'See All Clubs',
     club_location: 'Location',
+    club_real_madrid: 'Real Madrid',
+    club_loc_real_madrid: 'Madrid, Spain',
+    club_man_united: 'Manchester United',
+    club_loc_man_united: 'Manchester, UK',
+    club_la_lakers: 'LA Lakers',
+    club_loc_la_lakers: 'Los Angeles, USA',
+    club_bayern: 'Bayern Munich',
+    club_loc_bayern: 'Munich, Germany',
+    club_warriors: 'Golden State Warriors',
+    club_loc_warriors: 'San Francisco, USA',
+    club_juventus: 'Juventus FC',
+    club_loc_juventus: 'Turin, Italy',
+    club_chelsea: 'Chelsea FC',
+    club_loc_chelsea: 'London, UK',
+    club_yankees: 'New York Yankees',
+    club_loc_yankees: 'New York, USA',
+    club_barcelona: 'FC Barcelona',
+    club_loc_barcelona: 'Barcelona, Spain',
+    club_celtics: 'Boston Celtics',
+    club_loc_celtics: 'Boston, USA',
+    club_psg: 'Paris Saint-Germain',
+    club_loc_psg: 'Paris, France',
+    club_liverpool: 'Liverpool FC',
+    club_loc_liverpool: 'Liverpool, UK',
 
     // Academies
     academies_title: 'Famous Academies',
@@ -210,7 +236,41 @@ const en = {
     footer_privacy: 'Privacy Policy',
     footer_terms: 'Terms of Service',
     footer_cookies: 'Cookie Policy',
-    footer_copyright: '© 2025 SportEX. All Rights Reserved'
+    footer_copyright: '© 2025 SportEX. All Rights Reserved',
+
+    // Legal Modal
+    legal_title: 'Legal',
+    legal_privacy_title: 'Privacy Policy',
+    legal_terms_title: 'Terms of Service',
+    legal_cookies_title: 'Cookie Policy',
+    btn_close: 'Close',
+    
+    // Privacy Policy Content
+    privacy_intro: 'Your privacy is important to us. This Privacy Policy explains how Sportex collects, uses, and protects your personal information.',
+    privacy_collection_title: 'Information We Collect',
+    privacy_collection_text: 'We collect information you provide directly to us, including name, email, phone number, sports profile data, and performance statistics.',
+    privacy_usage_title: 'How We Use Your Information',
+    privacy_usage_text: 'We use your information to provide our services, connect you with scouts and clubs, improve our platform, and communicate with you about opportunities.',
+    privacy_protection_title: 'Data Protection',
+    privacy_protection_text: 'We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse.',
+    
+    // Terms of Service Content
+    terms_intro: 'By using Sportex, you agree to these Terms of Service. Please read them carefully.',
+    terms_account_title: 'Account Responsibilities',
+    terms_account_text: 'You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.',
+    terms_conduct_title: 'User Conduct',
+    terms_conduct_text: 'You agree to use Sportex in a lawful manner and not to engage in any activity that could harm the platform or other users.',
+    terms_termination_title: 'Termination',
+    terms_termination_text: 'We reserve the right to suspend or terminate your account if you violate these terms or engage in fraudulent activity.',
+    
+    // Cookie Policy Content
+    cookies_intro: 'Sportex uses cookies to enhance your experience on our platform.',
+    cookies_what_title: 'What Are Cookies',
+    cookies_what_text: 'Cookies are small text files stored on your device that help us remember your preferences and improve your user experience.',
+    cookies_usage_title: 'How We Use Cookies',
+    cookies_usage_text: 'We use cookies for authentication, analytics, personalization, and to remember your language preferences.',
+    cookies_control_title: 'Cookie Control',
+    cookies_control_text: 'You can control cookies through your browser settings. Note that disabling cookies may affect some features of our platform.'
 };
 
 // Export for use

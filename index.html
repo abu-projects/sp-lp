@@ -20,7 +20,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <link rel="stylesheet" href="rtl-styles.css">
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
         tailwind.config = {
@@ -380,8 +380,8 @@
 
 <body class="min-h-screen">
     <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <nav class="header-card mx-4 mt-4 rounded-2xl px-6 py-4 relative z-50">
+    <header id="header" class="fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
+        <nav class="header-card mx-4 mt-4 rounded-2xl px-6 py-4 relative z-[100]">
             <div class="flex items-center justify-between max-w-7xl mx-auto">
                 <div class="flex items-center gap-3 shrink-0 transition-opacity duration-300">
                     <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 w-auto shrink-0">
@@ -448,7 +448,7 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay"
-            class="fixed top-20 left-4 right-4 z-40 bg-dark-tertiary/95 backdrop-blur-xl rounded-2xl border border-primary/20 transform translate-y-[-120%] opacity-0 transition-all duration-300 lg:hidden overflow-hidden"
+            class="fixed top-20 left-4 right-4 z-[90] bg-dark-tertiary/95 backdrop-blur-xl rounded-2xl border border-primary/20 transform translate-y-[-120%] opacity-0 transition-all duration-300 lg:hidden overflow-hidden"
             style="overflow-y: auto !important;">
             <div class="p-6">
                 <!-- Navigation Links -->
@@ -851,7 +851,7 @@
                                 <div>
                                     <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
                                         data-i18n="player_nationality">Nationality</p>
-                                    <p class="text-lg font-semibold">Saudi</p>
+                                    <p class="text-lg font-semibold" data-i18n="nationality_saudi">Saudi</p>
                                 </div>
                             </div>
                         </div>
@@ -908,7 +908,7 @@
                                 <div>
                                     <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
                                         data-i18n="player_nationality">Nationality</p>
-                                    <p class="text-lg font-semibold">Egypt</p>
+                                    <p class="text-lg font-semibold" data-i18n="nationality_egypt">Egypt</p>
                                 </div>
                             </div>
                         </div>
@@ -965,7 +965,7 @@
                                 <div>
                                     <p class="text-text-muted text-xs uppercase tracking-[0.08em]"
                                         data-i18n="player_nationality">Nationality</p>
-                                    <p class="text-lg font-semibold">Saudi</p>
+                                    <p class="text-lg font-semibold" data-i18n="nationality_saudi">Saudi</p>
                                 </div>
                             </div>
                         </div>
@@ -1134,12 +1134,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Real+Madrid&background=0c1117&color=0EA5E9"
                                     alt="Real Madrid" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Real Madrid</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Madrid, Spain</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_real_madrid">Real Madrid</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_real_madrid">Madrid, Spain</p>
                         </div>
                     </div>
                     <div
@@ -1150,12 +1148,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Manchester+United&background=0c1117&color=0EA5E9"
                                     alt="Manchester United" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Manchester United</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Manchester, UK</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_man_united">Manchester United</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_man_united">Manchester, UK</p>
                         </div>
                     </div>
                     <div
@@ -1166,12 +1162,10 @@
                                 <img src="https://ui-avatars.com/api/?name=LA+Lakers&background=0c1117&color=0EA5E9"
                                     alt="LA Lakers" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                LA Lakers</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Los Angeles, USA</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_la_lakers">LA Lakers</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_la_lakers">Los Angeles, USA</p>
                         </div>
                     </div>
                     <div
@@ -1182,12 +1176,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Bayern+Munich&background=0c1117&color=0EA5E9"
                                     alt="Bayern Munich" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Bayern Munich</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Munich, Germany</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_bayern">Bayern Munich</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_bayern">Munich, Germany</p>
                         </div>
                     </div>
                     <div
@@ -1198,12 +1190,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Golden+State+Warriors&background=0c1117&color=0EA5E9"
                                     alt="Golden State Warriors" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Golden State Warriors</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                San Francisco, USA</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_warriors">Golden State Warriors</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_warriors">San Francisco, USA</p>
                         </div>
                     </div>
                     <div
@@ -1214,12 +1204,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Juventus+FC&background=0c1117&color=0EA5E9"
                                     alt="Juventus" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Juventus FC</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Turin, Italy</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_juventus">Juventus FC</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_juventus">Turin, Italy</p>
                         </div>
                     </div>
                     <div
@@ -1230,12 +1218,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Chelsea+FC&background=0c1117&color=0EA5E9"
                                     alt="Chelsea FC" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Chelsea FC</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                London, UK</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_chelsea">Chelsea FC</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_chelsea">London, UK</p>
                         </div>
                     </div>
                     <div
@@ -1246,12 +1232,10 @@
                                 <img src="https://ui-avatars.com/api/?name=New+York+Yankees&background=0c1117&color=0EA5E9"
                                     alt="New York Yankees" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                New York Yankees</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                New York, USA</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_yankees">New York Yankees</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_yankees">New York, USA</p>
                         </div>
                     </div>
                     <div
@@ -1262,12 +1246,10 @@
                                 <img src="https://ui-avatars.com/api/?name=FC+Barcelona&background=0c1117&color=0EA5E9"
                                     alt="FC Barcelona" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                FC Barcelona</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Barcelona, Spain</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_barcelona">FC Barcelona</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_barcelona">Barcelona, Spain</p>
                         </div>
                     </div>
                     <div
@@ -1278,12 +1260,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Boston+Celtics&background=0c1117&color=0EA5E9"
                                     alt="Boston Celtics" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Boston Celtics</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Boston, USA</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_celtics">Boston Celtics</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_celtics">Boston, USA</p>
                         </div>
                     </div>
                     <div
@@ -1294,12 +1274,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Paris+Saint-Germain&background=0c1117&color=0EA5E9"
                                     alt="Paris Saint-Germain" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Paris Saint-Germain</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Paris, France</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_psg">Paris Saint-Germain</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_psg">Paris, France</p>
                         </div>
                     </div>
                     <div
@@ -1310,12 +1288,10 @@
                                 <img src="https://ui-avatars.com/api/?name=Liverpool+FC&background=0c1117&color=0EA5E9"
                                     alt="Liverpool FC" class="w-12 h-12 object-contain rounded-full">
                             </div>
-                            <p
-                                class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm">
-                                Liverpool FC</p>
-                            <p
-                                class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Liverpool, UK</p>
+                            <p class="text-text-primary font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm"
+                                data-i18n="club_liverpool">Liverpool FC</p>
+                            <p class="text-text-muted text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                data-i18n="club_loc_liverpool">Liverpool, UK</p>
                         </div>
                     </div>
                 </div>
@@ -1901,17 +1877,193 @@
         </section>
     </main>
 
+    <!-- Legal Modal -->
+    <div id="legal-modal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        style="display: none;">
+        <div class="relative w-full max-w-4xl max-h-[90vh] bg-dark-secondary rounded-3xl border border-primary/20 shadow-2xl overflow-hidden"
+            onclick="event.stopPropagation();">
+            <!-- Modal Header -->
+            <div
+                class="sticky top-0 z-10 bg-dark-tertiary border-b border-primary/20 px-8 py-6 flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center text-primary text-xl">
+                        <i class="ri-file-text-line"></i>
+                    </div>
+                    <h2 id="legal-modal-title" class="text-3xl font-bold text-text-primary" data-i18n="legal_title">
+                        Legal</h2>
+                </div>
+                <button id="close-legal-modal"
+                    class="w-10 h-10 rounded-xl bg-dark-bg border border-primary/20 flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-all">
+                    <i class="ri-close-line text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="overflow-y-auto max-h-[calc(90vh-120px)] px-8 py-6">
+                <!-- Privacy Policy Content -->
+                <div id="privacy-content" class="legal-content hidden">
+                    <div class="space-y-6">
+                        <div class="bg-dark-bg rounded-2xl p-6 border border-primary/10">
+                            <p class="text-text-secondary leading-relaxed" data-i18n="privacy_intro">
+                                Your privacy is important to us. This Privacy Policy explains how Sportex collects,
+                                uses, and protects your personal information.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-information-line text-primary"></i>
+                                    <span data-i18n="privacy_collection_title">Information We Collect</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="privacy_collection_text">
+                                    We collect information you provide directly to us, including name, email, phone
+                                    number, sports profile data, and performance statistics.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-settings-3-line text-primary"></i>
+                                    <span data-i18n="privacy_usage_title">How We Use Your Information</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="privacy_usage_text">
+                                    We use your information to provide our services, connect you with scouts and clubs,
+                                    improve our platform, and communicate with you about opportunities.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-shield-check-line text-primary"></i>
+                                    <span data-i18n="privacy_protection_title">Data Protection</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="privacy_protection_text">
+                                    We implement industry-standard security measures to protect your personal
+                                    information from unauthorized access, disclosure, or misuse.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms of Service Content -->
+                <div id="terms-content" class="legal-content hidden">
+                    <div class="space-y-6">
+                        <div class="bg-dark-bg rounded-2xl p-6 border border-primary/10">
+                            <p class="text-text-secondary leading-relaxed" data-i18n="terms_intro">
+                                By using Sportex, you agree to these Terms of Service. Please read them carefully.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-user-settings-line text-primary"></i>
+                                    <span data-i18n="terms_account_title">Account Responsibilities</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="terms_account_text">
+                                    You are responsible for maintaining the confidentiality of your account credentials
+                                    and for all activities that occur under your account.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-shield-user-line text-primary"></i>
+                                    <span data-i18n="terms_conduct_title">User Conduct</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="terms_conduct_text">
+                                    You agree to use Sportex in a lawful manner and not to engage in any activity that
+                                    could harm the platform or other users.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-close-circle-line text-primary"></i>
+                                    <span data-i18n="terms_termination_title">Termination</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="terms_termination_text">
+                                    We reserve the right to suspend or terminate your account if you violate these terms
+                                    or engage in fraudulent activity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cookie Policy Content -->
+                <div id="cookies-content" class="legal-content hidden">
+                    <div class="space-y-6">
+                        <div class="bg-dark-bg rounded-2xl p-6 border border-primary/10">
+                            <p class="text-text-secondary leading-relaxed" data-i18n="cookies_intro">
+                                Sportex uses cookies to enhance your experience on our platform.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-question-line text-primary"></i>
+                                    <span data-i18n="cookies_what_title">What Are Cookies</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="cookies_what_text">
+                                    Cookies are small text files stored on your device that help us remember your
+                                    preferences and improve your user experience.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-settings-4-line text-primary"></i>
+                                    <span data-i18n="cookies_usage_title">How We Use Cookies</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="cookies_usage_text">
+                                    We use cookies for authentication, analytics, personalization, and to remember your
+                                    language preferences.
+                                </p>
+                            </div>
+
+                            <div class="bg-dark-tertiary rounded-2xl p-6 border border-primary/10">
+                                <h3 class="text-xl font-bold text-text-primary mb-3 flex items-center gap-2">
+                                    <i class="ri-toggle-line text-primary"></i>
+                                    <span data-i18n="cookies_control_title">Cookie Control</span>
+                                </h3>
+                                <p class="text-text-secondary leading-relaxed" data-i18n="cookies_control_text">
+                                    You can control cookies through your browser settings. Note that disabling cookies
+                                    may affect some features of our platform.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="sticky bottom-0 bg-dark-tertiary border-t border-primary/20 px-8 py-4 flex justify-end">
+                <button id="close-legal-modal-btn"
+                    class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-primary-hover transition-colors font-medium"
+                    data-i18n="btn_close">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer-section py-12">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="max-w-xs">
                         <img src="assets/imgs/logo-w.png" alt="Sportex Logo" class="h-8 w-auto mb-6">
                         <p class="text-text-secondary mb-6 leading-relaxed" data-i18n="footer_desc">Connecting sports
                             talent worldwide through
                             innovative technology and meaningful relationships.</p>
-                        <div class="flex gap-4">
+                        <div class="flex gap-4 justify-center">
                             <a href="#"
                                 class="action-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary">
                                 <i class="ri-facebook-fill text-text-secondary"></i>
@@ -1949,36 +2101,20 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-6" data-i18n="footer_quick_links">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#how-it-works" class="text-text-secondary hover:text-primary transition-colors"
-                                data-i18n="footer_how_works">How
-                                It Works</a></li>
-                        <li><a href="#sports" class="text-text-secondary hover:text-primary transition-colors"
-                                data-i18n="nav_sports">Sports</a>
-                        </li>
-                        <li><a href="#success-stories" class="text-text-secondary hover:text-primary transition-colors"
-                                data-i18n="nav_success">Success Stories</a></li>
-                        <li><a href="#partners" class="text-text-secondary hover:text-primary transition-colors"
-                                data-i18n="nav_partners">Partners</a>
-                        </li>
-                        <li><a href="#download" class="text-text-secondary hover:text-primary transition-colors"
-                                data-i18n="footer_download">Download
-                                App</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-lg font-semibold text-text-primary mb-4">Legal</h5>
+                    <h5 class="text-lg font-semibold text-text-primary mb-4" data-i18n="legal_title">Legal</h5>
                     <div class="space-y-2">
-                        <a href="#"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Privacy
-                            Policy</a>
-                        <a href="#"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Terms
-                            of Service</a>
-                        <a href="#"
-                            class="block text-text-muted hover:text-primary transition-colors duration-200 text-sm">Cookie
-                            Policy</a>
+                        <button type="button" data-legal-modal="privacy"
+                            class="block text-left text-text-muted hover:text-primary transition-colors duration-200 text-sm cursor-pointer"
+                            data-i18n="footer_privacy">Privacy
+                            Policy</button>
+                        <button type="button" data-legal-modal="terms"
+                            class="block text-left text-text-muted hover:text-primary transition-colors duration-200 text-sm cursor-pointer"
+                            data-i18n="footer_terms">Terms
+                            of Service</button>
+                        <button type="button" data-legal-modal="cookies"
+                            class="block text-left text-text-muted hover:text-primary transition-colors duration-200 text-sm cursor-pointer"
+                            data-i18n="footer_cookies">Cookie
+                            Policy</button>
                     </div>
                 </div>
                 <div>
@@ -2259,6 +2395,101 @@
                     cover.innerHTML = '';
                     cover.appendChild(iframe);
                 });
+            });
+        });
+
+        // Legal Modal Handler
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('legal-modal');
+            const modalTitle = document.getElementById('legal-modal-title');
+            const closeModalBtn = document.getElementById('close-legal-modal');
+            const closeModalFooterBtn = document.getElementById('close-legal-modal-btn');
+            const legalLinks = document.querySelectorAll('[data-legal-modal]');
+
+            const contentSections = {
+                privacy: document.getElementById('privacy-content'),
+                terms: document.getElementById('terms-content'),
+                cookies: document.getElementById('cookies-content')
+            };
+
+            const titles = {
+                privacy: 'legal_privacy_title',
+                terms: 'legal_terms_title',
+                cookies: 'legal_cookies_title'
+            };
+
+            function openModal(type) {
+                // Hide all content sections
+                Object.values(contentSections).forEach(section => {
+                    section.classList.add('hidden');
+                });
+
+                // Show selected content
+                if (contentSections[type]) {
+                    contentSections[type].classList.remove('hidden');
+                }
+
+                // Update title
+                const titleKey = titles[type];
+                if (titleKey && window.currentLang) {
+                    modalTitle.textContent = window.currentLang[titleKey];
+                    modalTitle.setAttribute('data-i18n', titleKey);
+                }
+
+                // Show modal with inline styles for better mobile support
+                modal.style.display = 'flex';
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+
+                // Force reflow for mobile
+                setTimeout(() => {
+                    modal.style.opacity = '1';
+                }, 10);
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                modal.style.opacity = '0';
+            }
+
+            // Add click handlers to legal links
+            legalLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const type = this.getAttribute('data-legal-modal');
+                    console.log('Opening modal:', type);
+                    openModal(type);
+                });
+
+                // Also add touch event for mobile
+                link.addEventListener('touchend', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const type = this.getAttribute('data-legal-modal');
+                    console.log('Opening modal (touch):', type);
+                    openModal(type);
+                }, { passive: false });
+            });
+
+            // Close modal handlers
+            closeModalBtn.addEventListener('click', closeModal);
+            closeModalFooterBtn.addEventListener('click', closeModal);
+
+            // Close on backdrop click
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
             });
         });
     </script>
