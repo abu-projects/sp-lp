@@ -69,10 +69,11 @@
 
     // Update dropdown to show current selection
     function updateDropdownSelection() {
-        // Update both header and footer dropdowns
+        // Update header, footer, and mobile dropdowns
         const dropdowns = [
             document.getElementById('language-dropdown'),
-            document.getElementById('header-language-dropdown')
+            document.getElementById('header-language-dropdown'),
+            document.getElementById('mobile-language-dropdown')
         ];
 
         dropdowns.forEach(dropdown => {
@@ -123,8 +124,8 @@
 
     // Setup dropdown functionality
     function setupDropdown() {
-        // Setup both header and footer dropdowns
-        const dropdownIds = ['language-dropdown', 'header-language-dropdown'];
+        // Setup header, footer, and mobile dropdowns
+        const dropdownIds = ['language-dropdown', 'header-language-dropdown', 'mobile-language-dropdown'];
         
         dropdownIds.forEach(dropdownId => {
             const dropdown = document.getElementById(dropdownId);

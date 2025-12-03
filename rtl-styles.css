@@ -1596,3 +1596,49 @@ html[dir="rtl"] {
 [dir="rtl"] .sports-cards h4 , [dir="rtl"] .sports-cards p{
     text-align: center !important;
 }
+
+
+/* ============================================
+   MOBILE MENU RTL (NEW DROPDOWN STYLE)
+   ============================================ */
+[dir="rtl"] #mobile-menu-overlay {
+    left: 1rem;
+    right: 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] #mobile-menu-overlay .mobile-link {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] #mobile-menu-overlay .flex.flex-col {
+    direction: rtl;
+}
+
+[dir="rtl"] #mobile-language-dropdown {
+    direction: rtl;
+}
+
+[dir="rtl"] #mobile-language-dropdown .dropdown-trigger {
+    direction: rtl;
+}
+
+[dir="rtl"] #mobile-language-dropdown .dropdown-menu {
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+
+[dir="rtl"] #mobile-language-dropdown .dropdown-item {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Mobile menu button spacing */
+[dir="rtl"] #mobile-menu-overlay .space-y-1 > * + *,
+[dir="rtl"] #mobile-menu-overlay .space-y-3 > * + * {
+    margin-top: 0.25rem;
+    margin-right: 0;
+}

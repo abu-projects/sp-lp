@@ -417,47 +417,75 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu-overlay"
-            class="fixed inset-0 z-40 bg-dark-bg/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-center items-center h-screen w-screen">
-            <!-- Links -->
-            <div class="flex flex-col w-full px-6 text-xl">
-                <a href="#home"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_home">Home</a>
-                <a href="#how-it-works"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_about">About</a>
-                <a href="#sports"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_sports">Sports</a>
-                <a href="#success-stories"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_success">Success
-                    Stories</a>
-                <a href="#clubs"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_clubs">Clubs</a>
-                <a href="#academies"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_academies">Academies</a>
-                <a href="#partners"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_partners">Partners</a>
-                <a href="#contact"
-                    class="mobile-link text-text-secondary hover:text-primary transition-colors py-4 border-b border-white/10 block w-full text-left"
-                    data-i18n="nav_contact">Contact</a>
-            </div>
-            <!-- Buttons -->
-            <div class="flex flex-col items-center space-y-4 mt-8 w-full px-8">
-                <a href="#login" class="mobile-link text-text-secondary hover:text-primary transition-colors text-lg"
-                    data-i18n="btn_login">Login</a>
-                <button
-                    class="bg-primary text-white px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors w-full max-w-xs text-lg font-medium"
-                    data-i18n="btn_signup">Sign
-                    Up</button>
-                <button
-                    class="action-btn text-text-secondary px-8 py-3 rounded-xl hover:bg-white/5 transition-colors w-full max-w-xs text-lg font-medium"
-                    data-i18n="btn_download">Download
-                    App</button>
+            class="fixed top-20 left-4 right-4 z-40 bg-dark-tertiary/95 backdrop-blur-xl rounded-2xl border border-primary/20 transform translate-y-[-120%] opacity-0 transition-all duration-300 lg:hidden overflow-hidden" style="overflow-y: auto !important;">
+            <div class="p-6">
+                <!-- Navigation Links -->
+                <div class="flex flex-col space-y-1 mb-6">
+                    <a href="#home"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_home">Home</a>
+                    <a href="#how-it-works"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_about">About</a>
+                    <a href="#sports"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_sports">Sports</a>
+                    <a href="#success-stories"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_success">Success Stories</a>
+                    <a href="#clubs"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_clubs">Clubs</a>
+                    <a href="#academies"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_academies">Academies</a>
+                    <a href="#partners"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_partners">Partners</a>
+                    <a href="#contact"
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg"
+                        data-i18n="nav_contact">Contact</a>
+                </div>
+                
+                <!-- Divider -->
+                <div class="border-t border-white/10 mb-6"></div>
+                   <!-- Language Dropdown for Mobile -->
+                    <div class="custom-dropdown relative" id="mobile-language-dropdown">
+                        <button type="button"
+                            class="dropdown-trigger flex items-center justify-center gap-2 bg-dark-bg text-text-secondary rounded-lg px-4 py-3 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200 w-full border border-primary/20">
+                            <span class="lang-code selected-code">EN</span>
+                            <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full left-0 right-0 mt-2 rounded-lg opacity-0 invisible transform translate-y-2 transition-all duration-200 overflow-hidden z-50"
+                            style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.2); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+                            <div class="py-2">
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="en" data-code="EN">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">English</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="ar" data-code="AR">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">العربية</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col space-y-3">
+                    <a href="#login" 
+                        class="mobile-link text-text-secondary hover:text-primary hover:bg-dark-bg/50 transition-all py-3 px-4 rounded-lg text-center"
+                        data-i18n="btn_login">Login</a>
+                    <button
+                        class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-hover transition-colors font-medium"
+                        data-i18n="btn_signup">Sign Up</button>
+                    
+                 
+                </div>
             </div>
         </div>
     </header>
@@ -721,7 +749,7 @@
         </section>
 
         <!-- Players Section -->
-        <section id="players" class="players-section py-20 bg-dark-bg"></section>
+        <section id="players" class="players-section py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
                     <div>
@@ -915,7 +943,7 @@
         </section>
 
         <!-- Sports Section -->
-        <section id="sports" class="sports-section py-20 bg-dark-bg"></section>
+        <section id="sports" class="sports-section py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="sports_title">
                     Explore All Sports in
@@ -1011,7 +1039,7 @@
         </section>
 
         <!-- Success Stories Section -->
-        <section id="success-stories" class="success-stories-section py-20 bg-dark-secondary"></section>
+        <section id="success-stories" class="success-stories-section py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
                     data-i18n="success_title">They Made It</h3>
@@ -1061,7 +1089,7 @@
         </section>
 
         <!-- Clubs Section -->
-        <section id="clubs" class="clubs-section py-20 bg-dark-bg"></section>
+        <section id="clubs" class="clubs-section py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="clubs_title">
                     Famous Clubs</h3>
@@ -1270,7 +1298,7 @@
         </section>
 
         <!-- Academies Section -->
-        <section id="academies" class="academies-section py-20 bg-dark-secondary"></section>
+        <section id="academies" class="academies-section py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-8 text-text-primary"
                     data-i18n="academies_title">Famous Academies</h3>
@@ -1481,7 +1509,7 @@
         </section>
 
         <!-- Partners Section -->
-        <section id="partners" class="partners-section py-20 bg-dark-bg"></section>
+        <section id="partners" class="partners-section py-20 bg-dark-bg">
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
                     data-i18n="partners_title">Our Partners</h3>
@@ -1598,7 +1626,7 @@
         </section>
 
         <!-- App Screenshots Section -->
-        <section id="app-screenshots" class="screenshots-section py-20 bg-dark-secondary relative overflow-hidden"></section>
+        <section id="app-screenshots" class="screenshots-section py-20 bg-dark-secondary relative overflow-hidden">
             <!-- Background elements -->
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -1679,11 +1707,7 @@
                                     Optimized</h4>
                                 <p class="text-text-muted mb-6" data-i18n="screenshots_tablet_desc">Perfect for coaches
                                     and scouts on the field.</p>
-                                <button
-                                    class="text-primary font-medium flex items-center gap-2 group-hover:gap-3 transition-all"
-                                    data-i18n="btn_learn_more">
-                                    Learn more <i class="ri-arrow-right-line"></i>
-                                </button>
+                          
                             </div>
                             <div class="w-1/2 relative h-full flex items-end">
                                 <div
@@ -1699,7 +1723,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact-section py-20 bg-dark-bg relative overflow-hidden"></section>
+        <section id="contact" class="contact-section py-20 bg-dark-bg relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute -left-20 top-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="absolute right-0 bottom-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
@@ -1973,18 +1997,10 @@
     </script>
     <script src="language-switcher.js"></script>
     <script>
-        // H effect
+        // Header blur effect
         document.addEventListener('DOMContentLoaded', function () {
             const header = document.getElementById('header');
             window.addEventListener('scroll', function () {
-                const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-                const isMenuOpen = mobileMenuOverlay && !mobileMenuOverlay.classList.contains('translate-x-full');
-
-                if (isMenuOpen) {
-                    header.querySelector('nav').classList.remove('header-blur');
-                    return;
-                }
-
                 if (window.scrollY > 50) {
                     header.querySelector('nav').classList.add('header-blur');
                 } else {
@@ -2000,54 +2016,50 @@
             const mobileLinks = document.querySelectorAll('.mobile-link');
             const icon = mobileMenuBtn.querySelector('i');
 
-            const nav = document.querySelector('nav');
-            const logoContainer = document.querySelector('.flex.items-center.gap-3.shrink-0');
-
             function toggleMenu() {
-                const isOpen = !mobileMenuOverlay.classList.contains('translate-x-full');
+                const isOpen = mobileMenuOverlay.classList.contains('translate-y-0');
 
                 if (isOpen) {
                     // Close menu
-                    mobileMenuOverlay.classList.add('translate-x-full');
-                    mobileMenuOverlay.classList.remove('translate-x-0');
+                    mobileMenuOverlay.classList.remove('translate-y-0', 'opacity-100');
+                    mobileMenuOverlay.classList.add('translate-y-[-120%]', 'opacity-0');
                     icon.classList.remove('ri-close-line');
                     icon.classList.add('ri-menu-line');
+                    // Re-enable body scroll
                     document.body.style.overflow = '';
-
-                    // Show header card and logo
-                    nav.classList.add('header-card');
-                    logoContainer.classList.remove('opacity-0');
-
-                    // Restore blur if scrolled
-                    if (window.scrollY > 50) {
-                        nav.classList.add('header-blur');
-                    }
                 } else {
                     // Open menu
-                    mobileMenuOverlay.classList.remove('translate-x-full');
-                    mobileMenuOverlay.classList.add('translate-x-0');
+                    mobileMenuOverlay.classList.remove('translate-y-[-120%]', 'opacity-0');
+                    mobileMenuOverlay.classList.add('translate-y-0', 'opacity-100');
                     icon.classList.remove('ri-menu-line');
                     icon.classList.add('ri-close-line');
+                    // Disable body scroll
                     document.body.style.overflow = 'hidden';
-
-                    // Hide header card and logo
-                    nav.classList.remove('header-card');
-                    nav.classList.remove('header-blur');
-                    logoContainer.classList.add('opacity-0');
                 }
             }
 
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', toggleMenu);
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleMenu();
+                });
             }
 
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     // Close menu when link clicked
-                    if (!mobileMenuOverlay.classList.contains('translate-x-full')) {
+                    if (mobileMenuOverlay.classList.contains('translate-y-0')) {
                         toggleMenu();
                     }
                 });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const isOpen = mobileMenuOverlay.classList.contains('translate-y-0');
+                if (isOpen && !mobileMenuOverlay.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    toggleMenu();
+                }
             });
         });
 

@@ -769,3 +769,31 @@ section {
 [dir="rtl"] .step:hover {
     transform: translateX(-10px);
 }
+
+/* Mobile Menu Overlay Scroll Fix */
+#mobile-menu-overlay {
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#mobile-menu-overlay::-webkit-scrollbar {
+    width: 6px;
+}
+
+#mobile-menu-overlay::-webkit-scrollbar-track {
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 10px;
+}
+
+#mobile-menu-overlay::-webkit-scrollbar-thumb {
+    background: rgba(14, 165, 233, 0.5);
+    border-radius: 10px;
+}
+
+#mobile-menu-overlay::-webkit-scrollbar-thumb:hover {
+    background: rgba(14, 165, 233, 0.7);
+}
+#mobile-menu-overlay{
+    overflow-y: auto;
+}
