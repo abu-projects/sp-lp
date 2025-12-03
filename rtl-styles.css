@@ -1,26 +1,58 @@
 /* RTL (Right-to-Left) Styles for Arabic Language */
+/* Comprehensive RTL Support for Sportex Platform */
 
-/* Base RTL adjustments */
+/* ============================================
+   BASE RTL ADJUSTMENTS
+   ============================================ */
 [dir="rtl"] {
     direction: rtl;
     text-align: right;
 }
 
+/* Prevent horizontal scroll in RTL */
+[dir="rtl"] body {
+    overflow-x: hidden;
+}
+
+[dir="rtl"] html {
+    overflow-x: hidden;
+}
+
 [dir="rtl"] body {
     font-family: 'Poppins', 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
     text-align: right;
+    direction: rtl;
 }
 
 [dir="rtl"] * {
     text-align: inherit;
 }
 
-/* Header RTL fixes */
+/* Ensure all text elements inherit RTL */
+[dir="rtl"] p,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] span,
+[dir="rtl"] div {
+    text-align: inherit;
+}
 
+/* ============================================
+   HEADER RTL FIXES
+   ============================================ */
 
+/* Header navigation spacing */
+[dir="rtl"] .header-card {
+    direction: rtl;
+}
 
-
-
+[dir="rtl"] nav .flex {
+    direction: rtl;
+}
 
 /* Logo positioning */
 [dir="rtl"] .logo::before {
@@ -31,43 +63,228 @@
 /* Navigation spacing */
 [dir="rtl"] .nav {
     gap: 2rem;
+    direction: rtl;
+}
+
+[dir="rtl"] .hidden.lg\\:flex {
+    direction: rtl;
+}
+
+/* Header actions RTL */
+[dir="rtl"] .header-actions,
+[dir="rtl"] .hidden.lg\\:flex.items-center {
+    direction: rtl;
 }
 
 /* Mobile menu RTL */
 [dir="rtl"] #mobile-menu-overlay {
     transform: translateX(-100%);
+    right: auto;
+    left: 0;
 }
 
 [dir="rtl"] #mobile-menu-overlay:not(.translate-x-full) {
     transform: translateX(0);
 }
 
-/* Button groups RTL */
+[dir="rtl"] .mobile-link {
+    text-align: right;
+    direction: rtl;
+}
 
+/* ============================================
+   BUTTON GROUPS RTL
+   ============================================ */
+/* Header button groups */
+[dir="rtl"] .header-card .flex.items-center.space-x-3,
+[dir="rtl"] .header-card .flex.items-center.space-x-6 {
+    direction: rtl;
+}
 
-/* Hero section RTL */
+/* Hero section button groups */
+[dir="rtl"] .hero-section .hero-content .flex {
+    direction: rtl;
+}
 
+[dir="rtl"] .hero-section .flex.flex-col.sm\\:flex-row {
+    direction: rtl;
+}
 
-/* Step cards RTL */
+/* Download section button groups */
+[dir="rtl"] .download-section .flex.items-center.space-x-4 {
+    direction: rtl;
+}
 
+/* Contact section button groups */
+[dir="rtl"] .contact-section .flex.items-center {
+    direction: rtl;
+}
+
+/* Generic fallback */
+[dir="rtl"] .flex.items-center.space-x-3,
+[dir="rtl"] .flex.items-center.space-x-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .flex.flex-col.sm\\:flex-row {
+    direction: rtl;
+}
+
+/* ============================================
+   HERO SECTION RTL
+   ============================================ */
+[dir="rtl"] .hero-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .hero-section .hero-content {
+    text-align: center;
+    direction: rtl;
+}
+
+[dir="rtl"] .hero-section .hero-content h2,
+[dir="rtl"] .hero-section .hero-content p {
+    text-align: center;
+}
+
+/* ============================================
+   STEP CARDS RTL
+   ============================================ */
+[dir="rtl"] .how-it-works-section .step {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .how-it-works-section .step:hover {
+    transform: translateX(-10px);
+}
+
+[dir="rtl"] .how-it-works-section .step-number {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+/* Generic fallback */
+[dir="rtl"] .step {
+    direction: rtl;
+    text-align: right;
+}
 
 [dir="rtl"] .step:hover {
     transform: translateX(-10px);
 }
 
-/* Icon spacing RTL */
+[dir="rtl"] .step-number {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+/* ============================================
+   ICON SPACING RTL
+   ============================================ */
+/* Section-specific icon spacing */
+[dir="rtl"] .how-it-works-section .flex.items-center.gap-2,
+[dir="rtl"] .how-it-works-section .flex.items-center.gap-3,
+[dir="rtl"] .how-it-works-section .flex.items-start.gap-3 {
+    direction: rtl;
+}
+
+[dir="rtl"] .figures-section .flex.items-center.gap-2,
+[dir="rtl"] .figures-section .flex.items-center.gap-3 {
+    direction: rtl;
+}
+
+[dir="rtl"] .players-section .flex.items-center.gap-2,
+[dir="rtl"] .players-section .flex.items-center.gap-3 {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-section .flex.items-center.gap-2,
+[dir="rtl"] .contact-section .flex.items-center.gap-3,
+[dir="rtl"] .contact-section .flex.items-start.gap-3 {
+    direction: rtl;
+}
+
+/* Generic fallback */
+[dir="rtl"] .flex.items-center.gap-2,
+[dir="rtl"] .flex.items-center.gap-3 {
+    direction: rtl;
+}
+
+[dir="rtl"] .flex.items-start.gap-3 {
+    direction: rtl;
+}
+
+[dir="rtl"] i {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 
-/* Grid RTL - maintain visual order */
+/* ============================================
+   GRID LAYOUTS RTL
+   ============================================ */
+/* Section-specific grid layouts */
+[dir="rtl"] .hero-section .grid,
+[dir="rtl"] .how-it-works-section .grid,
+[dir="rtl"] .figures-section .grid,
+[dir="rtl"] .players-section .grid,
+[dir="rtl"] .sports-section .grid,
+[dir="rtl"] .success-stories-section .grid,
+[dir="rtl"] .clubs-section .grid,
+[dir="rtl"] .academies-section .grid,
+[dir="rtl"] .partners-section .grid,
+[dir="rtl"] .download-section .grid,
+[dir="rtl"] .screenshots-section .grid,
+[dir="rtl"] .contact-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .hero-section .grid>*,
+[dir="rtl"] .how-it-works-section .grid>*,
+[dir="rtl"] .figures-section .grid>*,
+[dir="rtl"] .players-section .grid>*,
+[dir="rtl"] .clubs-section .grid>*,
+[dir="rtl"] .academies-section .grid>*,
+[dir="rtl"] .download-section .grid>*,
+[dir="rtl"] .contact-section .grid>* {
+    text-align: right;
+}
+
+/* Sports and partners maintain center alignment */
+[dir="rtl"] .sports-section .grid>*,
+[dir="rtl"] .partners-section .grid>*,
+[dir="rtl"] .screenshots-section .grid>* {
+    text-align: center;
+}
+
+/* Maintain center alignment for specific grids */
+[dir="rtl"] .grid .text-center {
+    text-align: center !important;
+}
+
+/* Generic fallback */
 [dir="rtl"] .grid {
     direction: rtl;
 }
 
-/* Card content RTL */
+[dir="rtl"] .grid>* {
+    text-align: right;
+}
+
+/* ============================================
+   CARD CONTENT RTL
+   ============================================ */
 [dir="rtl"] .card-hover,
 [dir="rtl"] .section-card,
 [dir="rtl"] .testimonial-card {
     text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .card-hover .flex,
+[dir="rtl"] .section-card .flex {
+    direction: rtl;
 }
 
 /* Two column layouts */
@@ -76,35 +293,59 @@
     direction: rtl;
 }
 
-/* Stats and figures RTL */
+/* ============================================
+   STATISTICS AND FIGURES RTL
+   ============================================ */
+[dir="rtl"] .section-card.rounded-2xl {
+    text-align: right;
+}
 
 
-/* Form elements RTL */
+
+/* ============================================
+   FORM ELEMENTS RTL
+   ============================================ */
 [dir="rtl"] input,
 [dir="rtl"] textarea,
 [dir="rtl"] select {
     text-align: right;
     direction: rtl;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 [dir="rtl"] input::placeholder,
 [dir="rtl"] textarea::placeholder {
     text-align: right;
+    direction: rtl;
 }
 
-/* Button icon spacing RTL */
-[dir="rtl"] button i,
-[dir="rtl"] a i {
-    margin-left: 0.5rem;
-    margin-right: 0;
+/* ============================================
+   BUTTON ICON SPACING RTL
+   ============================================ */
+[dir="rtl"] button,
+[dir="rtl"] a {
+    direction: rtl;
+}
+
+[dir="rtl"] button .flex,
+[dir="rtl"] a .flex {
+    direction: rtl;
 }
 
 [dir="rtl"] .btn-app {
+    text-align: right;
+    direction: rtl;
+}
 
+/* ============================================
+   FOOTER RTL
+   ============================================ */
+[dir="rtl"] footer {
+    direction: rtl;
     text-align: right;
 }
 
-/* Footer RTL */
 [dir="rtl"] .footer-content {
     direction: rtl;
 }
@@ -121,33 +362,57 @@
 }
 
 [dir="rtl"] .social-links {
+    justify-content: center;
+    direction: ltr;
+}
 
-    justify-content: flex-start;
+[dir="rtl"] .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[dir="rtl"] .social-links i {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 [dir="rtl"] footer .grid {
     text-align: right;
+    direction: rtl;
 }
 
 [dir="rtl"] footer .flex {
     justify-content: flex-start;
+    direction: rtl;
 }
 
 [dir="rtl"] .footer-bottom {
-    text-align: center;
+    text-align: center !important;
 }
 
-/* Dropdown RTL */
+/* ============================================
+   DROPDOWN RTL
+   ============================================ */
+[dir="rtl"] .custom-dropdown {
+    direction: rtl;
+}
 
+[dir="rtl"] .custom-dropdown .dropdown-trigger {
+    direction: rtl;
+}
 
 [dir="rtl"] .custom-dropdown .dropdown-item {
-
     text-align: right;
+    direction: rtl;
 }
 
 [dir="rtl"] .dropdown-menu {
     left: auto;
     right: 0;
+    text-align: right;
 }
 
 /* Language code badge */
@@ -155,25 +420,60 @@
     direction: ltr;
 }
 
-/* Contact section RTL */
-[dir="rtl"] .contact-info {
+/* ============================================
+   CONTACT SECTION RTL
+   ============================================ */
+[dir="rtl"] .contact-section {
+    direction: rtl;
     text-align: right;
 }
 
-/* Academy and club cards RTL */
+[dir="rtl"] .contact-section .contact-info {
+    text-align: right;
+}
+
+[dir="rtl"] .contact-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-section .flex {
+    direction: rtl;
+}
+
+/* ============================================
+   ACADEMY AND CLUB CARDS RTL
+   ============================================ */
 [dir="rtl"] .academy-card,
 [dir="rtl"] .club-card {
     text-align: right;
+    direction: rtl;
 }
 
+[dir="rtl"] .academy-card .flex,
+[dir="rtl"] .club-card .flex {
+    direction: rtl;
+}
 
-
-/* Player cards RTL */
-[dir="rtl"] .player-card {
+/* ============================================
+   PLAYER CARDS RTL
+   ============================================ */
+[dir="rtl"] .player-card,
+[dir="rtl"] .rounded-3xl {
     text-align: right;
+    direction: rtl;
 }
 
-/* Arrows and icons that should flip */
+[dir="rtl"] .rounded-3xl .flex {
+    direction: rtl;
+}
+
+[dir="rtl"] .rounded-3xl .grid {
+    direction: rtl;
+}
+
+/* ============================================
+   ARROWS AND DIRECTIONAL ICONS
+   ============================================ */
 [dir="rtl"] .ri-arrow-right-line::before {
     content: "\ea64";
     /* arrow-left */
@@ -184,7 +484,16 @@
     /* arrow-right */
 }
 
-/* Positioning adjustments */
+/* Transform for chevrons */
+[dir="rtl"] .ri-arrow-right-s-line,
+[dir="rtl"] .ri-arrow-right-line {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+/* ============================================
+   ABSOLUTE POSITIONING ADJUSTMENTS
+   ============================================ */
 [dir="rtl"] .absolute.top-4.left-4 {
     left: auto;
     right: 1rem;
@@ -195,21 +504,41 @@
     left: 1rem;
 }
 
-/* Text alignment for specific sections */
+[dir="rtl"] .absolute.left-4 {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .absolute.right-4 {
+    right: auto;
+    left: 1rem;
+}
+
+/* ============================================
+   TEXT ALIGNMENT OVERRIDES
+   ============================================ */
 [dir="rtl"] .text-left {
-    text-align: right;
+    text-align: right !important;
 }
 
 [dir="rtl"] .text-right {
-    text-align: left;
+    text-align: left !important;
 }
 
 /* Maintain center alignment */
 [dir="rtl"] .text-center {
-    text-align: center;
+    text-align: center !important;
 }
 
-/* Flex row reverse for specific components */
+/* Specific section alignments */
+[dir="rtl"] section {
+    text-align: right;
+}
+
+[dir="rtl"] .max-w-7xl {
+    text-align: right;
+}
+
 
 
 /* Border radius adjustments for RTL */
@@ -227,36 +556,42 @@
     border-bottom-left-radius: 0.75rem;
 }
 
-/* Padding and margin adjustments */
-[dir="rtl"] .pl-4 {
-    padding-left: 0;
-    padding-right: 1rem;
-}
+/* ============================================
+   PADDING AND MARGIN ADJUSTMENTS
+   ============================================ */
+/* Padding left/right swaps */
+[dir="rtl"] .pl-1 { padding-left: 0; padding-right: 0.25rem; }
+[dir="rtl"] .pl-2 { padding-left: 0; padding-right: 0.5rem; }
+[dir="rtl"] .pl-3 { padding-left: 0; padding-right: 0.75rem; }
+[dir="rtl"] .pl-4 { padding-left: 0; padding-right: 1rem; }
+[dir="rtl"] .pl-5 { padding-left: 0; padding-right: 1.25rem; }
+[dir="rtl"] .pl-6 { padding-left: 0; padding-right: 1.5rem; }
+[dir="rtl"] .pl-8 { padding-left: 0; padding-right: 2rem; }
 
-[dir="rtl"] .pr-4 {
-    padding-right: 0;
-    padding-left: 1rem;
-}
+[dir="rtl"] .pr-1 { padding-right: 0; padding-left: 0.25rem; }
+[dir="rtl"] .pr-2 { padding-right: 0; padding-left: 0.5rem; }
+[dir="rtl"] .pr-3 { padding-right: 0; padding-left: 0.75rem; }
+[dir="rtl"] .pr-4 { padding-right: 0; padding-left: 1rem; }
+[dir="rtl"] .pr-5 { padding-right: 0; padding-left: 1.25rem; }
+[dir="rtl"] .pr-6 { padding-right: 0; padding-left: 1.5rem; }
+[dir="rtl"] .pr-8 { padding-right: 0; padding-left: 2rem; }
 
-[dir="rtl"] .ml-2 {
-    margin-left: 0;
-    margin-right: 0.5rem;
-}
+/* Margin left/right swaps */
+[dir="rtl"] .ml-1 { margin-left: 0; margin-right: 0.25rem; }
+[dir="rtl"] .ml-2 { margin-left: 0; margin-right: 0.5rem; }
+[dir="rtl"] .ml-3 { margin-left: 0; margin-right: 0.75rem; }
+[dir="rtl"] .ml-4 { margin-left: 0; margin-right: 1rem; }
+[dir="rtl"] .ml-5 { margin-left: 0; margin-right: 1.25rem; }
+[dir="rtl"] .ml-6 { margin-left: 0; margin-right: 1.5rem; }
+[dir="rtl"] .ml-8 { margin-left: 0; margin-right: 2rem; }
 
-[dir="rtl"] .mr-2 {
-    margin-right: 0;
-    margin-left: 0.5rem;
-}
-
-[dir="rtl"] .ml-4 {
-    margin-left: 0;
-    margin-right: 1rem;
-}
-
-[dir="rtl"] .mr-4 {
-    margin-right: 0;
-    margin-left: 1rem;
-}
+[dir="rtl"] .mr-1 { margin-right: 0; margin-left: 0.25rem; }
+[dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+[dir="rtl"] .mr-3 { margin-right: 0; margin-left: 0.75rem; }
+[dir="rtl"] .mr-4 { margin-right: 0; margin-left: 1rem; }
+[dir="rtl"] .mr-5 { margin-right: 0; margin-left: 1.25rem; }
+[dir="rtl"] .mr-6 { margin-right: 0; margin-left: 1.5rem; }
+[dir="rtl"] .mr-8 { margin-right: 0; margin-left: 2rem; }
 
 /* Transform adjustments for hover effects */
 [dir="rtl"] .card-hover:hover {
@@ -287,11 +622,6 @@
 /* Smooth transitions for language switch */
 body {
     transition: opacity 0.2s ease;
-}
-
-/* RTL mode class for additional styling */
-.rtl-mode {
-    /* Additional RTL-specific styles can be added here */
 }
 
 /* Fix for Tailwind utility classes in RTL */
@@ -351,19 +681,12 @@ body {
 
 /* Fix for specific Tailwind classes that need RTL adjustment */
 
-
 [dir="rtl"] .justify-start {
     justify-content: flex-end;
 }
 
 [dir="rtl"] .justify-end {
     justify-content: flex-start;
-}
-
-/* Maintain proper alignment for centered content */
-[dir="rtl"] .justify-center,
-[dir="rtl"] .items-center {
-    /* Keep centered */
 }
 
 
@@ -433,7 +756,7 @@ body {
 }
 
 /* Contact section */
-[dir="rtl"] #contact .grid {
+[dir="rtl"] .contact-section .grid {
     text-align: right;
 }
 
@@ -466,7 +789,7 @@ body {
 }
 
 /* Specific section fixes */
-[dir="rtl"] .hero-content {
+[dir="rtl"] .hero-section .hero-content {
     text-align: center;
 }
 
@@ -548,7 +871,26 @@ body {
 
 [dir="rtl"] .flex.items-center i:last-child {
     margin-left: 0;
-    margin-right: 0.5rem;
+  
+}
+
+/* Center icons in circular/square containers */
+[dir="rtl"] .rounded-full i,
+[dir="rtl"] .rounded-xl i,
+[dir="rtl"] .rounded-2xl i,
+[dir="rtl"] .rounded-lg i {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center icons in action buttons */
+[dir="rtl"] .action-btn i,
+[dir="rtl"] button i,
+[dir="rtl"] a.rounded-full i,
+[dir="rtl"] a.rounded-xl i {
+    margin: 0;
 }
 
 /* Gap utilities RTL */
@@ -556,4 +898,649 @@ body {
 [dir="rtl"] .gap-3,
 [dir="rtl"] .gap-4 {
     direction: rtl;
+}
+
+/* ============================================
+   TAILWIND SPACE-X UTILITIES RTL FIX
+   ============================================ */
+/* Header navigation spacing */
+[dir="rtl"] .header-card .space-x-6>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1.5rem; 
+}
+
+[dir="rtl"] .header-card .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+/* Section-specific space-x utilities */
+[dir="rtl"] .hero-section .space-x-4>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1rem; 
+}
+
+[dir="rtl"] .how-it-works-section .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+[dir="rtl"] .figures-section .space-x-2>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.5rem; 
+}
+
+[dir="rtl"] .players-section .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+[dir="rtl"] .sports-section .space-x-4>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1rem; 
+}
+
+[dir="rtl"] .success-stories-section .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+[dir="rtl"] .clubs-section .space-x-4>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1rem; 
+}
+
+[dir="rtl"] .academies-section .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+[dir="rtl"] .partners-section .space-x-6>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1.5rem; 
+}
+
+[dir="rtl"] .download-section .space-x-4>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 1rem; 
+}
+
+[dir="rtl"] .contact-section .space-x-3>:not([hidden])~:not([hidden]) { 
+    margin-left: 0; 
+    margin-right: 0.75rem; 
+}
+
+/* Generic fallback for any remaining space-x utilities */
+[dir="rtl"] .space-x-1>*+* { margin-left: 0; margin-right: 0.25rem; }
+[dir="rtl"] .space-x-2>*+* { margin-left: 0; margin-right: 0.5rem; }
+[dir="rtl"] .space-x-3>*+* { margin-left: 0; margin-right: 0.75rem; }
+[dir="rtl"] .space-x-4>*+* { margin-left: 0; margin-right: 1rem; }
+[dir="rtl"] .space-x-5>*+* { margin-left: 0; margin-right: 1.25rem; }
+[dir="rtl"] .space-x-6>*+* { margin-left: 0; margin-right: 1.5rem; }
+[dir="rtl"] .space-x-8>*+* { margin-left: 0; margin-right: 2rem; }
+
+/* ============================================
+   GAP UTILITIES RTL (maintain proper spacing)
+   ============================================ */
+[dir="rtl"] .hero-section .gap-2,
+[dir="rtl"] .hero-section .gap-3,
+[dir="rtl"] .hero-section .gap-4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .how-it-works-section .gap-3,
+[dir="rtl"] .how-it-works-section .gap-4,
+[dir="rtl"] .how-it-works-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .figures-section .gap-2,
+[dir="rtl"] .figures-section .gap-3,
+[dir="rtl"] .figures-section .gap-4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .players-section .gap-4,
+[dir="rtl"] .players-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .sports-section .gap-4,
+[dir="rtl"] .sports-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .clubs-section .gap-4,
+[dir="rtl"] .clubs-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .academies-section .gap-4,
+[dir="rtl"] .academies-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .partners-section .gap-6,
+[dir="rtl"] .partners-section .gap-8 {
+    direction: rtl;
+}
+
+[dir="rtl"] .download-section .gap-4,
+[dir="rtl"] .download-section .gap-6 {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-section .gap-3,
+[dir="rtl"] .contact-section .gap-4 {
+    direction: rtl;
+}
+
+/* Generic fallback */
+[dir="rtl"] .gap-1,
+[dir="rtl"] .gap-2,
+[dir="rtl"] .gap-3,
+[dir="rtl"] .gap-4,
+[dir="rtl"] .gap-5,
+[dir="rtl"] .gap-6,
+[dir="rtl"] .gap-8 {
+    direction: rtl;
+}
+
+/* ============================================
+   JUSTIFY CONTENT RTL
+   ============================================ */
+[dir="rtl"] .justify-start {
+    justify-content: flex-end !important;
+}
+
+[dir="rtl"] .justify-end {
+    justify-content: flex-start !important;
+}
+
+[dir="rtl"] .justify-between {
+    justify-content: space-between;
+}
+
+/* Keep centered items centered */
+[dir="rtl"] .justify-center {
+    justify-content: center !important;
+}
+
+/* ============================================
+   ITEMS ALIGNMENT RTL
+   ============================================ */
+[dir="rtl"] .items-start {
+    align-items: flex-start;
+}
+
+[dir="rtl"] .items-end {
+    align-items: flex-end;
+}
+
+[dir="rtl"] .items-center {
+    align-items: center;
+}
+
+/* ============================================
+   BORDER RADIUS RTL ADJUSTMENTS
+   ============================================ */
+[dir="rtl"] .rounded-l-none {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+[dir="rtl"] .rounded-r-none {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+[dir="rtl"] .rounded-l-xl {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+[dir="rtl"] .rounded-r-xl {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+/* ============================================
+   TRANSFORM ADJUSTMENTS FOR HOVER EFFECTS
+   ============================================ */
+[dir="rtl"] .card-hover:hover {
+    transform: translateY(-4px);
+}
+
+[dir="rtl"] .hover\\:translate-x-2:hover {
+    transform: translateX(-0.5rem);
+}
+
+[dir="rtl"] .hover\\:translate-x-4:hover {
+    transform: translateX(-1rem);
+}
+
+/* ============================================
+   NUMBERS, CODES, AND LTR CONTENT
+   ============================================ */
+/* Ensure numbers and codes remain LTR */
+[dir="rtl"] .phone-number,
+[dir="rtl"] .email,
+[dir="rtl"] .price,
+[dir="rtl"] .stat-number,
+[dir="rtl"] .lang-code {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* Keep numeric values LTR */
+[dir="rtl"] .text-3xl.font-bold,
+[dir="rtl"] .text-2xl.font-bold {
+    direction: ltr;
+    display: inline-block;
+}
+
+/* ============================================
+   SPORT ICONS AND BADGES
+   ============================================ */
+[dir="rtl"] .sport-icon-bg {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[dir="rtl"] .sport-icon-bg i {
+    margin: 0;
+}
+
+[dir="rtl"] .sport-card {
+    text-align: center;
+}
+
+[dir="rtl"] .sport-card i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* ============================================
+   VIDEO AND IMAGE CONTAINERS
+   ============================================ */
+[dir="rtl"] .video-cover,
+[dir="rtl"] .phone-mockup {
+    transform: scaleX(1);
+}
+
+[dir="rtl"] .aspect-video {
+    direction: ltr;
+}
+
+/* ============================================
+   FILTER BUTTONS RTL
+   ============================================ */
+[dir="rtl"] .filter-btn {
+    text-align: center;
+    direction: rtl;
+}
+
+/* ============================================
+   RESPONSIVE RTL ADJUSTMENTS
+   ============================================ */
+@media (max-width: 768px) {
+    [dir="rtl"] .mobile-menu-toggle {
+        order: -1;
+    }
+
+    [dir="rtl"] #mobile-menu-overlay {
+        text-align: right;
+        direction: rtl;
+    }
+
+    [dir="rtl"] .mobile-link {
+        text-align: right;
+        direction: rtl;
+    }
+
+    [dir="rtl"] .flex-col {
+        direction: rtl;
+    }
+}
+
+@media (max-width: 640px) {
+    [dir="rtl"] .hero-cta {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .app-buttons {
+        direction: rtl;
+    }
+}
+
+/* ============================================
+   FONT RENDERING FOR ARABIC
+   ============================================ */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.3;
+}
+
+[dir="rtl"] p {
+    line-height: 1.8;
+    letter-spacing: 0;
+}
+
+/* ============================================
+   SPECIFIC SECTION FIXES WITH CUSTOM CLASSES
+   ============================================ */
+
+/* Hero section */
+[dir="rtl"] .hero-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .hero-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .hero-section .flex {
+    direction: rtl;
+}
+
+/* How It Works section */
+[dir="rtl"] .how-it-works-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .how-it-works-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .how-it-works-section .flex {
+    direction: rtl;
+}
+
+/* Figures section */
+[dir="rtl"] .figures-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .figures-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .figures-section .section-card .flex {
+    direction: rtl;
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .figures-section .section-card i {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+[dir="rtl"] .figures-section .rounded-xl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Players section */
+[dir="rtl"] .players-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .players-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .players-section .player-card {
+    text-align: right;
+}
+
+/* Sports section */
+[dir="rtl"] .sports-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .sports-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .sports-section .card-hover {
+    text-align: center;
+}
+
+/* Success stories section */
+[dir="rtl"] .success-stories-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .success-stories-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .success-stories-section .testimonial-card {
+    text-align: right;
+}
+
+/* Clubs section */
+[dir="rtl"] .clubs-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .clubs-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .clubs-section .club-card {
+    text-align: right;
+}
+
+/* Academies section */
+[dir="rtl"] .academies-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .academies-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .academies-section .academy-card {
+    text-align: right;
+}
+
+/* Partners section */
+[dir="rtl"] .partners-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .partners-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .partners-section .partner-logo {
+    text-align: center;
+}
+
+/* Download section */
+[dir="rtl"] .download-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .download-section .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .download-section .download-content {
+    text-align: right;
+}
+
+/* Screenshots section */
+[dir="rtl"] .screenshots-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .screenshots-section .grid {
+    direction: rtl;
+}
+
+/* Contact section */
+[dir="rtl"] .contact-section {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-section .grid {
+    direction: rtl;
+}
+
+/* ============================================
+   SMOOTH TRANSITIONS FOR LANGUAGE SWITCH
+   ============================================ */
+body {
+    transition: opacity 0.2s ease;
+}
+
+html[dir="rtl"] {
+    transition: direction 0s;
+}
+
+/* ============================================
+   RTL MODE CLASS
+   ============================================ */
+.rtl-mode {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl-mode * {
+    text-align: inherit;
+}
+
+/* ============================================
+   ADDITIONAL FLEX FIXES
+   ============================================ */
+[dir="rtl"] .flex.flex-col {
+    direction: rtl;
+}
+
+[dir="rtl"] .flex.flex-row {
+    direction: rtl;
+}
+
+[dir="rtl"] .inline-flex {
+    direction: rtl;
+}
+
+/* ============================================
+   DROPDOWN ARROW ROTATION
+   ============================================ */
+[dir="rtl"] .dropdown-trigger i:last-child {
+    transform: rotate(0deg);
+}
+
+[dir="rtl"] .dropdown-trigger.open i:last-child {
+    transform: rotate(180deg);
+}
+
+/* ============================================
+   COMPREHENSIVE CARD FIXES
+   ============================================ */
+[dir="rtl"] .rounded-3xl.overflow-hidden {
+    direction: rtl;
+}
+
+[dir="rtl"] .rounded-3xl .p-6 {
+    text-align: right;
+}
+
+[dir="rtl"] .rounded-3xl .space-y-4 {
+    direction: rtl;
+}
+
+[dir="rtl"] .rounded-3xl .grid.grid-cols-2 {
+    direction: rtl;
+}
+
+/* ============================================
+   BADGE AND TAG POSITIONING
+   ============================================ */
+[dir="rtl"] .absolute.top-4.left-4.bg-black\/60 {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .absolute.top-4.left-4.bg-dark-bg\/80 {
+    left: auto;
+    right: 1rem;
+}
+
+/* ============================================
+   FINAL CATCH-ALL RULES
+   ============================================ */
+[dir="rtl"] main {
+    direction: rtl;
+}
+
+[dir="rtl"] section > div {
+    direction: rtl;
+}
+
+[dir="rtl"] .container {
+    direction: rtl;
+}
+
+[dir="rtl"] .max-w-7xl.mx-auto {
+    direction: rtl;
+}
+
+/* Ensure proper text flow */
+[dir="rtl"] .leading-relaxed,
+[dir="rtl"] .leading-tight {
+    text-align: inherit;
+}
+
+/* ============================================
+   HEADER LANGUAGE DROPDOWN RTL
+   ============================================ */
+[dir="rtl"] #header-language-dropdown .dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] #header-language-dropdown .dropdown-item {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] #header-language-dropdown .dropdown-trigger {
+    direction: rtl;
+}
+
+/* Header actions spacing for RTL */
+[dir="rtl"] .header-content .hidden.lg\\:flex.items-center.space-x-3 {
+    flex-direction: row-reverse;
+    gap: 0.75rem;
+}
+
+[dir="rtl"] .header-content .hidden.lg\\:flex.items-center.space-x-3 > * {
+    margin-left: 0;
+    margin-right: 0;
 }

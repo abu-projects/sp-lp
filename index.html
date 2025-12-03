@@ -323,6 +323,27 @@
             color: #E2E8F0;
             border: 1px solid rgba(14, 165, 233, 0.3);
         }
+
+        /* Header Language Dropdown Specific Styles */
+        #header-language-dropdown .dropdown-trigger {
+            background: rgba(26, 35, 50, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        #header-language-dropdown .dropdown-trigger:hover {
+            background: rgba(26, 35, 50, 0.95);
+            border-color: rgba(14, 165, 233, 0.5);
+        }
+
+        #header-language-dropdown .dropdown-menu {
+            backdrop-filter: blur(10px);
+        }
+
+        #header-language-dropdown .lang-code {
+            font-size: 0.875rem;
+            padding: 6px 10px;
+            min-width: 40px;
+        }
     </style>
 </head>
 
@@ -356,16 +377,38 @@
                         data-i18n="nav_contact">Contact</a>
                 </div>
                 <div class="hidden lg:flex items-center space-x-3">
+                    <!-- Language Dropdown -->
+                    <div class="custom-dropdown relative" id="header-language-dropdown">
+                        <button type="button"
+                            class="dropdown-trigger flex items-center gap-2 bg-dark-tertiary text-text-secondary border border-primary/30 rounded-2xl px-4 py-2 text-sm focus:outline-none hover:border-primary/50 transition-all duration-200">
+                            <span class="lang-code selected-code">EN</span>
+                            <i class="ri-arrow-down-s-line text-base transition-transform duration-200"></i>
+                        </button>
+                        <div class="dropdown-menu absolute top-full right-0 mt-2 rounded-2xl opacity-0 invisible transform translate-y-2 transition-all duration-200 overflow-hidden z-50 min-w-[120px]"
+                            style="background: #1E293B; border: 1px solid rgba(14, 165, 233, 0.2); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);">
+                            <div class="py-2">
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="en" data-code="EN">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">English</span>
+                                </button>
+                                <button
+                                    class="dropdown-item w-full px-4 py-3 text-left text-text-primary hover:bg-dark-tertiary flex items-center gap-3 transition-colors duration-150"
+                                    data-lang="ar" data-code="AR">
+                                    <i class="ri-global-line text-text-muted text-lg"></i>
+                                    <span class="text-sm font-medium">العربية</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#login" class="text-text-secondary hover:text-primary transition-colors duration-200"
                         data-i18n="btn_login">Login</a>
                     <button
                         class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-primary-hover transition-colors duration-200 whitespace-nowrap text-sm font-medium"
                         data-i18n="btn_signup">Sign
                         Up</button>
-                    <button
-                        class="action-btn text-text-secondary px-5 py-2 rounded-lg whitespace-nowrap text-sm font-medium"
-                        data-i18n="btn_download">Download
-                        App</button>
+               
                 </div>
                 <button id="mobile-menu-btn" class="lg:hidden text-text-secondary z-50 relative">
                     <i class="ri-menu-line ri-lg"></i>
@@ -422,7 +465,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative pt-24">
+        <section id="home" class="hero-section hero-bg min-h-screen flex items-center justify-center relative pt-24">
             <div id="hero-slider" class="hero-slider" aria-hidden="true">
                 <div class="hero-slide active" style="background-image: url('assets/imgs/sports/football.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('assets/imgs/sports/tenis.jpg');"></div>
@@ -464,7 +507,7 @@
         </section>
 
         <!-- How It Works Section -->
-        <section id="how-it-works" class="py-20 bg-dark-secondary relative overflow-hidden">
+        <section id="how-it-works" class="how-it-works-section py-20 bg-dark-secondary relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute -left-16 top-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="absolute right-0 bottom-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
@@ -595,7 +638,7 @@
         </section>
 
         <!-- Company Figures Section -->
-        <section id="figures" class="py-16 bg-dark-bg relative overflow-hidden">
+        <section id="figures" class="figures-section py-16 bg-dark-bg relative overflow-hidden">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-10 right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-10 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
@@ -679,7 +722,7 @@
         </section>
 
         <!-- Players Section -->
-        <section id="players" class="py-20 bg-dark-bg">
+        <section id="players" class="players-section py-20 bg-dark-bg"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
                     <div>
@@ -873,7 +916,7 @@
         </section>
 
         <!-- Sports Section -->
-        <section id="sports" class="py-20 bg-dark-bg">
+        <section id="sports" class="sports-section py-20 bg-dark-bg"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="sports_title">
                     Explore All Sports in
@@ -969,7 +1012,7 @@
         </section>
 
         <!-- Success Stories Section -->
-        <section id="success-stories" class="py-20 bg-dark-secondary">
+        <section id="success-stories" class="success-stories-section py-20 bg-dark-secondary"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
                     data-i18n="success_title">They Made It</h3>
@@ -1019,7 +1062,7 @@
         </section>
 
         <!-- Clubs Section -->
-        <section id="clubs" class="py-20 bg-dark-bg">
+        <section id="clubs" class="clubs-section py-20 bg-dark-bg"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary" data-i18n="clubs_title">
                     Famous Clubs</h3>
@@ -1228,7 +1271,7 @@
         </section>
 
         <!-- Academies Section -->
-        <section id="academies" class="py-20 bg-dark-secondary">
+        <section id="academies" class="academies-section py-20 bg-dark-secondary"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-8 text-text-primary"
                     data-i18n="academies_title">Famous Academies</h3>
@@ -1439,7 +1482,7 @@
         </section>
 
         <!-- Partners Section -->
-        <section id="partners" class="py-20 bg-dark-bg">
+        <section id="partners" class="partners-section py-20 bg-dark-bg"></section>
             <div class="max-w-7xl mx-auto px-6">
                 <h3 class="text-4xl md:text-5xl font-bold text-center mb-16 text-text-primary"
                     data-i18n="partners_title">Our Partners</h3>
@@ -1504,7 +1547,7 @@
         </section>
 
         <!-- Download Section -->
-        <section id="download" class="py-20 bg-dark-secondary">
+        <section id="download" class="download-section py-20 bg-dark-secondary">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="section-card rounded-2xl p-8">
@@ -1556,7 +1599,7 @@
         </section>
 
         <!-- App Screenshots Section -->
-        <section id="app-screenshots" class="py-20 bg-dark-secondary relative overflow-hidden">
+        <section id="app-screenshots" class="screenshots-section py-20 bg-dark-secondary relative overflow-hidden"></section>
             <!-- Background elements -->
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -1657,7 +1700,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-dark-bg relative overflow-hidden">
+        <section id="contact" class="contact-section py-20 bg-dark-bg relative overflow-hidden"></section>
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute -left-20 top-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="absolute right-0 bottom-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
