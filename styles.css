@@ -907,3 +907,6 @@ section {
 #mobile-menu-overlay.opacity-0{
     display: none;
 }
+#app-screenshots h3{
+    text-align: centers;
+}
